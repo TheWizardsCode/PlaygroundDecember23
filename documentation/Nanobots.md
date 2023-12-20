@@ -28,9 +28,9 @@ The Nanobots will build the game object defined by the most appropriate recipe f
 
 Once the PickupObject and Recipe scriptable objects are available you can build a new recipe as follows:
 
-Create a new recipe by right clicking in a Resources/Recipes folder and selecting Create > Playground > [recipe type]
-Fill in the details (tooltips should guide you)
-Open Assets/_Dev/Prefabs/Player/Playground_Character.prefab
-Find the Nanobot Manager component
-In the appropriate Recipes section click the + to add a new recipe
-Drag the recipe to the right priority position
+* Create a new recipe by right clicking in a Resources/Recipes folder and selecting Create > Playground > [recipe type]
+* Fill in the details (tooltips should guide you)
+* Open Assets/_Dev/Prefabs/Player/Playground_Character.prefab
+* Find the Nanobot Manager component
+* In the appropriate Recipes section click the + to add a new recipe
+* Drag the recipe to the right priority position
