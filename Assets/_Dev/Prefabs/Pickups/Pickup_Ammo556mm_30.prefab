@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435a52505a395c2459ad493ac1228696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ConsumeResult: 2
+  m_ConsumeResult: 0
   m_ItemPrefab: {fileID: 114491831698022604, guid: c60dc682cbd9dfa4b9764789e612122b, type: 3}
   m_AdditionalItems: []
   m_SpawnOnAwake: 1

@@ -44,14 +44,6 @@ namespace Playground
         internal void SpawnerDestroyed()
         {
             spawnersRemaining--;
-            if (spawnersRemaining == 0)
-            {
-                Debug.Log("All spawners destroyed.");
-            }
-            else
-            {
-                Debug.Log(spawnersRemaining + " spawners remaining.");
-            }
         }
         #endregion
 
