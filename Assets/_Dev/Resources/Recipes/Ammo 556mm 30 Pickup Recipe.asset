@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b81f4165b0a6244b9fd646452c5eec, type: 3}
+  m_Name: Ammo 556mm 30 Pickup Recipe
+  m_EditorClassIdentifier: 
+  displayName: 556mm 30
+  item: {fileID: 114439433628311108, guid: 22b000e4b734447488222861cf03d541, type: 3}
+  spawnOffset: {x: 0, y: 0, z: -2}
+  cost: 10
+  timeToBuild: 5
+  buildCompleteClip: {fileID: 8300000, guid: d844d39e1ce76564298935583b21ce23, type: 3}
+  ammo: {fileID: 11400000, guid: 6bb76e133096f6a4e8a2c63fb876b6eb, type: 2}

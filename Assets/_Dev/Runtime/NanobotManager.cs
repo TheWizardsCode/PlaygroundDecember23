@@ -5,14 +5,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static NeoFPS.BasicHealthManager;
 
 namespace Playground
 {
     public class NanobotManager : MonoBehaviour
     {
-        [SerializeField, Tooltip("The recipes available to the Nanobots in order of preference.")]
-        private Recipe[] recipes;
+        [SerializeField, Tooltip("The health recipes available to the Nanobots in order of preference.")]
+        private List<HealthPickupRecipe> healthRecipes = new List<HealthPickupRecipe>();
+        [SerializeField, Tooltip("The ammo recipes available to the Nanobots in order of preference.")]
+        private List<AmmoPickupRecipe> ammoRecipes = new List<AmmoPickupRecipe>();
 
         public delegate void OnResourcesChanged(float from, float to);
         public event OnResourcesChanged onResourcesChanged;
@@ -28,46 +31,50 @@ namespace Playground
 
         private void Update()
         {
-            // TODO: currently we only enable a single recipe, which is to build 556 ammo. Need to make this more generic
-            Recipe recipe = recipes[0];
-            
-            IQuickSlotItem item = inventory.selected;
-            if (item == null)
+            if (isBuilding) return;
+
+            for (int i = 0; i < healthRecipes.Count; i++)
             {
-                return;
+                if (TryRecipe(healthRecipes[i]))
+                {
+                    break;
+                }
             }
 
-            SharedPoolAmmo ammo = item.GetComponent<SharedPoolAmmo>();
-            if (ammo == null)
+            for (int i = 0; i < ammoRecipes.Count; i++)
             {
-                return;
-            }
-
-            if (ammo.ammoType.itemIdentifier != recipe.item.itemIdentifier)
-            {
-                return;
-            }
-
-            if (ammo.atMaximum)
-            {
-                return;
-            }
-
-            if (!isBuilding && currentResources >= recipe.cost)
-            {
-                StartCoroutine(BuildRecipe(recipe));
+                if (TryRecipe(ammoRecipes[i]))
+                {
+                    break;
+                }
             }
         }
 
-        private IEnumerator BuildRecipe(Recipe recipe)
+        private bool TryRecipe(IRecipe recipe)
+        {
+            if (currentResources >= recipe.Cost && recipe.ShouldBuild)
+            {
+                StartCoroutine(BuildRecipe(recipe));
+                return true;
+            }
+
+            return false;
+        }
+
+        private IEnumerator BuildRecipe(IRecipe recipe)
         {
             isBuilding = true;
-            resources -= recipe.cost;
+            resources -= recipe.Cost;
 
-            yield return new WaitForSeconds(recipe.timeToBuild);
+            yield return new WaitForSeconds(recipe.TimeToBuild);
 
             // TODO Use the pool manager to create the item
-            inventory.AddItem(Instantiate(recipe.item));
+            GameObject go = Instantiate(recipe.Item.gameObject);
+            go.transform.position = transform.position + recipe.SpawnOffset;
+            if (recipe.BuildCompleteClip != null)
+            {
+                NeoFpsAudioManager.PlayEffectAudioAtPosition(recipe.BuildCompleteClip, go.transform.position, 1);
+            }
             isBuilding = false;
         }
 
@@ -88,18 +95,5 @@ namespace Playground
                 currentResources = value;
             }
         }
-    }
-
-    [Serializable]
-    public class Recipe
-    {
-        [SerializeField, Tooltip("The name of this recipe.")]
-        public string name = "TBD";
-        [SerializeField, Tooltip("The resources required to build this ammo type.")]
-        public int cost = 10;
-        [SerializeField, Tooltip("The inventory item this recipe creates.")]
-        public FpsInventoryItemBase item;
-        [SerializeField, Tooltip("The time it takes to build this recipe.")]
-        public float timeToBuild = 5;
     }
 }
