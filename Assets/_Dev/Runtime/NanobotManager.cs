@@ -16,6 +16,16 @@ namespace Playground
         private List<HealthPickupRecipe> healthRecipes = new List<HealthPickupRecipe>();
         [SerializeField, Tooltip("The ammo recipes available to the Nanobots in order of preference.")]
         private List<AmmoPickupRecipe> ammoRecipes = new List<AmmoPickupRecipe>();
+        [SerializeField, Tooltip("Cooldown between recipes.")]
+        private float cooldown = 3;
+
+        [Header("Feedback")]
+        [SerializeField, Tooltip("The sound to play when the build is started. Note that this can be overridden in the recipe.")]
+        private AudioClip buildStartedClip;
+        [SerializeField, Tooltip("The sound to play when the build is complete. Note that this can be overridden in the recipe.")]
+        private AudioClip buildCompleteClip;
+        [SerializeField, Tooltip("The particle system to play when a pickup is spawned.")]
+        ParticleSystem pickupSpawnParticlePrefab;
 
         public delegate void OnResourcesChanged(float from, float to);
         public event OnResourcesChanged onResourcesChanged;
@@ -23,6 +33,7 @@ namespace Playground
         private int currentResources = 0;
         private FpsInventorySwappable inventory;
         private bool isBuilding = false;
+        private float timeOfNextBuiild = 0;
 
         private void Start()
         {
@@ -31,13 +42,13 @@ namespace Playground
 
         private void Update()
         {
-            if (isBuilding) return;
+            if (isBuilding || Time.timeSinceLevelLoad < timeOfNextBuiild) return;
 
             for (int i = 0; i < healthRecipes.Count; i++)
             {
                 if (TryRecipe(healthRecipes[i]))
                 {
-                    break;
+                    return;
                 }
             }
 
@@ -45,7 +56,7 @@ namespace Playground
             {
                 if (TryRecipe(ammoRecipes[i]))
                 {
-                    break;
+                    return;
                 }
             }
         }
@@ -66,16 +77,37 @@ namespace Playground
             isBuilding = true;
             resources -= recipe.Cost;
 
+            if (recipe.BuildStartedClip != null)
+            {
+                NeoFpsAudioManager.PlayEffectAudioAtPosition(recipe.BuildStartedClip, transform.position, 1);
+            } else
+            {
+                NeoFpsAudioManager.PlayEffectAudioAtPosition(buildStartedClip, transform.position, 1);
+            }
+
             yield return new WaitForSeconds(recipe.TimeToBuild);
 
             // TODO Use the pool manager to create the item
             GameObject go = Instantiate(recipe.Item.gameObject);
-            go.transform.position = transform.position + recipe.SpawnOffset;
+            go.transform.position = transform.position + (transform.forward * 5);
             if (recipe.BuildCompleteClip != null)
             {
                 NeoFpsAudioManager.PlayEffectAudioAtPosition(recipe.BuildCompleteClip, go.transform.position, 1);
+            } else
+            {
+                NeoFpsAudioManager.PlayEffectAudioAtPosition(buildCompleteClip, go.transform.position, 1);
             }
+
+            // TODO: Use the pool manager to create the particle system
+            if (pickupSpawnParticlePrefab != null)
+            {
+                ParticleSystem ps = Instantiate(pickupSpawnParticlePrefab);
+                ps.transform.position = go.transform.position;
+                ps.Play();
+            }
+            
             isBuilding = false;
+            timeOfNextBuiild = Time.timeSinceLevelLoad + cooldown;
         }
 
         /// <summary>

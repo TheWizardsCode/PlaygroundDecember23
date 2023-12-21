@@ -10,17 +10,21 @@ namespace Playground
     public class Recipe<T> : ScriptableObject, IRecipe where T : MonoBehaviour
     {
         [SerializeField, Tooltip("The name of this recipe.")]
-        public string displayName = "TBD";
+        string displayName = "TBD";
         [SerializeField, Tooltip("The pickup item this recipe creates.")]
-        public T item;
+        T item;
         [SerializeField, Tooltip("The offset from the NanobotManager to spawn the item.")]
-        public Vector3 spawnOffset = new Vector3(0, 0, -2);
+        Vector3 spawnOffset = new Vector3(0, 0, -2);
         [SerializeField, Tooltip("The resources required to build this ammo type.")]
-        public int cost = 10;
+        int cost = 10;
         [SerializeField, Tooltip("The time it takes to build this recipe.")]
-        public float timeToBuild = 5;
-        [SerializeField, Tooltip("The sound to play when the recipe is complete.")]
-        public AudioClip buildCompleteClip;
+        float timeToBuild = 5;
+
+        [Header("Feedback")]
+        [SerializeField, Tooltip("The sound to play when the build is started.")]
+        AudioClip buildStartedClip;
+        [SerializeField, Tooltip("The sound to play when the build is complete.")]
+        AudioClip buildCompleteClip;
 
         public virtual bool ShouldBuild
         {
@@ -37,6 +41,8 @@ namespace Playground
         public int Cost => cost;
 
         public float TimeToBuild => timeToBuild;
+
+        public AudioClip BuildStartedClip => buildStartedClip;
 
         public AudioClip BuildCompleteClip => buildCompleteClip;
 

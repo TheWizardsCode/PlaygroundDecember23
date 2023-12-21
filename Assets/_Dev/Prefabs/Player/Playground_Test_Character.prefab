@@ -2967,6 +2967,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acfc3b4061ccfed46b45124f93446649, type: 2}
   ammoRecipes:
   - {fileID: 11400000, guid: 643b1bd15f2739a4c8ccafac741ac2fc, type: 2}
+  cooldown: 3
+  buildStartedClip: {fileID: 8300000, guid: 19caa26d8d01e794b9135018f61d304d, type: 3}
+  buildCompleteClip: {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}
+  pickupSpawnParticlePrefab: {fileID: 1974278376555586578, guid: 5431668a66cd19c42ac02f0bdd90e9d2, type: 3}
 --- !u!1 &4167775306372098691
 GameObject:
   m_ObjectHideFlags: 0

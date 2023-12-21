@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Health 10
   item: {fileID: 114608595035019784, guid: 1c36af958a0fbe646b6dff5ed9c8d273, type: 3}
-  spawnOffset: {x: 0, y: 0, z: -2}
+  spawnOffset: {x: 0, y: 0, z: 2}
   cost: 10
   timeToBuild: 5
-  buildCompleteClip: {fileID: 8300000, guid: d844d39e1ce76564298935583b21ce23, type: 3}
+  buildStartedClip: {fileID: 8300000, guid: bab4c765a059ad643ae2f78f8a494d0f, type: 3}
+  buildCompleteClip: {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}

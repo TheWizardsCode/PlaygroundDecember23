@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 556mm 30
   item: {fileID: 114439433628311108, guid: 22b000e4b734447488222861cf03d541, type: 3}
-  spawnOffset: {x: 0, y: 0, z: -2}
+  spawnOffset: {x: 0, y: 0, z: 2}
   cost: 10
   timeToBuild: 5
-  buildCompleteClip: {fileID: 8300000, guid: d844d39e1ce76564298935583b21ce23, type: 3}
+  buildStartedClip: {fileID: 8300000, guid: 49da8a573c71c184293324e6e103c6a5, type: 3}
+  buildCompleteClip: {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}
   ammo: {fileID: 11400000, guid: 6bb76e133096f6a4e8a2c63fb876b6eb, type: 2}

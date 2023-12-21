@@ -7,9 +7,9 @@ namespace Playground
     {
         public string DisplayName { get; }
         public Component Item { get; }
-        public Vector3 SpawnOffset{ get; }
         public int Cost { get; }
         public float TimeToBuild { get; }
+        public AudioClip BuildStartedClip { get; }
         public AudioClip BuildCompleteClip { get; }
 
         /// <summary>
