@@ -52,11 +52,7 @@ MonoBehaviour:
   displayName: Doughnut
   description: The doughnut has sensors that mean it can detect and hunt down the
     player relentlessly. Fortunately it is not well armed.
-  speed: 5
-  rotationSpeed: 3
-  minimumHeight: 2
-  maximumHeight: 18
-  optimalDistanceFromPlayer: 15
+  config: {fileID: 11400000, guid: 599dc57cf7f44474bb380ac3dee348be, type: 2}
   seekDuration: 180
   maxWanderRange: 500
   requireLineOfSight: 0
@@ -121,10 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c66edff86b6934292b17047252c5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaults: {fileID: 11400000, guid: dd9dd38bb10772a41aa5a9ce16634dec, type: 2}
+  config: {fileID: 11400000, guid: cbf5323e5a79dfa4c8fed345febe7579, type: 2}
   droneSource: {fileID: 2131261758738502137}
-  droneClip: {fileID: 0}
-  deathClips: []
 --- !u!82 &2131261758738502137
 AudioSource:
   m_ObjectHideFlags: 0

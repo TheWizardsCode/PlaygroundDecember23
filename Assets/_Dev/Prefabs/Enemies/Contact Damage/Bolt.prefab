@@ -53,11 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Bolt
   description: TBD
-  speed: 3.75
-  rotationSpeed: 3
-  minimumHeight: 0.5
-  maximumHeight: 75
-  optimalDistanceFromPlayer: 0.2
+  config: {fileID: 11400000, guid: 4aa9ff23d1e65b24e995979f5c9a617f, type: 2}
   seekDuration: 15
   maxWanderRange: 75
   requireLineOfSight: 1
@@ -299,10 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c66edff86b6934292b17047252c5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaults: {fileID: 11400000, guid: dd9dd38bb10772a41aa5a9ce16634dec, type: 2}
+  config: {fileID: 11400000, guid: 2ef1cd633368d0046a280cde4681dcbb, type: 2}
   droneSource: {fileID: 5570795577165164235}
-  droneClip: {fileID: 8300000, guid: ea744d978cea3a542b7a61cc08136dd4, type: 3}
-  deathClips: []
 --- !u!1 &8500651545726619052
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,12 @@
 using NaughtyAttributes;
-using NeoFPS;
 using NeoFPS.SinglePlayer;
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.IO;
+using System.Reflection;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace Playground
 {
@@ -15,41 +17,12 @@ namespace Playground
         [SerializeField, TextArea, Tooltip("The description of this enemy as displayed in the UI.")]
         protected string description = "TBD";
 
-        [SerializeField, Tooltip("How fast the enemy moves."), Foldout("Movement")]
-        protected float speed = 5f;
-        [SerializeField, Tooltip("How fast the enemy rotates."), Foldout("Movement")]
-        protected float rotationSpeed = 1f;
-        [SerializeField, Tooltip("The minimum height the enemy will move to."), Foldout("Movement")]
-        float minimumHeight = 0.5f;
-        [SerializeField, Tooltip("The maximum height the enemy will move to."), Foldout("Movement")]
-        float maximumHeight = 75f;
-        [SerializeField, Tooltip("How close to the player will this enemy try to get?"), Foldout("Movement")]
-        float optimalDistanceFromPlayer = 0.2f;
+        [SerializeField, Tooltip("The Enemy behaviour definition defines how this enemy will behave. The best way to start is to drag in an existing configuration and then save a copy using the button below. Then edit for your needs."), Expandable]
+        [Required("A configuration must be provided. This forms the base definition of the enemy. Higher level enemies will be generated from this base definition.")]
+        EnemyBehaviourDefinition config = null;
 
-        [SerializeField, Tooltip("How long the enemy will seek out the player for after losing sight of them."), Foldout("Behaviour")]
-        float seekDuration = 7;
-        [SerializeField, Tooltip("The maximum distance the enemy will wander from their spawn point. The enemy will move further away than this when they are chasing the player but will return to within this range if they go back to a wandering state."), Foldout("Behaviour")]
-        float maxWanderRange = 30f;
-        
-        [SerializeField, Tooltip("If true, the enemy will only move towards the player if they have line of sight. If false they will always seek out the player."), Foldout("Senses")]
-        bool requireLineOfSight = true;
-        [SerializeField, Tooltip("The maximum distance the character can see"), Foldout("Senses")]
-        float viewDistance = 30f;
-        
-        [SerializeField, Tooltip("The distance the enemy will try to avoid obstacles by."), Foldout("Senses")]
-        float obstacleAvoidanceDistance = 2f;
-        [SerializeField, Tooltip("The source of the sensor array for this enemy. Note this must be inside the enemies collider."), Foldout("Senses")]
+        [SerializeField, Tooltip("The source of the sensor array for this enemy. Note this must be inside the enemies collider."), Foldout("References")]
         Transform sensor;
-        [SerializeField, Tooltip("The layers the character can see"), Foldout("Senses")]
-        LayerMask sensorMask = 0;
-
-        [SerializeField, Tooltip("The chance of dropping a reward when killed."), Foldout("Rewards")]
-        protected float resourcesDropChance = 0.5f;
-        [SerializeField, Tooltip("The resources this enemy drops when killed."), Foldout("Rewards")]
-        protected ResourcesPickup resourcesPrefab;
-
-        [SerializeField, Tooltip("The particle system to play when the enemy is killed."), Foldout("Juice")]
-        protected ParticleSystem deathParticlePrefab;
 
         [SerializeField, Tooltip("The event to trigger when this enemy dies."), Foldout("Events")]
         public UnityEvent onDeath;
@@ -73,7 +46,7 @@ namespace Playground
         {
             get
             { 
-                if (requireLineOfSight && CanSeeTarget == false)
+                if (config.requireLineOfSight && CanSeeTarget == false)
                 {
                     return false;
                 }
@@ -89,7 +62,7 @@ namespace Playground
                 if (Target == null)
                     return false;
 
-                if (Vector3.Distance(Target.position, transform.position) <= viewDistance)
+                if (Vector3.Distance(Target.position, transform.position) <= config.viewDistance)
                 {
                     Vector3 rayTargetPosition = Target.position;
                     rayTargetPosition.y = Target.position.y + 0.8f; // TODO: Should use the seek targets
@@ -104,12 +77,12 @@ namespace Playground
                     }
 #endif
                     RaycastHit hit;
-                    if (Physics.Raycast(ray, out hit, viewDistance, sensorMask))
+                    if (Physics.Raycast(ray, out hit, config.viewDistance, config.sensorMask))
                     {
                         if (hit.transform == Target)
                         {
                             lastKnownPosition = GetDestination(Target.position);
-                            timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + seekDuration;
+                            timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + config.seekDuration;
                             return true;
                         }
 #if UNITY_EDITOR
@@ -129,7 +102,7 @@ namespace Playground
 #if UNITY_EDITOR
                 else if (isDebug)
                 {
-                    Debug.Log($"{name} cannot see the player as they are further than {viewDistance}m away.");
+                    Debug.Log($"{name} cannot see the player as they are further than {config.viewDistance}m away.");
                 }
 #endif
 
@@ -155,14 +128,14 @@ namespace Playground
             Vector3 newPosition = new Vector3();
             for (int i = 0; i < 4; i++)
             {
-                newPosition = UnityEngine.Random.onUnitSphere * optimalDistanceFromPlayer;
+                newPosition = UnityEngine.Random.onUnitSphere * config.optimalDistanceFromPlayer;
                 newPosition += targetPosition;
-                if (newPosition.y >= minimumHeight)
+                if (newPosition.y >= config.minimumHeight)
                 {
                     return newPosition;
                 }
             }
-            newPosition.y = Mathf.Max(newPosition.y, minimumHeight);
+            newPosition.y = Mathf.Max(newPosition.y, config.minimumHeight);
             return newPosition;
         }
 
@@ -191,12 +164,12 @@ namespace Playground
                 return;
             }
 
-            if (requireLineOfSight == false)
+            if (config.requireLineOfSight == false)
             {
                 lastKnownPosition = GetDestination(Target.position);
             }
 
-            if (requireLineOfSight && CanSeeTarget == false)
+            if (config.requireLineOfSight && CanSeeTarget == false)
             {
                 if (Time.timeSinceLevelLoad > timeOfNextWanderPositionChange)
                 {
@@ -220,19 +193,19 @@ namespace Playground
             Vector3 directionToDestination = (destination - transform.position).normalized;
             float currentDistance = Vector3.Distance(transform.position, destination);
 
-            if (currentDistance < optimalDistanceFromPlayer)
+            if (currentDistance < config.optimalDistanceFromPlayer)
             {
-                float distanceToMoveAway = optimalDistanceFromPlayer - currentDistance;
+                float distanceToMoveAway = config.optimalDistanceFromPlayer - currentDistance;
                 destination = transform.position - (directionToDestination * distanceToMoveAway);
             }
 
 
-            if (destination.y < minimumHeight)
+            if (destination.y < config.minimumHeight)
             {
-                destination.y = minimumHeight;
-            } else if (destination.y > maximumHeight)
+                destination.y = config.minimumHeight;
+            } else if (destination.y > config.maximumHeight)
             {
-                destination.y = maximumHeight;
+                destination.y = config.maximumHeight;
             }
 
             float turnAngle = Vector3.Angle(transform.forward, directionToDestination);
@@ -241,7 +214,7 @@ namespace Playground
             bool rotateRight = true;
 
             Ray ray = new Ray(sensor.position, transform.forward);
-            if (Physics.Raycast(ray, out RaycastHit forwardHit, obstacleAvoidanceDistance, sensorMask))
+            if (Physics.Raycast(ray, out RaycastHit forwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
             {
                 if (forwardHit.collider.transform.root != Target)
                 {
@@ -250,7 +223,7 @@ namespace Playground
             }
 
             ray.direction = Quaternion.AngleAxis(turnAngle, transform.transform.up) * transform.forward;
-            if (Physics.Raycast(ray, out RaycastHit rightForwardHit, obstacleAvoidanceDistance, sensorMask))
+            if (Physics.Raycast(ray, out RaycastHit rightForwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
             {
                 if (rightForwardHit.collider.transform.root != Target)
                 {
@@ -260,7 +233,7 @@ namespace Playground
             }
 
             ray.direction = Quaternion.AngleAxis(-turnAngle, transform.transform.up) * transform.forward;
-            if (Physics.Raycast(ray, out RaycastHit leftForwardHit, obstacleAvoidanceDistance, sensorMask))
+            if (Physics.Raycast(ray, out RaycastHit leftForwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
             {
                 if (leftForwardHit.collider.transform.root != Target)
                 {
@@ -273,11 +246,11 @@ namespace Playground
             {
                 if (rotateRight)
                 {
-                    targetRotation = transform.rotation * Quaternion.Euler(0, turnAngle * (distanceToObstacle / obstacleAvoidanceDistance), 0);
+                    targetRotation = transform.rotation * Quaternion.Euler(0, turnAngle * (distanceToObstacle / config.obstacleAvoidanceDistance), 0);
                 }
                 else
                 {
-                    targetRotation = transform.rotation * Quaternion.Euler(0, -turnAngle * (distanceToObstacle / obstacleAvoidanceDistance), 0);
+                    targetRotation = transform.rotation * Quaternion.Euler(0, -turnAngle * (distanceToObstacle / config.obstacleAvoidanceDistance), 0);
                 }
                 //Debug.Log($"Rotating to avoid obstacle F {forwardHit.collider}, L {leftForwardHit.collider}, R {rightForwardHit.collider}");
             }
@@ -291,8 +264,8 @@ namespace Playground
                 }
             }
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            transform.position += transform.forward * speed * speedMultiplier * Time.deltaTime;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, config.rotationSpeed * Time.deltaTime);
+            transform.position += transform.forward * config.speed * speedMultiplier * Time.deltaTime;
             AdjustHeight(destination, speedMultiplier);
         }
 
@@ -301,7 +274,7 @@ namespace Playground
             float heightDifference = transform.position.y - destination.y;
             if ( heightDifference > 0.2f || heightDifference < -0.2f)
             {
-                float rate = speed * speedMultiplier * Time.deltaTime;
+                float rate = config.speed * speedMultiplier * Time.deltaTime;
                 if (destination.y > transform.position.y)
                 {
                     transform.position += Vector3.up * rate;
@@ -318,9 +291,9 @@ namespace Playground
         {
             if (Time.timeSinceLevelLoad > timeOfNextWanderPositionChange)
             {
-                timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + Random.Range(10f, maxWanderRange);
-                wanderDestination = spawnPosition + Random.insideUnitSphere * maxWanderRange;
-                wanderDestination.y = Mathf.Clamp(wanderDestination.y, 1, maxWanderRange);
+                timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + Random.Range(10f, config.maxWanderRange);
+                wanderDestination = spawnPosition + Random.insideUnitSphere * config.maxWanderRange;
+                wanderDestination.y = Mathf.Clamp(wanderDestination.y, 1, config.maxWanderRange);
                 lastKnownPosition = wanderDestination;
 
 #if UNITY_EDITOR
@@ -344,9 +317,9 @@ namespace Playground
             Renderer parentRenderer = GetComponentInChildren<Renderer>();
 
             // TODO use pool for particles
-            if (deathParticlePrefab != null)
+            if (config.deathParticlePrefab != null)
             {
-                ParticleSystem deathParticle = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+                ParticleSystem deathParticle = Instantiate(config.deathParticlePrefab, transform.position, Quaternion.identity);
                 if (parentRenderer != null)
                 {
                     var particleSystemRenderer = deathParticle.GetComponent<ParticleSystemRenderer>();
@@ -359,11 +332,11 @@ namespace Playground
             }
 
             // Drop resources
-            if (Random.value <= resourcesDropChance)
+            if (UnityEngine.Random.value <= config.resourcesDropChance)
             {
                 Vector3 pos = transform.position;
                 pos.y = 0;
-                ResourcesPickup resources = Instantiate(resourcesPrefab, pos, Quaternion.identity);
+                ResourcesPickup resources = Instantiate(config.resourcesPrefab, pos, Quaternion.identity);
                 if (parentRenderer != null)
                 {
                     var resourcesRenderer = resources.GetComponentInChildren<Renderer>();
@@ -378,5 +351,48 @@ namespace Playground
 
             Destroy(gameObject);
         }
+
+
+#if UNITY_EDITOR
+        #region Inspector
+        [Button]
+        private void SaveCopyOfConfig()
+        {
+            string defaultPath = AssetDatabase.GetAssetPath(config);
+            string directoryPath = Path.GetDirectoryName(defaultPath);
+
+            string path = EditorUtility.SaveFilePanel(
+                "Save Enemy Behaviour Definition",
+                directoryPath,
+                $"{transform.root.name} Enemy Behaviour Definition",
+                "asset"
+            );
+
+            if (path.Length != 0)
+            {
+                string relativePath = "Assets" + path.Substring(Application.dataPath.Length);
+
+                EnemyBehaviourDefinition newConfig = ScriptableObject.CreateInstance<EnemyBehaviourDefinition>();
+
+                FieldInfo[] fields = newConfig.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                foreach (FieldInfo field in fields)
+                {
+                    if (field.IsPublic && !Attribute.IsDefined(field, typeof(System.NonSerializedAttribute)) ||
+                        Attribute.IsDefined(field, typeof(SerializeField)))
+                    {
+                        field.SetValue(newConfig, field.GetValue(config));
+                    }
+                }
+
+                AssetDatabase.CreateAsset(newConfig, relativePath);
+                config = newConfig;
+                AssetDatabase.SaveAssets();
+            }
+        }
+        #region Validatoin
+        #endregion
+
+        #endregion
+#endif
     }
 }

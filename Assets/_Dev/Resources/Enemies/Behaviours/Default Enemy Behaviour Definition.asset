@@ -10,9 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 094fd309cbedad74e987c684d8f373f5, type: 3}
-  m_Name: Bolt Enemy Definition
+  m_Name: Default Enemy Behaviour Definition
   m_EditorClassIdentifier: 
-  _droneClip: {fileID: 8300000, guid: ea744d978cea3a542b7a61cc08136dd4, type: 3}
+  speed: 3.5
+  rotationSpeed: 3
+  minimumHeight: 20
+  maximumHeight: 75
+  optimalDistanceFromPlayer: 50
+  _droneClip: {fileID: 0}
   deathClips:
   - {fileID: 8300000, guid: 0a1de67c5382add469eae178ece5e6e5, type: 3}
   - {fileID: 8300000, guid: 4197e96eb4509f146ae6420f3172c8b1, type: 3}

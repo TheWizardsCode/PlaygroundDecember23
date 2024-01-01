@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094fd309cbedad74e987c684d8f373f5, type: 3}
-  m_Name: Shielded Core Enemy Definition
+  m_Script: {fileID: 11500000, guid: 842f110c150f5f24f88e72bacc535395, type: 3}
+  m_Name: Gem Enemy Audio Definition
   m_EditorClassIdentifier: 
-  _droneClip: {fileID: 0}
+  _droneClip: {fileID: 8300000, guid: e8bcddab3fdc910488517e0f282bf4bc, type: 3}
   deathClips:
   - {fileID: 8300000, guid: 0a1de67c5382add469eae178ece5e6e5, type: 3}
   - {fileID: 8300000, guid: 4197e96eb4509f146ae6420f3172c8b1, type: 3}

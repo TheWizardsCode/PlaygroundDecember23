@@ -84,11 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Gem
   description: Moves slowly towards the enemy in a direct line and attacks on contact.
-  speed: 5
-  rotationSpeed: 4
-  minimumHeight: 0.5
-  maximumHeight: 75
-  optimalDistanceFromPlayer: 0.2
+  config: {fileID: 11400000, guid: 43f9ca3645d51bd4bac89412a30dc37d, type: 2}
   seekDuration: 7
   maxWanderRange: 30
   requireLineOfSight: 1
@@ -330,10 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c66edff86b6934292b17047252c5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaults: {fileID: 11400000, guid: dd9dd38bb10772a41aa5a9ce16634dec, type: 2}
+  config: {fileID: 11400000, guid: f69c554eea554f54cb3391a2000f10a7, type: 2}
   droneSource: {fileID: 6274646092407174085}
-  droneClip: {fileID: 8300000, guid: 9a6a8d5101feca341b16462e808284e5, type: 3}
-  deathClips: []
 --- !u!1001 &2121357580465666191
 PrefabInstance:
   m_ObjectHideFlags: 0

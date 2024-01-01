@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094fd309cbedad74e987c684d8f373f5, type: 3}
-  m_Name: Caltrop Enemy Definition
+  m_Script: {fileID: 11500000, guid: 842f110c150f5f24f88e72bacc535395, type: 3}
+  m_Name: Saucer Enemy Audio Definition
   m_EditorClassIdentifier: 
   _droneClip: {fileID: 0}
   deathClips:

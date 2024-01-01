@@ -10,9 +10,9 @@ namespace Playground
 {
     internal class EnemyAudioController : MonoBehaviour
     {
-        [SerializeField, Tooltip("The Enemy Definition to use for default values if any of the values below are not set."), Expandable]
-        [Required("A configuration must be provided. This forms the base definition of the enemy. Higher level enemies will be generated from this base definition.")]
-        EnemyDefinition config = null;
+        [SerializeField, Tooltip("The Enemy Audio Definition defines the sounds to use. The best way to start is to drag in an existing configuration and then save a copy using the button below. Then edit for your needs."), Expandable]
+        [Required("An Audio configuration must be provided.")]
+        EnemyAudioDefinition config = null;
 
         [Header("Audio Sources")]
         [SerializeField, Tooltip("The audio source for this enemies drone sound.")]
@@ -80,7 +80,6 @@ namespace Playground
         }
 
 #if UNITY_EDITOR
-
         #region Inspector
         [Button]
         private void SaveCopyOfConfig()
@@ -91,7 +90,7 @@ namespace Playground
             string path = EditorUtility.SaveFilePanel(
                 "Save Enemy Definition",
                 directoryPath,
-                $"{transform.root.name} Enemy Definition",
+                $"{transform.root.name} Enemy Audio Definition",
                 "asset"
             );
 
@@ -99,7 +98,7 @@ namespace Playground
             {
                 string relativePath = "Assets" + path.Substring(Application.dataPath.Length);
 
-                EnemyDefinition newConfig = ScriptableObject.CreateInstance<EnemyDefinition>();
+                EnemyAudioDefinition newConfig = ScriptableObject.CreateInstance<EnemyAudioDefinition>();
 
                 FieldInfo[] fields = newConfig.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
                 foreach (FieldInfo field in fields)

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 9165906392841844883}
   - component: {fileID: 8117743476493717414}
   - component: {fileID: 4984582729786400570}
+  - component: {fileID: 8024360569292229668}
   m_Layer: 12
   m_Name: Artillery
   m_TagString: Untagged
@@ -82,11 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Artillery
   description: Slow moving, stays at a range and bombards the player.
-  speed: 2
-  rotationSpeed: 1
-  minimumHeight: 0
-  maximumHeight: 0
-  optimalDistanceFromPlayer: 50
+  config: {fileID: 11400000, guid: f46ed6863cef21349831bec09843d1f5, type: 2}
   seekDuration: 15
   maxWanderRange: 50
   requireLineOfSight: 1
@@ -96,15 +93,15 @@ MonoBehaviour:
   sensorMask:
     serializedVersion: 2
     m_Bits: 12781057
-  deathClips:
-  - {fileID: 8300000, guid: 0a1de67c5382add469eae178ece5e6e5, type: 3}
-  - {fileID: 8300000, guid: 4197e96eb4509f146ae6420f3172c8b1, type: 3}
-  - {fileID: 8300000, guid: 8444f39ba82065641832f740cc017832, type: 3}
-  - {fileID: 8300000, guid: 54d105434dfebf5488a65894f6dc6d1b, type: 3}
-  - {fileID: 8300000, guid: 36f38d4fc6992e24db6c1c5ba4cf5987, type: 3}
-  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   resourcesDropChance: 0.55
   resourcesPrefab: {fileID: 8288433013401571843, guid: 273c17fb78a75db47a22c3e1280c0217, type: 3}
+  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
   isDebug: 0
 --- !u!114 &8117743476493717414
 MonoBehaviour:
@@ -235,6 +232,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8024360569292229668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7238103921518997512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c66edff86b6934292b17047252c5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 4d92e955264afd3438dc93853172f0a1, type: 2}
+  droneSource: {fileID: 4984582729786400570}
 --- !u!1001 &6957053980484623106
 PrefabInstance:
   m_ObjectHideFlags: 0

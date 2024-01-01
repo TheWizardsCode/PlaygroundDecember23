@@ -9,13 +9,13 @@ namespace Playground
     /// EnemyDefinition is a ScriptableObject that defines the behaviour of an enemy.
     /// It is used as a basis for configuring the BasicEnemyController for new enemies.
     /// </summary>
-    [CreateAssetMenu(fileName = "Enemy Definition", menuName = "Playground/Enemy Definition", order = 300)]
-    public class EnemyDefinition : ScriptableObject
+    [CreateAssetMenu(fileName = "Enemy Audio Definition", menuName = "Playground/Enemy Audio Definition", order = 300)]
+    public class EnemyAudioDefinition : ScriptableObject
     {
-        [SerializeField, Tooltip("The drone sound to play for this enemy."), Foldout("Clips")]
+        [Header("Audio Clips")]
+        [SerializeField, Tooltip("The drone sound to play for this enemy.")]
         internal AudioClip _droneClip = null;
-
-        [SerializeField, Tooltip("The sound to play when the enemy is killed."), Foldout("Clips")]
+        [SerializeField, Tooltip("The sound to play when the enemy is killed.")]
         internal AudioClip[] deathClips;
 
         /// <summary>
