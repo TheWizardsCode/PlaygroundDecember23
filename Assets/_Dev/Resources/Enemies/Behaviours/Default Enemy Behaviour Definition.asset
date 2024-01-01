@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094fd309cbedad74e987c684d8f373f5, type: 3}
   m_Name: Default Enemy Behaviour Definition
   m_EditorClassIdentifier: 
+  requireLineOfSight: 1
+  viewDistance: 30
   speed: 3.5
   rotationSpeed: 3
   minimumHeight: 20
   maximumHeight: 75
   optimalDistanceFromPlayer: 50
-  _droneClip: {fileID: 0}
-  deathClips:
-  - {fileID: 8300000, guid: 0a1de67c5382add469eae178ece5e6e5, type: 3}
-  - {fileID: 8300000, guid: 4197e96eb4509f146ae6420f3172c8b1, type: 3}
-  - {fileID: 8300000, guid: 8444f39ba82065641832f740cc017832, type: 3}
-  - {fileID: 8300000, guid: 54d105434dfebf5488a65894f6dc6d1b, type: 3}
-  - {fileID: 8300000, guid: 36f38d4fc6992e24db6c1c5ba4cf5987, type: 3}
+  obstacleAvoidanceDistance: 2
+  sensorMask:
+    serializedVersion: 2
+    m_Bits: 0
+  seekDuration: 7
+  maxWanderRange: 30
+  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
+  resourcesDropChance: 0.5
+  resourcesPrefab: {fileID: 0}

@@ -113,6 +113,7 @@ namespace Playground
         internal void OnSpawnerCreated(Spawner spawner)
         {
             spawnersRemaining++;
+            spawner.onDestroyed.AddListener(OnSpawnerDestroyed);
         }
 
         internal void OnSpawnerDestroyed()
@@ -282,6 +283,8 @@ namespace Playground
             }
             
             ConfigureLoadout();
+
+            NeoFpsInputManager.captureMouseCursor = false;
 
             return base.PreSpawnStep();
         }

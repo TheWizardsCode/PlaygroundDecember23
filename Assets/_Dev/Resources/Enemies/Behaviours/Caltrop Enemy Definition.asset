@@ -25,5 +25,6 @@ MonoBehaviour:
     m_Bits: 12781057
   seekDuration: 15
   maxWanderRange: 150
+  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   resourcesDropChance: 0.8
   resourcesPrefab: {fileID: 8288433013401571843, guid: 72f7888ace28a354b9ab0462e17a1c8a, type: 3}

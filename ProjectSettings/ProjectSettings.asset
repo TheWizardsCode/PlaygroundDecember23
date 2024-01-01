@@ -136,7 +136,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.0.0.38
+  bundleVersion: 0.0.0.41
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,12 +161,12 @@ PlayerSettings:
     Standalone: com.Wizards-Code.PlaygroundDecember23
     WebGL: com.Wizards-Code.PlaygroundDecember23
   buildNumber:
-    Standalone: 41
+    Standalone: 44
     VisionOS: 0
-    iPhone: 41
+    iPhone: 44
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 42
+  AndroidBundleVersionCode: 45
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -652,7 +652,7 @@ PlayerSettings:
     PS5: UNITY_POST_PROCESSING_STACK_V2
     QNX: UNITY_POST_PROCESSING_STACK_V2
     Stadia: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: NEOFPS;UNITY_POST_PROCESSING_STACK_V2
+    Standalone: BUILD_TYPE_DEVELOPERTEST;BUILD_PLATFORM_PC;BUILD_ARCH_WINDOWSX64;BUILD_BACKEND_MONO;NEOFPS;UNITY_POST_PROCESSING_STACK_V2
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
     WebGL: UNITY_POST_PROCESSING_STACK_V2;NEOFPS
     XboxOne: UNITY_POST_PROCESSING_STACK_V2

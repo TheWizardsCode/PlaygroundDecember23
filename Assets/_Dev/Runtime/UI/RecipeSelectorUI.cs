@@ -245,16 +245,16 @@ namespace Playground
 
         private void QuitSelectionUI()
         {
+            NeoFpsInputManager.captureMouseCursor = true;
+
             if (m_PreSpawn)
             {
                 if (!string.IsNullOrWhiteSpace(m_CombatScene))
                 {
-                    NeoFpsInputManager.captureMouseCursor = false;
                     NeoSceneManager.LoadScene(m_CombatScene);
                 }
             }
             else {
-                NeoFpsInputManager.captureMouseCursor = true;
                 Destroy(gameObject);
             }
         }
