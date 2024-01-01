@@ -42,13 +42,11 @@ GameObject:
   - component: {fileID: 1450764596457488462}
   - component: {fileID: 4070675553001932281}
   - component: {fileID: 5219187662690625511}
-  - component: {fileID: 5391398547824553434}
-  - component: {fileID: 3281636757601728904}
   - component: {fileID: 8124027268666945902}
   - component: {fileID: 2253302858215140040}
   m_Layer: 12
   m_Name: Gem
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +66,7 @@ Transform:
   m_Children:
   - {fileID: 397087759782533152}
   - {fileID: 3468349145074774147}
+  - {fileID: 1965897515796100135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4070675553001932281
@@ -85,18 +84,7 @@ MonoBehaviour:
   displayName: Gem
   description: Moves slowly towards the enemy in a direct line and attacks on contact.
   config: {fileID: 11400000, guid: 08d6615386e39044d83abf95b1257611, type: 2}
-  seekDuration: 15
-  maxWanderRange: 75
-  requireLineOfSight: 1
-  viewDistance: 100
-  obstacleAvoidanceDistance: 5
   sensor: {fileID: 3468349145074774147}
-  sensorMask:
-    serializedVersion: 2
-    m_Bits: 12781057
-  resourcesDropChance: 0.8
-  resourcesPrefab: {fileID: 8288433013401571843, guid: 72f7888ace28a354b9ab0462e17a1c8a, type: 3}
-  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -137,42 +125,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!135 &5391398547824553434
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7985948857531989657}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.5
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &3281636757601728904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7985948857531989657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f7ece69f6b33e41b0d85e8f9c53e02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DamagePerSecond: 20
-  m_DamageType: 1
-  m_DamageDescription: Damage Zone
 --- !u!82 &8124027268666945902
 AudioSource:
   m_ObjectHideFlags: 0
@@ -474,3 +426,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DissolveTime: 1
+--- !u!1001 &5032170605116415703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1450764596457488462}
+    m_Modifications:
+    - target: {fileID: 1120541826775380849, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120541826775380849, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881717928048593120, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_Name
+      value: Contact Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+--- !u!4 &1965897515796100135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+  m_PrefabInstance: {fileID: 5032170605116415703}
+  m_PrefabAsset: {fileID: 0}

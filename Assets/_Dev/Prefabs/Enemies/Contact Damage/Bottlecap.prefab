@@ -42,13 +42,11 @@ GameObject:
   - component: {fileID: 1450764596457488462}
   - component: {fileID: 4070675553001932281}
   - component: {fileID: 5219187662690625511}
-  - component: {fileID: 3281636757601728904}
-  - component: {fileID: 8920570852494711528}
   - component: {fileID: 6274646092407174085}
   - component: {fileID: 8698099878786347980}
   m_Layer: 12
   m_Name: Bottlecap
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +66,7 @@ Transform:
   m_Children:
   - {fileID: 1943912401393000292}
   - {fileID: 5256639003744301464}
+  - {fileID: 8277986127168470828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4070675553001932281
@@ -85,18 +84,7 @@ MonoBehaviour:
   displayName: Gem
   description: Moves slowly towards the enemy in a direct line and attacks on contact.
   config: {fileID: 11400000, guid: 43f9ca3645d51bd4bac89412a30dc37d, type: 2}
-  seekDuration: 7
-  maxWanderRange: 30
-  requireLineOfSight: 1
-  viewDistance: 100
-  obstacleAvoidanceDistance: 5
   sensor: {fileID: 5256639003744301464}
-  sensorMask:
-    serializedVersion: 2
-    m_Bits: 12781057
-  resourcesDropChance: 0.7
-  resourcesPrefab: {fileID: 8288433013401571843, guid: 273c17fb78a75db47a22c3e1280c0217, type: 3}
-  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -137,42 +125,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3281636757601728904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7985948857531989657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f7ece69f6b33e41b0d85e8f9c53e02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DamagePerSecond: 25
-  m_DamageType: 1
-  m_DamageDescription: Damage Zone
---- !u!135 &8920570852494711528
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7985948857531989657}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.25
-  m_Center: {x: 0, y: -0.4, z: 0}
 --- !u!82 &6274646092407174085
 AudioSource:
   m_ObjectHideFlags: 0
@@ -485,4 +437,82 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b23e285d73eacf4eaf523aa195f5335, type: 3}
   m_PrefabInstance: {fileID: 2121357580465666191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3205658419533305308
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1450764596457488462}
+    m_Modifications:
+    - target: {fileID: 1120541826775380849, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_Radius
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120541826775380849, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_Center.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120541826775380849, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881717928048593120, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_Name
+      value: Contact Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157215227061851081, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_DamagePerSecond
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+--- !u!4 &8277986127168470828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+  m_PrefabInstance: {fileID: 3205658419533305308}
   m_PrefabAsset: {fileID: 0}
