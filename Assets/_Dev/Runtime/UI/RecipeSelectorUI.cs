@@ -74,6 +74,8 @@ namespace Playground
             {
                 QuitSelectionUI();
             }
+
+            NeoFpsInputManager.captureMouseCursor = false;
         }
 
         /// <summary>
@@ -238,7 +240,7 @@ namespace Playground
         private void QuitSelectionUI()
         {
             isOpen = false;
-
+            
             if (FpsSoloCharacter.localPlayerCharacter == null)
             {
                 if (!string.IsNullOrWhiteSpace(m_CombatScene))
