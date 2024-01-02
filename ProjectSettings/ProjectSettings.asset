@@ -136,7 +136,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.0.0.44
+  bundleVersion: 0.0.0.45
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,12 +161,12 @@ PlayerSettings:
     Standalone: com.Wizards-Code.PlaygroundDecember23
     WebGL: com.Wizards-Code.PlaygroundDecember23
   buildNumber:
-    Standalone: 47
+    Standalone: 48
     VisionOS: 0
-    iPhone: 47
+    iPhone: 48
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 48
+  AndroidBundleVersionCode: 49
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

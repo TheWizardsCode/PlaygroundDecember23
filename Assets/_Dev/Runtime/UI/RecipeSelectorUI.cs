@@ -74,8 +74,10 @@ namespace Playground
             {
                 QuitSelectionUI();
             }
-
-            NeoFpsInputManager.captureMouseCursor = false;
+            else if (FpsSoloCharacter.localPlayerCharacter == null)
+            {
+                NeoFpsInputManager.captureMouseCursor = false;
+            }
         }
 
         /// <summary>

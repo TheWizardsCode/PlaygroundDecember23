@@ -81,7 +81,7 @@ namespace Playground
                     {
                         if (hit.transform == Target)
                         {
-                            lastKnownPosition = GetDestination(Target.position);
+                            goalDestination = GetDestination(Target.position);
                             timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + config.seekDuration;
                             return true;
                         }
@@ -140,7 +140,7 @@ namespace Playground
         }
 
         Vector3 spawnPosition = Vector3.zero;
-        Vector3 lastKnownPosition = Vector3.zero;
+        Vector3 goalDestination = Vector3.zero;
         Vector3 wanderDestination = Vector3.zero;
         float timeOfNextWanderPositionChange = 0;
 
@@ -166,7 +166,14 @@ namespace Playground
 
             if (config.requireLineOfSight == false)
             {
-                lastKnownPosition = GetDestination(Target.position);
+                goalDestination = GetDestination(Target.position);
+            }
+
+            float currentDistance = Vector3.Distance(transform.position, goalDestination);
+            if (currentDistance < config.optimalDistanceFromPlayer)
+            {
+                float distanceToMoveAway = config.optimalDistanceFromPlayer - currentDistance;
+                goalDestination = transform.position - (transform.forward * distanceToMoveAway);
             }
 
             if (config.requireLineOfSight && CanSeeTarget == false)
@@ -177,29 +184,21 @@ namespace Playground
                 }
                 else
                 {
-                    MoveTo(lastKnownPosition);
+                    MoveTowards(goalDestination);
                 }
 
                 return;
             }
             else
             {
-                MoveTo(lastKnownPosition);
+                MoveTowards(goalDestination);
             }
         }
 
-        internal virtual void MoveTo(Vector3 destination, float speedMultiplier = 1)
+        internal virtual void MoveTowards(Vector3 destination, float speedMultiplier = 1)
         {
             Vector3 directionToDestination = (destination - transform.position).normalized;
-            float currentDistance = Vector3.Distance(transform.position, destination);
-
-            if (currentDistance < config.optimalDistanceFromPlayer)
-            {
-                float distanceToMoveAway = config.optimalDistanceFromPlayer - currentDistance;
-                destination = transform.position - (directionToDestination * distanceToMoveAway);
-            }
-
-
+            
             if (destination.y < config.minimumHeight)
             {
                 destination.y = config.minimumHeight;
@@ -266,6 +265,7 @@ namespace Playground
 
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, config.rotationSpeed * Time.deltaTime);
             transform.position += transform.forward * config.speed * speedMultiplier * Time.deltaTime;
+
             AdjustHeight(destination, speedMultiplier);
         }
 
@@ -294,16 +294,16 @@ namespace Playground
                 timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + Random.Range(10f, config.maxWanderRange);
                 wanderDestination = spawnPosition + Random.insideUnitSphere * config.maxWanderRange;
                 wanderDestination.y = Mathf.Clamp(wanderDestination.y, 1, config.maxWanderRange);
-                lastKnownPosition = wanderDestination;
+                goalDestination = wanderDestination;
 
 #if UNITY_EDITOR
                 if (isDebug)
-                    Debug.LogWarning($"{name} updating wander position to {lastKnownPosition}");
+                    Debug.LogWarning($"{name} updating wander position to {goalDestination}");
 #endif
 
             }
 
-            MoveTo(wanderDestination);
+            MoveTowards(wanderDestination);
         }
 
         public void OnAliveIsChanged(bool isAlive)

@@ -22,7 +22,7 @@ namespace Playground
 
             if (shouldAttack)
             {
-                MoveTo(Target.position, attackSpeedMultiplier);
+                MoveTowards(Target.position, attackSpeedMultiplier);
             } else
             {
                 base.Update();
