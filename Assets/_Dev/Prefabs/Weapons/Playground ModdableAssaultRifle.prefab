@@ -6531,7 +6531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartActive: 1
   m_ActivationMode: 0
-  m_ShotSpacing: 5
+  m_ShotSpacing: 10
   m_TriggerHoldAnimKey: TriggerHold
 --- !u!114 &90402370139473426
 MonoBehaviour:
