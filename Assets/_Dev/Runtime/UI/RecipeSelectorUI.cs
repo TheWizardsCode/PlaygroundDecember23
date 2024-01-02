@@ -87,6 +87,7 @@ namespace Playground
         public void ChooseRecipe() {
             NeoFpsInputManager.captureMouseCursor = false;
 
+            offers = RecipeManager.GetOffers(m_NumberOfOffers);
             m_PersistentData = RogueLiteManager.persistentData;
             m_RunData = RogueLiteManager.runData;
 
