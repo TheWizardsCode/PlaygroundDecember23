@@ -41,7 +41,7 @@ namespace Playground
             StopDrone();
         }
 
-        protected void OnDeath()
+        protected void OnDeath(BasicEnemyController enemy)
         {
             droneSource.Stop();
 

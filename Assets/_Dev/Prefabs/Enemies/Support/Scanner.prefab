@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5415787680099374018}
   - component: {fileID: 4337732152716580310}
   - component: {fileID: 2131261758738502137}
+  - component: {fileID: 4437746279418429034}
   m_Layer: 12
   m_Name: Scanner
   m_TagString: Untagged
@@ -49,22 +50,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735e4c1315dedbc4a869e8dc7e67a4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayName: Doughnut
+  displayName: Scanner
   description: The doughnut has sensors that mean it can detect and hunt down the
     player relentlessly. Fortunately it is not well armed.
+  challengeRating: 1
   config: {fileID: 11400000, guid: 599dc57cf7f44474bb380ac3dee348be, type: 2}
-  seekDuration: 180
-  maxWanderRange: 500
-  requireLineOfSight: 0
-  viewDistance: 100
-  obstacleAvoidanceDistance: 5
   sensor: {fileID: 3991244696875155355}
-  sensorMask:
-    serializedVersion: 2
-    m_Bits: 12781057
-  resourcesDropChance: 0.8
-  resourcesPrefab: {fileID: 8288433013401571843, guid: 72f7888ace28a354b9ab0462e17a1c8a, type: 3}
-  deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -260,6 +251,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4437746279418429034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244797647134910332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5182254e9026d66408c01f56d442e4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScanPrecision: 50
+  m_ScanFrequency: 10
+  m_ReportSuspectedLocation: 1
 --- !u!1 &1696857280060097259
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,68 +297,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1565113201411319522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1062617173443821979
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8946617122499836180}
-    m_Modifications:
-    - target: {fileID: 1070318524709720543, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_Name
-      value: EnemyBurstFireGun
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
---- !u!4 &6511195740291069931 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6116810472173647472, guid: 2f077e09c83a3aa48a0ec87eaddb886a, type: 3}
-  m_PrefabInstance: {fileID: 1062617173443821979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3749929356114862929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,10 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -4025470130324596155, guid: 1352bd14e9f58bf4bb7e407d4fde94f4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6511195740291069931}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -5117700066308340382, guid: 1352bd14e9f58bf4bb7e407d4fde94f4, type: 3}
       insertIndex: -1
@@ -561,8 +502,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 150, y: 150, z: 150}
---- !u!4 &8946617122499836180 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4025470130324596155, guid: 1352bd14e9f58bf4bb7e407d4fde94f4, type: 3}
-  m_PrefabInstance: {fileID: 3749929356114862929}
-  m_PrefabAsset: {fileID: 0}

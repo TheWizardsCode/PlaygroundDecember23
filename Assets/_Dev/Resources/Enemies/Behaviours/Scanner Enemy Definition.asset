@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094fd309cbedad74e987c684d8f373f5, type: 3}
   m_Name: Scanner Enemy Definition
   m_EditorClassIdentifier: 
-  requireLineOfSight: 0
-  viewDistance: 100
+  requireLineOfSight: 1
+  viewDistance: 40
   speed: 5
   rotationSpeed: 3
-  minimumHeight: 2
-  maximumHeight: 18
-  optimalDistanceFromPlayer: 15
-  obstacleAvoidanceDistance: 5
+  minimumHeight: 20
+  maximumHeight: 30
+  optimalDistanceFromPlayer: 45
+  obstacleAvoidanceDistance: 10
   sensorMask:
     serializedVersion: 2
     m_Bits: 12682753
-  seekDuration: 180
+  shouldWander: 0
   maxWanderRange: 500
+  seekDuration: 180
   deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
-  resourcesDropChance: 0.5
+  resourcesDropChance: 0.1
   resourcesPrefab: {fileID: 8288433013401571843, guid: 72f7888ace28a354b9ab0462e17a1c8a, type: 3}

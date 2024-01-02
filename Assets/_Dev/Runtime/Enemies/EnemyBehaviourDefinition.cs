@@ -34,12 +34,14 @@ namespace Playground
         internal float obstacleAvoidanceDistance = 2f;
         [SerializeField, Tooltip("The layers the character can see")]
         internal LayerMask sensorMask = 0;
+        [SerializeField, Tooltip("If the enemy cannot see the player should they wander? Set this to true if you want the AI to do more than be stationary and there is no other moduls to tell it what to do when the player is not seen.")]
+        internal bool shouldWander = true;
+        [SerializeField, Tooltip("The maximum distance the enemy will wander from their spawn point. The enemy will move further away than this when they are chasing the player but will return to within this range if they go back to a wandering state."), ShowIf("shouldWander")]
+        internal float maxWanderRange = 30f;
 
         [Header("Seek Behaviour")]
         [SerializeField, Tooltip("How long the enemy will seek out the player for after losing sight of them.")]
         internal float seekDuration = 7;
-        [SerializeField, Tooltip("The maximum distance the enemy will wander from their spawn point. The enemy will move further away than this when they are chasing the player but will return to within this range if they go back to a wandering state.")]
-        internal float maxWanderRange = 30f;
 
         [Header("Juice")]
         [SerializeField, Tooltip("The particle system to play when the enemy is killed.")]

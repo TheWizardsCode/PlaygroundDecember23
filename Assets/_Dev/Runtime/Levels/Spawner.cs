@@ -9,6 +9,9 @@ namespace Playground
 {
     public class Spawner : MonoBehaviour
     {
+        [SerializeField, Tooltip("The level of this spawner.")]
+        internal int challengeRating = 3;
+
         [Header("Spawn Behaviours")]
         [SerializeField, Tooltip("Distance to player for this spawner to be activated. If this is set to 0 then it will always be active, if >0 then the spawner will only be active when the player is within this many units. If the player moves further away then the spawner will pause.")]
         float activeRange = 0;
@@ -43,7 +46,7 @@ namespace Playground
 
         [Header("Events")]
         [SerializeField, Tooltip("The event to trigger when this spawner is destroyed.")]
-        public UnityEvent onDestroyed;
+        public UnityEvent<Spawner> onDestroyed;
         [SerializeField, Tooltip("The event to trigger when an enemy is spawned.")]
         public UnityEvent<BasicEnemyController> onEnemySpawned;
         [SerializeField, Tooltip("The event to trigger when all waves are complete.")]
@@ -128,7 +131,7 @@ namespace Playground
         {
             StopAllCoroutines();
 
-            onDestroyed?.Invoke();
+            onDestroyed?.Invoke(this);
         }
 
         void RegisterShieldGenerator(BasicHealthManager h)
@@ -307,6 +310,19 @@ namespace Playground
             waves = currentLevelDefinition.Waves;
             timeBetweenWaves  = currentLevelDefinition.WaveWait;
             generateWaves = currentLevelDefinition.GenerateNewWaves;
+        }
+
+        /// <summary>
+        /// The spawner will attempt to spawn the given scanner prefab.
+        /// </summary>
+        /// <param name="scannerPrefab"></param>
+        internal void RequestSpawn(BasicEnemyController enemyPrefab)
+        {
+            Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
+            BasicEnemyController enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            spawnedEnemies.Add(enemy);
+
+            onEnemySpawned?.Invoke(enemy);
         }
     }
 }

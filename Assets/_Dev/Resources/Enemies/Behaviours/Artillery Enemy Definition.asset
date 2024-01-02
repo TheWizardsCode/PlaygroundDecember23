@@ -23,8 +23,9 @@ MonoBehaviour:
   sensorMask:
     serializedVersion: 2
     m_Bits: 12781057
-  seekDuration: 15
+  shouldWander: 1
   maxWanderRange: 50
+  seekDuration: 45
   deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   resourcesDropChance: 0.55
   resourcesPrefab: {fileID: 8288433013401571843, guid: 273c17fb78a75db47a22c3e1280c0217, type: 3}

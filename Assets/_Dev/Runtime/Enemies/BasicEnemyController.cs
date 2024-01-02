@@ -16,16 +16,18 @@ namespace Playground
         protected string displayName = "TBD";
         [SerializeField, TextArea, Tooltip("The description of this enemy as displayed in the UI.")]
         protected string description = "TBD";
+        [SerializeField, Tooltip("The level of this enemy. Higher level enemies will be more difficult to defeat.")]
+        internal int challengeRating = 1;
 
         [SerializeField, Tooltip("The Enemy behaviour definition defines how this enemy will behave. The best way to start is to drag in an existing configuration and then save a copy using the button below. Then edit for your needs."), Expandable]
         [Required("A configuration must be provided. This forms the base definition of the enemy. Higher level enemies will be generated from this base definition.")]
-        EnemyBehaviourDefinition config = null;
+        internal EnemyBehaviourDefinition config = null;
 
         [SerializeField, Tooltip("The source of the sensor array for this enemy. Note this must be inside the enemies collider."), Foldout("References")]
         Transform sensor;
 
         [SerializeField, Tooltip("The event to trigger when this enemy dies."), Foldout("Events")]
-        public UnityEvent onDeath;
+        public UnityEvent<BasicEnemyController> onDeath;
         [SerializeField, Tooltip("The event to trigger when this enemy is destroyed."), Foldout("Events")]
         public UnityEvent onDestroyed;
 
@@ -140,7 +142,7 @@ namespace Playground
         }
 
         Vector3 spawnPosition = Vector3.zero;
-        Vector3 goalDestination = Vector3.zero;
+        internal Vector3 goalDestination = Vector3.zero;
         Vector3 wanderDestination = Vector3.zero;
         float timeOfNextWanderPositionChange = 0;
 
@@ -160,7 +162,10 @@ namespace Playground
         {
             if (Target == null)
             {
-                Wander();
+                if (config.shouldWander)
+                {
+                    Wander();
+                }
                 return;
             }
 
@@ -169,16 +174,11 @@ namespace Playground
                 goalDestination = GetDestination(Target.position);
             }
 
-            float currentDistance = Vector3.Distance(transform.position, goalDestination);
-            if (currentDistance < config.optimalDistanceFromPlayer)
-            {
-                float distanceToMoveAway = config.optimalDistanceFromPlayer - currentDistance;
-                goalDestination = transform.position - (transform.forward * distanceToMoveAway);
-            }
+            MoveAwayIfTooClose();
 
             if (config.requireLineOfSight && CanSeeTarget == false)
             {
-                if (Time.timeSinceLevelLoad > timeOfNextWanderPositionChange)
+                if (config.shouldWander && Time.timeSinceLevelLoad > timeOfNextWanderPositionChange)
                 {
                     Wander();
                 }
@@ -192,6 +192,16 @@ namespace Playground
             else
             {
                 MoveTowards(goalDestination);
+            }
+        }
+
+        protected void MoveAwayIfTooClose()
+        {
+            float currentDistance = Vector3.Distance(transform.position, goalDestination);
+            if (currentDistance < config.optimalDistanceFromPlayer)
+            {
+                float distanceToMoveAway = config.optimalDistanceFromPlayer - currentDistance;
+                goalDestination = transform.position - (transform.forward * distanceToMoveAway);
             }
         }
 
@@ -287,7 +297,7 @@ namespace Playground
             }
         }
 
-        private void Wander()
+        protected void Wander()
         {
             if (Time.timeSinceLevelLoad > timeOfNextWanderPositionChange)
             {
@@ -347,7 +357,7 @@ namespace Playground
                 }
             }
 
-            onDeath?.Invoke();
+            onDeath?.Invoke(this);
 
             Destroy(gameObject);
         }
@@ -388,6 +398,18 @@ namespace Playground
                 config = newConfig;
                 AssetDatabase.SaveAssets();
             }
+        }
+
+        /// <summary>
+        /// The Enemy is requested to move to and attack the location provided. 
+        /// The enemy will move to a point near the location and attack if it sees a target on the way.
+        /// </summary>
+        /// <param name="position"></param>
+        internal void RequestAttack(Vector3 position)
+        {
+            goalDestination = GetDestination(position);
+            timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + config.seekDuration;
+            //Debug.Log($"{name} has been requested to attack {position}.");
         }
         #region Validatoin
         #endregion

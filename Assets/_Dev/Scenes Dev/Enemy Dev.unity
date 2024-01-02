@@ -621,10 +621,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scanner
       objectReference: {fileID: 0}
-    - target: {fileID: 244797647134910332, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1565113201411319522, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -664,10 +660,6 @@ PrefabInstance:
     - target: {fileID: 1565113201411319522, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4449391905032569489, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
-      propertyPath: displayName
-      value: Scanner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

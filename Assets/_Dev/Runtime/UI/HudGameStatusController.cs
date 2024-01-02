@@ -44,7 +44,7 @@ namespace Playground
             spawner.onEnemySpawned.AddListener(OnEnemySpawned);
         }
 
-        private void OnSpawnerDestroyed()
+        private void OnSpawnerDestroyed(Spawner spawner)
         {
             spawnersCount--;
             if (m_SpawnersText != null)

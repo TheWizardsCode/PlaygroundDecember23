@@ -35,6 +35,8 @@ namespace Playground
         int nextRewardsLevel = 200;
         private int spawnersRemaining = int.MaxValue;
 
+        public static PlaygroundDecember23GameMode Instance { get; private set; }
+
         LevelGenerator _levelGenerator;
         internal LevelGenerator levelGenerator
         {
@@ -67,6 +69,16 @@ namespace Playground
         #region Unity Life-cycle
         protected override void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
             levelGenerator = GetComponentInChildren<LevelGenerator>();
             levelGenerator.onSpawnerCreated.AddListener(OnSpawnerCreated);
 
@@ -116,7 +128,7 @@ namespace Playground
             spawner.onDestroyed.AddListener(OnSpawnerDestroyed);
         }
 
-        internal void OnSpawnerDestroyed()
+        internal void OnSpawnerDestroyed(Spawner spawner)
         {
             spawnersRemaining--;
         }
