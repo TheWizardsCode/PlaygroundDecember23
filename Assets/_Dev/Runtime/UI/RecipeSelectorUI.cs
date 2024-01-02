@@ -18,8 +18,8 @@ namespace Playground
     public class RecipeSelectorUI : MonoBehaviour
     {
         [Header("Behaviour")]
-        [SerializeField, Tooltip("If this UI is being shown before the run actually starts, e.g. in a Hub Scene, this should be set to true. If, however, the player has been spawned and this is being shown in a run then this should be false.")]
-        private bool m_PreSpawn = true;
+        [SerializeField, Tooltip("If true then the selector will be opened as soon as it is instantiated. If false a call to `ChooseRecipe` is required to open the selector.")]
+        bool isOpen = false;
         [SerializeField, Tooltip("If true then selections will be recorded in persistent data and will survive between runs. If false then the selection will be recorded in run data and lost upon death.")]
         private bool m_MakePersistentSelections = true;
         [SerializeField, Tooltip("If true then the player will be given the item as well as the recipe. If they are given the item they will be charged for it, and it will be available immediately.")]
@@ -70,14 +70,9 @@ namespace Playground
         {
             offers = RecipeManager.GetOffers(m_NumberOfOffers);
 
-            if (offers.Count == 0)
+            if (FpsSoloCharacter.localPlayerCharacter != null && offers.Count == 0)
             {
                 QuitSelectionUI();
-            }
-
-            if (m_PreSpawn)
-            {
-                ChooseRecipe();
             }
         }
 
@@ -85,20 +80,20 @@ namespace Playground
         /// Display the UI and start the choosing process.
         /// When a recipe is chosen the UI will be hidden and the chosen recipe will be added to the player's runData.
         /// </summary>
-        /// <param name="numberOfOffers">The number of offers that should be presented.</param>
-        /// <param name="numberOfSelections">The number of selections that can be made.</param>
-        public void ChooseRecipe() { 
+        public void ChooseRecipe() {
             NeoFpsInputManager.captureMouseCursor = false;
 
             m_PersistentData = RogueLiteManager.persistentData;
             m_RunData = RogueLiteManager.runData;
 
             optionsBackground = MakeTex(2, 2, new Color(0.4f, 0.4f, 0.4f, 0.5f));
+
+            isOpen = true;
         }
 
         void OnGUI()
         {
-            if (offers == null)
+            if (isOpen == false || offers == null)
                 return;
 
             if (m_ResourcesText != null)
@@ -106,110 +101,107 @@ namespace Playground
                 m_ResourcesText.text = RogueLiteManager.persistentData.currentResources.ToString();
             }
 
-            if (m_PersistentData != null)
+            int numberOfOffers = offers.Count;
+            float screenWidth = Screen.width;
+            float screenHeight = Screen.height;
+            float targetWidth = screenWidth * 0.9f;
+            float targetHeight = screenHeight * 0.5f;
+
+            float cardWidth = (targetWidth * 0.8f) / numberOfOffers; 
+
+            float imageHeight = targetHeight * 0.6f;
+            float imageWidth = 640 * (imageHeight / 960f);
+
+            GUILayout.BeginArea(new Rect((screenWidth - targetWidth) / 2, (screenHeight - targetHeight) / 2, targetWidth, targetHeight));
+
+            GUILayout.BeginHorizontal(GUILayout.Width(targetWidth), GUILayout.Height(targetHeight));
+            GUILayout.FlexibleSpace();
+
+            if (m_NotEnoughResourcesMessage != null)
             {
-                int numberOfOffers = offers.Count;
-                float screenWidth = Screen.width;
-                float screenHeight = Screen.height;
-                float targetWidth = screenWidth * 0.9f;
-                float targetHeight = screenHeight * 0.5f;
+                m_NotEnoughResourcesMessage.gameObject.SetActive(true);
+            }
 
-                float cardWidth = (targetWidth * 0.8f) / numberOfOffers; 
-
-                float imageHeight = targetHeight * 0.6f;
-                float imageWidth = 640 * (imageHeight / 960f);
-
-                GUILayout.BeginArea(new Rect((screenWidth - targetWidth) / 2, (screenHeight - targetHeight) / 2, targetWidth, targetHeight));
-
-                GUILayout.BeginHorizontal(GUILayout.Width(targetWidth), GUILayout.Height(targetHeight));
-                GUILayout.FlexibleSpace();
+            for (int i = numberOfOffers - 1; i >= 0; i--)
+            {
+                IRecipe offer = offers[i];
+                if (RogueLiteManager.persistentData.currentResources < offer.Cost)
+                {
+                    continue;
+                }
 
                 if (m_NotEnoughResourcesMessage != null)
                 {
-                    m_NotEnoughResourcesMessage.gameObject.SetActive(true);
+                    m_NotEnoughResourcesMessage.gameObject.SetActive(false);
                 }
 
-                for (int i = numberOfOffers - 1; i >= 0; i--)
-                {
-                    IRecipe offer = offers[i];
-                    if (RogueLiteManager.persistentData.currentResources < offer.Cost)
-                    {
-                        continue;
-                    }
+                GUIStyle optionStyle = new GUIStyle(GUI.skin.box);
+                optionStyle.normal.background = optionsBackground;
 
-                    if (m_NotEnoughResourcesMessage != null)
-                    {
-                        m_NotEnoughResourcesMessage.gameObject.SetActive(false);
-                    }
+                GUIStyle descriptionStyle = new GUIStyle(GUI.skin.textArea);
+                descriptionStyle.fontSize = 16;
+                descriptionStyle.alignment = TextAnchor.MiddleCenter;
+                descriptionStyle.normal.textColor = Color.grey;
 
-                    GUIStyle optionStyle = new GUIStyle(GUI.skin.box);
-                    optionStyle.normal.background = optionsBackground;
+                GUIStyle selectionButtonStyle = new GUIStyle(GUI.skin.button);
+                selectionButtonStyle.fontSize = 25;
 
-                    GUIStyle descriptionStyle = new GUIStyle(GUI.skin.textArea);
-                    descriptionStyle.fontSize = 16;
-                    descriptionStyle.alignment = TextAnchor.MiddleCenter;
-                    descriptionStyle.normal.textColor = Color.grey;
+                GUILayout.BeginVertical(optionStyle, GUILayout.Width(cardWidth));
+                GUILayout.FlexibleSpace();
 
-                    GUIStyle selectionButtonStyle = new GUIStyle(GUI.skin.button);
-                    selectionButtonStyle.fontSize = 25;
+                GUILayout.BeginHorizontal();
+                GUILayout.FlexibleSpace();
 
-                    GUILayout.BeginVertical(optionStyle, GUILayout.Width(cardWidth));
-                    GUILayout.FlexibleSpace();
-
-                    GUILayout.BeginHorizontal();
-                    GUILayout.FlexibleSpace();
-
-                    GUILayout.Box(offer.HeroImage, GUILayout.Width(imageWidth), GUILayout.Height(imageHeight));
-
-                    GUILayout.FlexibleSpace();
-                    GUILayout.EndHorizontal();
-
-                    GUILayout.FlexibleSpace();
-
-                    GUILayout.Label(offer.Description, descriptionStyle, GUILayout.MinHeight(60), GUILayout.MaxHeight(60));
-
-                    GUILayout.FlexibleSpace();
-                    string selectionButtonText;
-                    if (m_MakePersistentSelections)
-                    {
-                        selectionButtonText = $"{offer.DisplayName} ({offer.Cost} resources)";
-                    }
-                    else
-                    {
-                        selectionButtonText = $"{offer.DisplayName}";
-                    }
-                    if (GUILayout.Button(selectionButtonText, selectionButtonStyle, GUILayout.Height(50)))
-                    {
-                        Select(offer);
-                    }
-
-                    GUILayout.EndVertical();
-                }
+                GUILayout.Box(offer.HeroImage, GUILayout.Width(imageWidth), GUILayout.Height(imageHeight));
 
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
 
-                GUILayout.EndArea();
+                GUILayout.FlexibleSpace();
 
+                GUILayout.Label(offer.Description, descriptionStyle, GUILayout.MinHeight(60), GUILayout.MaxHeight(60));
 
-                GUILayout.BeginArea(new Rect((screenWidth - targetWidth) / 2, screenHeight - (targetHeight / 4), targetWidth, targetHeight));
-
-                GUIStyle startRunButtonStyle = new GUIStyle(GUI.skin.button);
-                startRunButtonStyle.fontSize = 25;
-
-                string startRunButtonText = "Back to the Action";
-                if (m_PreSpawn)
+                GUILayout.FlexibleSpace();
+                string selectionButtonText;
+                if (m_MakePersistentSelections)
                 {
-                    startRunButtonText = "Enter Combat";
+                    selectionButtonText = $"{offer.DisplayName} ({offer.Cost} resources)";
+                }
+                else
+                {
+                    selectionButtonText = $"{offer.DisplayName}";
+                }
+                if (GUILayout.Button(selectionButtonText, selectionButtonStyle, GUILayout.Height(50)))
+                {
+                    Select(offer);
                 }
 
-                if (GUILayout.Button(startRunButtonText, startRunButtonStyle, GUILayout.Height(50)))
-                {
-                    QuitSelectionUI();
-                }
+                GUILayout.EndVertical();
+            }
 
-                GUILayout.EndArea();
-            }   
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+
+            GUILayout.EndArea();
+
+
+            GUILayout.BeginArea(new Rect((screenWidth - targetWidth) / 2, screenHeight - (targetHeight / 4), targetWidth, targetHeight));
+
+            GUIStyle startRunButtonStyle = new GUIStyle(GUI.skin.button);
+            startRunButtonStyle.fontSize = 25;
+
+            string startRunButtonText = "Back to the Action";
+            if (FpsSoloCharacter.localPlayerCharacter == null)
+            {
+                startRunButtonText = "Enter Combat";
+            }
+
+            if (GUILayout.Button(startRunButtonText, startRunButtonStyle, GUILayout.Height(50)))
+            {
+                QuitSelectionUI();
+            }
+
+            GUILayout.EndArea();
         }
 
         private void Select(IRecipe offer)
@@ -245,16 +237,18 @@ namespace Playground
 
         private void QuitSelectionUI()
         {
-            NeoFpsInputManager.captureMouseCursor = true;
+            isOpen = false;
 
-            if (m_PreSpawn)
+            if (FpsSoloCharacter.localPlayerCharacter == null)
             {
                 if (!string.IsNullOrWhiteSpace(m_CombatScene))
                 {
                     NeoSceneManager.LoadScene(m_CombatScene);
                 }
             }
-            else {
+            else
+            {
+                NeoFpsInputManager.captureMouseCursor = true;
                 Destroy(gameObject);
             }
         }

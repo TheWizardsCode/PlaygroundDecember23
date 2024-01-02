@@ -284,8 +284,6 @@ namespace Playground
             
             ConfigureLoadout();
 
-            NeoFpsInputManager.captureMouseCursor = false;
-
             return base.PreSpawnStep();
         }
 
