@@ -150,21 +150,21 @@ namespace Playground
         float earliestTimeOfNextItemSpawn = 0;
         private bool TryItemRecipes()
         {
-            if (earliestTimeOfNextItemSpawn < Time.timeSinceLevelLoad)
+            if (earliestTimeOfNextItemSpawn > Time.timeSinceLevelLoad)
             {
                 return false;
             }
 
             float approximateFrequency = 1000;
-            // TODO: make a decision on whether to make a generic item in a more intelligent way
-            // TODO: can we make tests that are dependent on the pickup, e.g. when the pickup is triggered it will only be picked up if needed 
-            if (RogueLiteManager.persistentData.currentResources < 500)
-            {
-                return false;
-            }
-
             for (int i = 0; i < itemRecipes.Count; i++)
             {
+                // TODO: make a decision on whether to make a generic item in a more intelligent way
+                // TODO: can we make tests that are dependent on the pickup, e.g. when the pickup is triggered it will only be picked up if needed 
+                if (RogueLiteManager.persistentData.currentResources < itemRecipes[i].Cost * 5)
+                {
+                    continue;
+                }
+
                 if (TryRecipe(itemRecipes[i]))
                 {
                     earliestTimeOfNextItemSpawn = Time.timeSinceLevelLoad + (approximateFrequency * Random.Range(0.7f, 1.3f));

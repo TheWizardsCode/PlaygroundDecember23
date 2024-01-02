@@ -61,6 +61,9 @@ MonoBehaviour:
   numberOfEnemySpawners: 2
   buildingSpawnerDensity: 0.1
   buildingProximitySpawner: {fileID: 6576056135945926902, guid: 8580e7bc57d7d9a4e9cc17120733b0c9, type: 3}
+  onSpawnerCreated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5223561033937574973
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +123,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acfc3b4061ccfed46b45124f93446649, type: 2}
   levels:
   - {fileID: 11400000, guid: c6ce2c3bfb9d41b47b32f4690dc4a982, type: 2}
-  rewardsPrefab: {fileID: 0}
+  rewardsPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
   m_SpawnZones:
     mapSprite: {fileID: 0}
     spawnZones: []
