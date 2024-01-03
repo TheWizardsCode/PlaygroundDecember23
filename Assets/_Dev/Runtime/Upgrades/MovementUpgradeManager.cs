@@ -214,7 +214,7 @@ namespace Playground
 
         private MotionGraphContainer m_MotionGraph = null;
 
-        void Start()
+        void Awake()
         {
             // Get the persistent player data & motion graph
             m_MotionGraph = GetComponent<MotionController>().motionGraph;

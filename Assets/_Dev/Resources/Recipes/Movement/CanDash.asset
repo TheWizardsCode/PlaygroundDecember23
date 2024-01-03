@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b37cff4961f08409b466f92b1f4253, type: 3}
+  m_Name: CanDash
+  m_EditorClassIdentifier: 
+  displayName: Dash
+  description: Provide a momentary burst of speed to get out of sticky situations.
+  heroImage: {fileID: 2800000, guid: a3d77b1cd91884147903b64f18bb13d3, type: 3}
+  uniqueID: 00fffb51-4f80-41f0-bd8e-77694496687c
+  isPowerUp: 1
+  cost: 500
+  timeToBuild: 0
+  buildStartedClip: {fileID: 0}
+  buildCompleteClip: {fileID: 0}
+  pickupParticles: {fileID: 0}
+  statType: 0

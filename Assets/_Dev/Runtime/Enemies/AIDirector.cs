@@ -1,11 +1,7 @@
 using NaughtyAttributes;
 using NeoFPS.SinglePlayer;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.YamlDotNet.Core;
 using UnityEngine;
-using UnityEngine.Scripting;
 using Random = UnityEngine.Random;
 
 namespace Playground

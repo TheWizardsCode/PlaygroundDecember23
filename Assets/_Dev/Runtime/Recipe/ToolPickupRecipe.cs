@@ -5,7 +5,7 @@ using System;
 
 namespace Playground
 {
-    [CreateAssetMenu(fileName = "Tool Pickup Recipe", menuName = "Playground/Tool Pickup Recipe", order = 105)]
+    [CreateAssetMenu(fileName = "Tool Pickup Recipe", menuName = "Playground/Recipe/Tool Pickup", order = 105)]
     public class ToolPickupRecipe : ItemRecipe<InventoryItemPickup>
     {
         [NonSerialized]

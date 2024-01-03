@@ -8159,7 +8159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a3b456335ca61438524818321f8afd, type: 3}
   m_Name: canDash
   m_EditorClassIdentifier: 
-  m_StartingValue: 1
+  m_StartingValue: 0
 --- !u!114 &4790686183672535652
 MonoBehaviour:
   m_ObjectHideFlags: 1

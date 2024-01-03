@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Playground
 {
-    [CreateAssetMenu(fileName = "Ammo Pickup Recipe", menuName = "Playground/Ammo Pickup Recipe", order = 110)]
+    [CreateAssetMenu(fileName = "Ammo Pickup Recipe", menuName = "Playground/Recipe/Ammo Pickup", order = 110)]
     public class AmmoPickupRecipe : ItemRecipe<Pickup>
     {
         [SerializeField, Tooltip("The ammo type this recipe creates.")]

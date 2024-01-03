@@ -362,6 +362,17 @@ namespace Playground
             Destroy(gameObject);
         }
 
+        /// <summary>
+        /// The Enemy is requested to move to and attack the location provided. 
+        /// The enemy will move to a point near the location and attack if it sees a target on the way.
+        /// </summary>
+        /// <param name="position"></param>
+        internal void RequestAttack(Vector3 position)
+        {
+            goalDestination = GetDestination(position);
+            timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + config.seekDuration;
+            //Debug.Log($"{name} has been requested to attack {position}.");
+        }
 
 #if UNITY_EDITOR
         #region Inspector
@@ -398,18 +409,6 @@ namespace Playground
                 config = newConfig;
                 AssetDatabase.SaveAssets();
             }
-        }
-
-        /// <summary>
-        /// The Enemy is requested to move to and attack the location provided. 
-        /// The enemy will move to a point near the location and attack if it sees a target on the way.
-        /// </summary>
-        /// <param name="position"></param>
-        internal void RequestAttack(Vector3 position)
-        {
-            goalDestination = GetDestination(position);
-            timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + config.seekDuration;
-            //Debug.Log($"{name} has been requested to attack {position}.");
         }
         #region Validatoin
         #endregion

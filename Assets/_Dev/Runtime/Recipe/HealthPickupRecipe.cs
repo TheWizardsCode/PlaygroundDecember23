@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Playground
 {
-    [CreateAssetMenu(fileName = "Health Pickup Recipe", menuName = "Playground/Health Pickup Recipe", order = 115)]
+    [CreateAssetMenu(fileName = "Health Pickup Recipe", menuName = "Playground/Recipe/Health Pickup", order = 115)]
     public class HealthPickupRecipe : ItemRecipe<HealthPickup>
     {
         [NonSerialized]

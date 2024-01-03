@@ -340,6 +340,12 @@ namespace Playground
                 }
                 return;
             }
+            StatRecipe statRecipe = recipe as StatRecipe;
+            if (statRecipe != null)
+            {
+                statRecipe.Apply();
+                return;
+            }
 
             Debug.LogError("Unknown recipe type: " + recipe.GetType().Name);
         }

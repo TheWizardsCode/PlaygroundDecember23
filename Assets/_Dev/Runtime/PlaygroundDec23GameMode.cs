@@ -69,16 +69,6 @@ namespace Playground
         #region Unity Life-cycle
         protected override void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-
             levelGenerator = GetComponentInChildren<LevelGenerator>();
             levelGenerator.onSpawnerCreated.AddListener(OnSpawnerCreated);
 

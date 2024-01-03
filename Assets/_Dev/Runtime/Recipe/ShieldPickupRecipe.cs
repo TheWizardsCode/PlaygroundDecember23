@@ -7,7 +7,7 @@ namespace Playground
     /// <summary>
     /// This will add a shield manager to the player if they don't have one, and if they do, it will recharge a depleted shield.
     /// </summary>
-    [CreateAssetMenu(fileName = "Shield Pickup Recipe", menuName = "Playground/Shield Pickup Recipe", order = 110)]
+    [CreateAssetMenu(fileName = "Shield Pickup Recipe", menuName = "Playground/Recipe/Shield Pickup", order = 110)]
     public class ShieldPickupRecipe : ItemRecipe<ShieldPickup>
     {
         private ShieldManager _shieldMgr;
