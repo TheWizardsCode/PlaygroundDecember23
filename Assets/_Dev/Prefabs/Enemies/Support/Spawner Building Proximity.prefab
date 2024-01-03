@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 6576056135945926902}
   - component: {fileID: 2142438204395784425}
   m_Layer: 0
-  m_Name: Building Proximity Spawner
+  m_Name: Spawner Building Proximity
   m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

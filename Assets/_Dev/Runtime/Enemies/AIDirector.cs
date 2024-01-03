@@ -31,6 +31,7 @@ namespace Playground
         float timeOfLastPlayerLocationReport = 0;
         float timeOfNextTimeSlice = 0;
         float currentKillRate = 0; // the current value of the total challenge rating of enemies killed in the last timeSlice
+        private BasicEnemyController enemyController;
 
         /// <summary>
         /// Returns the suspected location of the player based on the reports made by the enemies.
@@ -66,7 +67,7 @@ namespace Playground
 
         private void Update()
         {
-            if (FpsSoloCharacter.localPlayerCharacter != null && Time.timeSinceLevelLoad - timeOfLastPlayerLocationReport > maximumTimeBetweenReports)
+            if (spawners.Count > 0 && FpsSoloCharacter.localPlayerCharacter != null && Time.timeSinceLevelLoad - timeOfLastPlayerLocationReport > maximumTimeBetweenReports)
             {
                 Spawner spawner = spawners[Random.Range(0, spawners.Count)];
                 spawner.RequestSpawn(scannerPrefab.transform.root.GetComponent<BasicEnemyController>());
@@ -112,7 +113,8 @@ namespace Playground
         private void OnSpawnerDestroyed(Spawner spawner)
         {
             spawners.Remove(spawner);
-            killReports.Add(new KillReport() { time = Time.timeSinceLevelLoad, challengeRating = spawner.challengeRating, enemyName = spawner.name, location = spawner.transform.position });
+            // OPTIMIZATION: don't use getcomponent here
+            killReports.Add(new KillReport() { time = Time.timeSinceLevelLoad, challengeRating = spawner.GetComponent<BasicEnemyController>().challengeRating, enemyName = spawner.name, location = spawner.transform.position });
         }
 
         private void OnEnemySpawned(BasicEnemyController enemy)

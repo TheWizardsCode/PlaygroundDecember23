@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Playground
 {
+    [RequireComponent(typeof(BasicEnemyController))]
     internal class EnemyAudioController : MonoBehaviour
     {
         [SerializeField, Tooltip("The Enemy Audio Definition defines the sounds to use. The best way to start is to drag in an existing configuration and then save a copy using the button below. Then edit for your needs."), Expandable]
@@ -43,40 +44,45 @@ namespace Playground
 
         protected void OnDeath(BasicEnemyController enemy)
         {
-            droneSource.Stop();
+            if (droneSource != null)
+            {
+                droneSource.Stop();
+            }
 
             if (config.deathClips.Length > 0)
             {
-                PlayOneShot(config.deathClips[UnityEngine.Random.Range(0, config.deathClips.Length)], transform.position);
+                PlayOneVariedShot(config.deathClips[UnityEngine.Random.Range(0, config.deathClips.Length)], transform.position);
             } else
             {
-                PlayOneShot(config.GetDeathClip(), transform.position);
+                PlayOneVariedShot(config.GetDeathClip(), transform.position);
             }
         }
 
         private void StartDrone()
         {
-            if (config.droneClip != null)
+            if (config.droneClip == null)
             {
-                droneSource.clip = config.droneClip;
+                return;
             }
-            else
-            {
-                droneSource.clip = config.droneClip;
-            }
+
+            droneSource.clip = config.droneClip;
             droneSource.loop = true;
             droneSource.Play();
         }
 
         private void StopDrone()
         {
-            droneSource.Stop();
+            if (droneSource != null)
+            {
+                droneSource.Stop();
+            }
         }
 
-        static void PlayOneShot(AudioClip clip, Vector3 position)
+        static void PlayOneVariedShot(AudioClip clip, Vector3 position)
         {
             // OPTIMIZATION Play only a limited number of death sounds within a certain time frame. Perhaps adding chorus or similar on subsequent calls
             NeoFpsAudioManager.PlayEffectAudioAtPosition(clip, position);
+
         }
 
 #if UNITY_EDITOR

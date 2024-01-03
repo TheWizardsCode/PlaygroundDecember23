@@ -19,11 +19,15 @@ namespace Playground
         {
             /*
 
+            Parameters To Test:
+            
+            - canGrapple
+
+
             Parameters TODO:
 
             SWITCH -
             - canAimHover
-            - canGrapple
             - canJetpack
             - canWallRun
             - canWallRunUp

@@ -9,9 +9,6 @@ namespace Playground
 {
     public class Spawner : MonoBehaviour
     {
-        [SerializeField, Tooltip("The level of this spawner.")]
-        internal int challengeRating = 3;
-
         [Header("Spawn Behaviours")]
         [SerializeField, Tooltip("Distance to player for this spawner to be activated. If this is set to 0 then it will always be active, if >0 then the spawner will only be active when the player is within this many units. If the player moves further away then the spawner will pause.")]
         float activeRange = 0;
@@ -25,10 +22,6 @@ namespace Playground
         private WaveDefinition[] waves;
         [SerializeField, Tooltip("If no more wave definitions are available should this spawner generate new waves of increasing difficulty? This value may be overriden by a level manager.")]
         private bool generateWaves = false;
-
-        [Header("Juice")]
-        [SerializeField, Tooltip("The particle system to play when the spawner is destroyed.")]
-        internal ParticleSystem deathParticlePrefab;
 
         [Header("Shield")]
         [SerializeField, Tooltip("Should this spawner generate a shield to protect itself?")]
@@ -269,23 +262,6 @@ namespace Playground
             }
             else
             {
-                Renderer parentRenderer = GetComponentInChildren<Renderer>();
-
-                // TODO use pool for particles
-                if (deathParticlePrefab != null)
-                {
-                    ParticleSystem deathParticle = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-                    if (parentRenderer != null)
-                    {
-                        var particleSystemRenderer = deathParticle.GetComponent<ParticleSystemRenderer>();
-                        if (particleSystemRenderer != null)
-                        {
-                            particleSystemRenderer.material = parentRenderer.material;
-                        }
-                    }
-                    deathParticle.Play();
-                }
-
                 if (destroySpawnsOnDeath)
                 {
                     for (int i = 0; i < spawnedEnemies.Count; i++)
@@ -296,8 +272,6 @@ namespace Playground
                         }
                     }
                 }
-
-                Destroy(gameObject);
             }
         }
 

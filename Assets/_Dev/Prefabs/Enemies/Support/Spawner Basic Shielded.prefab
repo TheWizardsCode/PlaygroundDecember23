@@ -534,8 +534,10 @@ GameObject:
   - component: {fileID: 6134286060280689273}
   - component: {fileID: 6576056135945926902}
   - component: {fileID: 2142438204395784425}
+  - component: {fileID: -8418557012773986996}
+  - component: {fileID: 8863506516404993791}
   m_Layer: 0
-  m_Name: Basic shielded Spawner
+  m_Name: Spawner Basic Shielded
   m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,21 +573,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1665053a590bc224e879e6668e1269b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeRange: 0
   spawnRadius: 5
   destroySpawnsOnDeath: 1
+  timeBetweenWaves: 10
+  waves: []
+  generateWaves: 0
   deathParticlePrefab: {fileID: 5327745311076098471, guid: ecf74d541dbf5cb40a417278326c0f1e, type: 3}
+  hasShield: 1
+  shieldGenerator: {fileID: 1313982842987553621}
+  shieldGenParticlePrefab: {fileID: 5327745311076098471, guid: 05ee104c9679f0f41bda212c0bb37ffc, type: 3}
+  numShieldGenerators: 3
+  shieldGeneratorRPM: 22.5
+  shieldCollider: {fileID: 1768168615545587999}
   onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnemySpawned:
     m_PersistentCalls:
       m_Calls: []
   onAllWavesComplete:
     m_PersistentCalls:
       m_Calls: []
-  shieldGenerator: {fileID: 1313982842987553621}
-  shieldGenParticlePrefab: {fileID: 5327745311076098471, guid: 05ee104c9679f0f41bda212c0bb37ffc, type: 3}
-  numShieldGenerators: 3
-  shieldGeneratorRPM: 22.5
-  shieldGenSpawnDelay: 10
-  shieldCollider: {fileID: 1768168615545587999}
 --- !u!114 &2142438204395784425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +615,57 @@ MonoBehaviour:
       m_Calls: []
   m_OnIsAliveChanged:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8863506516404993791}
+        m_TargetAssemblyTypeName: Playground.BasicEnemyController, playground
+        m_MethodName: OnAliveIsChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-8418557012773986996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299311784649714057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c66edff86b6934292b17047252c5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 19ef10ff5c507d642a2f9d52d7b0c218, type: 2}
+  droneSource: {fileID: 0}
+--- !u!114 &8863506516404993791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299311784649714057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735e4c1315dedbc4a869e8dc7e67a4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: Shielded Spawner
+  description: Creates enemies to track you down and destroy you.
+  challengeRating: 3
+  config: {fileID: 11400000, guid: 1f4670c4f527f5947b8656984228421a, type: 2}
+  sensor: {fileID: 0}
+  onDeath:
+    m_PersistentCalls:
       m_Calls: []
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  isDebug: 0
 --- !u!1 &5833403160988965908
 GameObject:
   m_ObjectHideFlags: 0

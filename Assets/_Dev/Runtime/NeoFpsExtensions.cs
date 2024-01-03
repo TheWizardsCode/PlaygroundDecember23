@@ -2,6 +2,8 @@ using NeoFPS.SinglePlayer;
 using NeoFPS;
 using System.Collections.Generic;
 using System.Reflection;
+using UnityEngine;
+using System.Runtime.CompilerServices;
 
 namespace Playground
 {

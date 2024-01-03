@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using NeoFPS;
 using NeoFPS.SinglePlayer;
 using System;
 using System.IO;
@@ -160,6 +161,11 @@ namespace Playground
 
         protected virtual void Update()
         {
+            if (config.isMobile == false)
+            {
+                return;
+            }
+
             if (Target == null)
             {
                 if (config.shouldWander)

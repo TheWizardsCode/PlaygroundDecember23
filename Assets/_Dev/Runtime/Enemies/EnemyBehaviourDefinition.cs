@@ -18,29 +18,29 @@ namespace Playground
         internal float viewDistance = 30f;
 
         [Header("Movement")]
-        [SerializeField, Tooltip("How fast the enemy moves.")]
+        [SerializeField, Tooltip("Is this enemy mobile?")]
+        internal bool isMobile = true;
+        [SerializeField, Tooltip("How fast the enemy moves."), ShowIf("isMobile")]
         internal float speed = 5f;
-        [SerializeField, Tooltip("How fast the enemy rotates.")]
+        [SerializeField, Tooltip("How fast the enemy rotates."), ShowIf("isMobile")]
         internal float rotationSpeed = 1f;
-        [SerializeField, Tooltip("The minimum height the enemy will move to.")]
+        [SerializeField, Tooltip("The minimum height the enemy will move to."), ShowIf("isMobile")]
         internal float minimumHeight = 0.5f;
-        [SerializeField, Tooltip("The maximum height the enemy will move to.")]
+        [SerializeField, Tooltip("The maximum height the enemy will move to."), ShowIf("isMobile")]
         internal float maximumHeight = 75f;
-        [SerializeField, Tooltip("How close to the player will this enemy try to get?")]
+        [SerializeField, Tooltip("How close to the player will this enemy try to get?"), ShowIf("isMobile")]
         internal float optimalDistanceFromPlayer = 0.2f;
-
-        [Header("Navigation")]
-        [SerializeField, Tooltip("The distance the enemy will try to avoid obstacles by.")]
-        internal float obstacleAvoidanceDistance = 2f;
-        [SerializeField, Tooltip("The layers the character can see")]
-        internal LayerMask sensorMask = 0;
-        [SerializeField, Tooltip("If the enemy cannot see the player should they wander? Set this to true if you want the AI to do more than be stationary and there is no other moduls to tell it what to do when the player is not seen.")]
-        internal bool shouldWander = true;
-        [SerializeField, Tooltip("The maximum distance the enemy will wander from their spawn point. The enemy will move further away than this when they are chasing the player but will return to within this range if they go back to a wandering state."), ShowIf("shouldWander")]
+        [SerializeField, Tooltip("The maximum distance the enemy will wander from their spawn point. A value of zero means do not wander. The enemy will move further away than this when they are chasing the player but will return to within this range if they go back to a wandering state."), ShowIf("isMobile")]
         internal float maxWanderRange = 30f;
 
+        [Header("Navigation")]
+        [SerializeField, Tooltip("The distance the enemy will try to avoid obstacles by."), ShowIf("isMobile")]
+        internal float obstacleAvoidanceDistance = 2f;
+        [SerializeField, Tooltip("The layers the character can see"), ShowIf("isMobile")]
+        internal LayerMask sensorMask = 0;
+
         [Header("Seek Behaviour")]
-        [SerializeField, Tooltip("How long the enemy will seek out the player for after losing sight of them.")]
+        [SerializeField, Tooltip("How long the enemy will seek out the player for after losing sight of them."), ShowIf("isMobile")]
         internal float seekDuration = 7;
 
         [Header("Juice")]
@@ -52,5 +52,10 @@ namespace Playground
         internal float resourcesDropChance = 0.5f;
         [SerializeField, Tooltip("The resources this enemy drops when killed.")]
         internal ResourcesPickup resourcesPrefab;
+
+        internal bool shouldWander
+        {
+            get { return maxWanderRange > 0; }
+        }
     }
 }

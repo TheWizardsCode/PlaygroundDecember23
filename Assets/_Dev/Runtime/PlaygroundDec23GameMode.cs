@@ -89,11 +89,6 @@ namespace Playground
                 return;
             }
 
-            if (spawnersRemaining == 0 && m_VictoryCoroutine == null)
-            {
-                m_VictoryCoroutine = StartCoroutine(DelayedVictoryCoroutine(m_VictoryDuration));
-            }
-
             if (RogueLiteManager.persistentData.currentResources > nextRewardsLevel)
             {
                 Transform player = FpsSoloCharacter.localPlayerCharacter.transform;
@@ -121,6 +116,11 @@ namespace Playground
         internal void OnSpawnerDestroyed(Spawner spawner)
         {
             spawnersRemaining--;
+
+            if (spawnersRemaining == 0 && m_VictoryCoroutine == null)
+            {
+                m_VictoryCoroutine = StartCoroutine(DelayedVictoryCoroutine(m_VictoryDuration));
+            }
         }
 
         protected override void DelayedDeathAction()
