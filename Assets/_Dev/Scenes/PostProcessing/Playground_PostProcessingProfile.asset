@@ -41,10 +41,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.5
+    value: 0.3
   color:
     overrideState: 1
-    value: {r: 0.108935565, g: 0.1509434, b: 0.13317086, a: 1}
+    value: {r: 0.20554467, g: 0.2280764, b: 0.2924528, a: 1}
   ambientOnly:
     overrideState: 0
     value: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 2.5
+    value: 2.46
   zBias:
     overrideState: 0
     value: 0.0001
@@ -169,7 +169,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 0
+    value: 2
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -197,28 +197,28 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 5
+    value: -5.2
   tint:
     overrideState: 1
-    value: -5
+    value: 8.9
   colorFilter:
-    overrideState: 1
+    overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
-    overrideState: 1
+    overrideState: 0
     value: -5
   saturation:
     overrideState: 1
-    value: 10
+    value: 43.4
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.4
+    value: 0.8
   contrast:
     overrideState: 1
-    value: 5
+    value: -7.1
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1467,22 +1467,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
   m_Name: AutoExposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   filtering:
-    overrideState: 0
-    value: {x: 50, y: 95}
+    overrideState: 1
+    value: {x: 13.803978, y: 58.803986}
   minLuminance:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: -4.53
   maxLuminance:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 5.1
   keyValue:
     overrideState: 0
-    value: 1
+    value: 54.12
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -1510,25 +1510,25 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 5
+    value: 5.64
   threshold:
     overrideState: 1
     value: 0.75
   softKnee:
     overrideState: 1
-    value: 0.3
+    value: 0.291
   clamp:
-    overrideState: 1
-    value: 65472
+    overrideState: 0
+    value: 100
   diffusion:
     overrideState: 1
-    value: 5
+    value: 3.87
   anamorphicRatio:
     overrideState: 1
-    value: -0.2
+    value: 0.69
   color:
     overrideState: 1
-    value: {r: 0.83823526, g: 0.83823526, b: 0.83823526, a: 1}
+    value: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -1551,7 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1

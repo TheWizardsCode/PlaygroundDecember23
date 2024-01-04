@@ -1445,6 +1445,8 @@ MonoBehaviour:
   levelGenerator: {fileID: 1877036597}
   maximumTimeBetweenReports: 30
   scannerPrefab: {fileID: 4437746279418429034, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
+  timeSlice: 25
+  targetKillRate: 10
 --- !u!1 &1911011922
 GameObject:
   m_ObjectHideFlags: 0

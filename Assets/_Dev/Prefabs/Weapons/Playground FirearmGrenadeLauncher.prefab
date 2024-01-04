@@ -1835,9 +1835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d6b0f7d24f6fc45ad5dbfaf9344f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DamageType: 1
-  m_Explosion: {fileID: 114048289010296272, guid: 5dc982c5a92afcb4daebbeb20ca5ca6b, type: 3}
-  m_Damage: 50
+  m_DamageType: 4
+  m_Explosion: {fileID: 114048289010296272, guid: f90d1bae48c85e8489dad2ebbe25b096, type: 3}
+  m_Damage: 125
   m_MaxForce: 50
   m_NormalOffset: 0.05
 --- !u!114 &1198138929343063218

@@ -7,6 +7,7 @@ using UnityEngine.Events;
 using NeoSaveGames.SceneManagement;
 using System.Collections;
 using NeoFPS.Constants;
+using NaughtyAttributes;
 
 namespace Playground
 {
@@ -31,6 +32,9 @@ namespace Playground
         LevelDefinition[] levels;
         [SerializeField, Tooltip("The prefab to use when generating level up rewards.")]
         private RecipeSelectorUI rewardsPrefab;
+
+        [SerializeField, Tooltip("Turn on debug mode for this Game Mode"), Foldout("Debug")]
+        private bool _isDebug = false;
 
         int nextRewardsLevel = 200;
         private int spawnersRemaining = int.MaxValue;
@@ -92,7 +96,7 @@ namespace Playground
             if (RogueLiteManager.persistentData.currentResources > nextRewardsLevel)
             {
                 Transform player = FpsSoloCharacter.localPlayerCharacter.transform;
-                Vector3 position = player.position + player.forward * 5;
+                Vector3 position = player.position + player.forward * 5 + player.right * 1.5f;
                 RecipeSelectorUI rewards = Instantiate(rewardsPrefab, position, Quaternion.identity);
 
                 nextRewardsLevel = GetRequiredResourcesForNextLevel();
@@ -117,7 +121,7 @@ namespace Playground
         {
             spawnersRemaining--;
 
-            if (spawnersRemaining == 0 && m_VictoryCoroutine == null)
+            if (!_isDebug && spawnersRemaining == 0 && m_VictoryCoroutine == null)
             {
                 m_VictoryCoroutine = StartCoroutine(DelayedVictoryCoroutine(m_VictoryDuration));
             }
