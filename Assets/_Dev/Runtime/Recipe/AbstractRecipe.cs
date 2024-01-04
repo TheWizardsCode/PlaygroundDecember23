@@ -22,9 +22,9 @@ namespace Playground
 
         [Header("Feedback")]
         [SerializeField, Tooltip("The sound to play when the build is started. If there are no sounds here then a default will be used.")]
-        AudioClip[] buildStartedClips;
+        AudioClip[] buildStartedClips = new AudioClip[0];
         [SerializeField, Tooltip("The sound to play when the build is complete. If there are no sounds here then a default will be used.")]
-        AudioClip[] buildCompleteClips;
+        AudioClip[] buildCompleteClips = new AudioClip[0];
         [SerializeField, Tooltip("The particle system to play when a pickup is spawned.")]
         ParticleSystem pickupParticles;
 
