@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9173466c2b1873b46a6dc2bb3df303bb, type: 3}
+  m_Name: Playground Health Pickup 25 Recipe
+  m_EditorClassIdentifier: 
+  displayName: Health 10
+  description: TBD
+  heroImage: {fileID: 0}
+  uniqueID: 64a6fe8c-474b-42c9-967c-17b46bf497f8
+  isPowerUp: 1
+  cost: 22
+  timeToBuild: 10
+  buildStartedClip: {fileID: 8300000, guid: bab4c765a059ad643ae2f78f8a494d0f, type: 3}
+  buildCompleteClip: {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}
+  pickupParticles: {fileID: 0}
+  pickup: {fileID: 114608595035019784, guid: ec080938cf493944fb6b703bb303a0ad, type: 3}

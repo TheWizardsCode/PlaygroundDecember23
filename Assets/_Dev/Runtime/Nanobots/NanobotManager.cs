@@ -109,12 +109,25 @@ namespace Playground
 
         private bool TryHealthRecipes()
         {
+            HealthPickupRecipe chosenRecipe = null;
+            float chosenOverage = int.MaxValue;
             for (int i = 0; i < healthRecipes.Count; i++)
             {
-                if (TryRecipe(healthRecipes[i]))
+                if (RogueLiteManager.persistentData.currentResources >= healthRecipes[i].Cost && healthRecipes[i].ShouldBuild)
                 {
-                    return true;
+                    float overage = healthRecipes[i].Overage;
+                    if (chosenOverage > overage)
+                    {
+                        chosenRecipe = healthRecipes[i];
+                        chosenOverage = overage;
+                    }
                 }
+            }
+
+            if (chosenRecipe != null)
+            {
+                StartCoroutine(BuildRecipe(chosenRecipe));
+                return true;
             }
 
             return false;
@@ -206,6 +219,7 @@ namespace Playground
 
         internal IEnumerator BuildRecipe(IRecipe recipe)
         {
+            Debug.Log($"Building {recipe.DisplayName}");
             isBuilding = true;
             resources -= recipe.Cost;
 

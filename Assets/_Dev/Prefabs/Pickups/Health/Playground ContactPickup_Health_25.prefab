@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114608595035019784}
   - component: {fileID: 114068998133964924}
   m_Layer: 21
-  m_Name: Playground ContactPickup_Health_10
+  m_Name: Playground ContactPickup_Health_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.077, y: 0, z: 2.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4601889877836758}
   m_Father: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealType: 0
-  m_HealAmount: 10
+  m_HealAmount: 25
   m_OnHealedCharacter:
     m_PersistentCalls:
       m_Calls: []
@@ -213,11 +213,11 @@ MonoBehaviour:
     m_Keys: 
     m_Values: []
     m_GameObject: {fileID: 114068998133964924}
-  m_PrefabStrongID: 501623135
+  m_PrefabStrongID: 1406294288
   expandChildObjects: 0
   expandNeoComponents: 0
   expandOtherComponents: 0
-  prefabGuid: 1c36af958a0fbe646b6dff5ed9c8d273
+  prefabGuid: ec080938cf493944fb6b703bb303a0ad
 --- !u!1 &1451755077098428
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,8 +246,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4193559800533092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

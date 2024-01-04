@@ -24,6 +24,15 @@ namespace Playground
         }
     }
 
+    public static class  HealthPickupExtension
+    {
+        public static float GetHealAmount(this HealthPickup instance)
+        {
+            var fieldInfo = typeof(HealthPickup).GetField("m_HealAmount", BindingFlags.NonPublic | BindingFlags.Instance);
+            return (float)fieldInfo.GetValue(instance);
+        }
+    }
+
     public static class LoadoutBuilderSlotExtensions
     {
         public static void AddOption(this LoadoutBuilderSlot slot, FpsInventoryItemBase option)

@@ -29,6 +29,18 @@ namespace Playground
             base.Reset();
         }
 
+        /// <summary>
+        /// Return the amount of healing above the required healing this recipe would probide.
+        /// </summary>
+        /// <returns></returns>
+        public float Overage
+        {
+            get {
+                float missingHealth = healthManager.healthMax - healthManager.health;
+                return missingHealth - (pickup as HealthPickup).GetHealAmount();
+            }
+        }
+
         public override bool ShouldBuild
         {
             get
