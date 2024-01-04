@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requireLineOfSight: 1
   viewDistance: 100
+  isMobile: 1
   speed: 3
-  rotationSpeed: 2
+  rotationSpeed: 1
   minimumHeight: 2.5
   maximumHeight: 75
   optimalDistanceFromPlayer: 5
-  obstacleAvoidanceDistance: 5
+  maxWanderRange: 250
+  obstacleAvoidanceDistance: 8
   sensorMask:
     serializedVersion: 2
     m_Bits: 12781057
-  shouldWander: 1
-  maxWanderRange: 250
   seekDuration: 10
   deathParticlePrefab: {fileID: 5327745311076098471, guid: e2b98be0b3446aa4492800d8aecef82d, type: 3}
   resourcesDropChance: 0.7

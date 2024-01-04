@@ -17,7 +17,7 @@ MonoBehaviour:
   heroImage: {fileID: 2800000, guid: 17be6d3ecb77f71469a47139024dc942, type: 3}
   uniqueID: 8d8e911d-6df3-4f3e-ae7b-10b9ed3c2303
   isPowerUp: 1
-  cost: 30
+  cost: 200
   timeToBuild: 3
   buildStartedClip: {fileID: 0}
   buildCompleteClip: {fileID: 0}

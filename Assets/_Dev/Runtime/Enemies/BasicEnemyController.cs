@@ -129,15 +129,17 @@ namespace Playground
         public Vector3 GetDestination(Vector3 targetPosition)
         {
             Vector3 newPosition = new Vector3();
-            for (int i = 0; i < 4; i++)
+            int tries = 0;
+            for (tries = 0; tries < 4; tries++)
             {
                 newPosition = UnityEngine.Random.onUnitSphere * config.optimalDistanceFromPlayer;
                 newPosition += targetPosition;
                 if (newPosition.y >= config.minimumHeight)
                 {
-                    return newPosition;
+                    break;
                 }
             }
+
             newPosition.y = Mathf.Max(newPosition.y, config.minimumHeight);
             return newPosition;
         }
@@ -213,61 +215,103 @@ namespace Playground
 
         internal virtual void MoveTowards(Vector3 destination, float speedMultiplier = 1)
         {
-            Vector3 directionToDestination = (destination - transform.position).normalized;
-            
             if (destination.y < config.minimumHeight)
             {
                 destination.y = config.minimumHeight;
-            } else if (destination.y > config.maximumHeight)
+            }
+            else if (destination.y > config.maximumHeight)
             {
                 destination.y = config.maximumHeight;
             }
 
-            float turnAngle = Vector3.Angle(transform.forward, directionToDestination);
+            Quaternion targetRotation = AvoidanceRotation(destination);
 
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, config.rotationSpeed * Time.deltaTime);
+            transform.position += transform.forward * config.speed * speedMultiplier * Time.deltaTime;
+
+            AdjustHeight(destination, speedMultiplier);
+        }
+
+        /// <summary>
+        /// Get a recommended rotation for the enemy to take in order to avoid the nearest obstacle.
+        /// </summary>
+        /// <param name="destination">The destination we are trying to reach.</param>
+        /// <returns></returns>
+        private Quaternion AvoidanceRotation(Vector3 destination)
+        {
+            Vector3 directionToDestination = (destination - transform.position).normalized;
             float distanceToObstacle = 0;
-            bool rotateRight = true;
+            float turnAngle = 0;
+            float turnRate = config.obstacleAvoidanceDistance * 10;
 
+            // Check for obstacle dead ahead
             Ray ray = new Ray(sensor.position, transform.forward);
             if (Physics.Raycast(ray, out RaycastHit forwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
             {
                 if (forwardHit.collider.transform.root != Target)
                 {
                     distanceToObstacle = forwardHit.distance;
+                    turnAngle = 90;
+#if UNITY_EDITOR
+                    if (isDebug)
+                    {
+                        Debug.DrawRay(sensor.position, ray.direction * config.obstacleAvoidanceDistance, Color.red, 2);
+                    }
+#endif
                 }
             }
 
-            ray.direction = Quaternion.AngleAxis(turnAngle, transform.transform.up) * transform.forward;
-            if (Physics.Raycast(ray, out RaycastHit rightForwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
+            // check for obstacle to the left
+            if (distanceToObstacle == 0)
             {
-                if (rightForwardHit.collider.transform.root != Target)
+                ray.direction = Quaternion.AngleAxis(-turnRate, transform.transform.up) * transform.forward;
+                if (Physics.Raycast(ray, out RaycastHit leftForwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
                 {
-                    distanceToObstacle = rightForwardHit.distance;
-                    rotateRight = false;
+                    if (leftForwardHit.collider.transform.root != Target)
+                    {
+                        distanceToObstacle = leftForwardHit.distance;
+                        turnAngle = 45;
+#if UNITY_EDITOR
+                        if (isDebug)
+                        {
+                            Debug.DrawRay(sensor.position, ray.direction * config.obstacleAvoidanceDistance, Color.red, 2);
+                        }
+#endif
+                    }
                 }
             }
 
-            ray.direction = Quaternion.AngleAxis(-turnAngle, transform.transform.up) * transform.forward;
-            if (Physics.Raycast(ray, out RaycastHit leftForwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
+            // Check for obstacle to the right
+            if (distanceToObstacle == 0)
             {
-                if (leftForwardHit.collider.transform.root != Target)
+                ray.direction = Quaternion.AngleAxis(turnRate, transform.transform.up) * transform.forward;
+                if (Physics.Raycast(ray, out RaycastHit rightForwardHit, config.obstacleAvoidanceDistance, config.sensorMask))
                 {
-                    distanceToObstacle = leftForwardHit.distance;
+                    if (rightForwardHit.collider.transform.root != Target)
+                    {
+                        distanceToObstacle = rightForwardHit.distance;
+                        turnAngle = -45;
+#if UNITY_EDITOR
+                        if (isDebug)
+                        {
+                            Debug.DrawRay(sensor.position, ray.direction * config.obstacleAvoidanceDistance, Color.red, 2);
+                        }
+#endif
+                    }
                 }
             }
 
+            // Calculate avoidance rotation
             Quaternion targetRotation = Quaternion.identity;
             if (distanceToObstacle > 0) // turn to avoid obstacle
             {
-                if (rotateRight)
+                targetRotation = transform.rotation * Quaternion.Euler(0, turnAngle * (distanceToObstacle / config.obstacleAvoidanceDistance), 0);
+#if UNITY_EDITOR
+                if (isDebug)
                 {
-                    targetRotation = transform.rotation * Quaternion.Euler(0, turnAngle * (distanceToObstacle / config.obstacleAvoidanceDistance), 0);
+                    Debug.Log($"Rotating {turnAngle * (distanceToObstacle / config.obstacleAvoidanceDistance)} degrees to avoid obstacle.");
                 }
-                else
-                {
-                    targetRotation = transform.rotation * Quaternion.Euler(0, -turnAngle * (distanceToObstacle / config.obstacleAvoidanceDistance), 0);
-                }
-                //Debug.Log($"Rotating to avoid obstacle F {forwardHit.collider}, L {leftForwardHit.collider}, R {rightForwardHit.collider}");
+#endif
             }
             else // no obstacle so rotate towards target
             {
@@ -279,10 +323,7 @@ namespace Playground
                 }
             }
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, config.rotationSpeed * Time.deltaTime);
-            transform.position += transform.forward * config.speed * speedMultiplier * Time.deltaTime;
-
-            AdjustHeight(destination, speedMultiplier);
+            return targetRotation;
         }
 
         private void AdjustHeight(Vector3 destination, float speedMultiplier)

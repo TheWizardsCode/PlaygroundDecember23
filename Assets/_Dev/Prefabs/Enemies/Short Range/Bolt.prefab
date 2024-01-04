@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Bolt
   description: TBD
+  challengeRating: 1
   config: {fileID: 11400000, guid: 4aa9ff23d1e65b24e995979f5c9a617f, type: 2}
   sensor: {fileID: 9069839117940701132}
   onDeath:
