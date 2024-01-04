@@ -19,8 +19,8 @@ MonoBehaviour:
   isPowerUp: 0
   cost: 20
   timeToBuild: 5
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
   pickup: {fileID: 114244782703139866, guid: 75342e5d96bacfb4aaf707d4f751071a, type: 3}
   ammo: {fileID: 11400000, guid: 0ae7b5f4e6c84ad49a61560a2e770f73, type: 2}

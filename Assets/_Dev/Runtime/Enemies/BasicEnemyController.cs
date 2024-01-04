@@ -206,6 +206,7 @@ namespace Playground
         protected void MoveAwayIfTooClose()
         {
             float currentDistance = Vector3.Distance(transform.position, goalDestination);
+
             if (currentDistance < config.optimalDistanceFromPlayer)
             {
                 float distanceToMoveAway = config.optimalDistanceFromPlayer - currentDistance;

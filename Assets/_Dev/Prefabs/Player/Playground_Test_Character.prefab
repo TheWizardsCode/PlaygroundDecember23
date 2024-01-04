@@ -2723,9 +2723,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
-  buildStartedClip: {fileID: 8300000, guid: 19caa26d8d01e794b9135018f61d304d, type: 3}
-  buildCompleteClip: {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}
-  pickupSpawnParticlePrefab: {fileID: 1974278376555586578, guid: 5431668a66cd19c42ac02f0bdd90e9d2, type: 3}
+  buildStartedClips:
+  - {fileID: 8300000, guid: f20eeaac5d265b84f95eb4b72a8b30b2, type: 3}
+  - {fileID: 8300000, guid: 62e3f0ab8af798d4f9df2a549ea49b22, type: 3}
+  - {fileID: 8300000, guid: 119e71a63fca0d1478124ee8be745952, type: 3}
+  - {fileID: 8300000, guid: 1e73a5f6676b98f4790db151629596f2, type: 3}
+  - {fileID: 8300000, guid: ea28e78b8974c1144a2dd4ba32253bcd, type: 3}
+  buildCompleteClips:
+  - {fileID: 8300000, guid: 9092330c07468984c90b8c0632f72a71, type: 3}
+  - {fileID: 8300000, guid: 9623f1d3431d042498f1d96b35a16b24, type: 3}
+  - {fileID: 8300000, guid: 51bf78040ed8b4e40bbc13bab80ab2a1, type: 3}
+  - {fileID: 8300000, guid: 1755a80de160ce347a90b172a6d817c2, type: 3}
+  - {fileID: 8300000, guid: a3c90128ef7096c428e032974597d0d6, type: 3}
+  defaultPickupParticlePrefab: {fileID: 1974278376555586578, guid: 5431668a66cd19c42ac02f0bdd90e9d2, type: 3}
 --- !u!114 &2584534266323046183
 MonoBehaviour:
   m_ObjectHideFlags: 0

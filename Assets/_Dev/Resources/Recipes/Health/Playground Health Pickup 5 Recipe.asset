@@ -19,7 +19,12 @@ MonoBehaviour:
   isPowerUp: 1
   cost: 5
   timeToBuild: 2
-  buildStartedClip: {fileID: 8300000, guid: bab4c765a059ad643ae2f78f8a494d0f, type: 3}
-  buildCompleteClip: {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}
+  buildStartedClips:
+  - {fileID: 8300000, guid: d210d5b65b7756e49b7b3a612f1fbae0, type: 3}
+  - {fileID: 8300000, guid: 263014f7a0dd6924a8b73f5e88f326e9, type: 3}
+  - {fileID: 8300000, guid: 9c715b49ac67b0c4280590cee6067c70, type: 3}
+  - {fileID: 8300000, guid: b9d5c9c9b0a695c41a9c9cd1ee2843c8, type: 3}
+  - {fileID: 8300000, guid: 579b43c8c16fded428de5d6a9b4541f7, type: 3}
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
   pickup: {fileID: 114608595035019784, guid: 07dff97a969c00743824edf4557db1a6, type: 3}

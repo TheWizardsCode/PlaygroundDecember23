@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -391,6 +391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bolt
       objectReference: {fileID: 0}
+    - target: {fileID: 7985948857531989657, guid: 48d1e5da616d77c49868f34093cc925e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -616,6 +620,10 @@ PrefabInstance:
     - target: {fileID: 244797647134910332, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
       propertyPath: m_Name
       value: Scanner
+      objectReference: {fileID: 0}
+    - target: {fileID: 244797647134910332, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1565113201411319522, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1808,6 +1816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottlecap
       objectReference: {fileID: 0}
+    - target: {fileID: 7985948857531989657, guid: c9fe6a1fefde401498f4df8d4dabe3f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1960,6 +1972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem
       objectReference: {fileID: 0}
+    - target: {fileID: 7985948857531989657, guid: 7dc7dfe04f45a9744bb4f37c5cbd57cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2016,6 +2032,10 @@ PrefabInstance:
     - target: {fileID: 8038197323659428586, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
       propertyPath: m_Name
       value: Shielded Core
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038197323659428586, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2147,6 +2167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caltrop
       objectReference: {fileID: 0}
+    - target: {fileID: 7985948857531989657, guid: dc8e65fcc446be54ea416d0af616ad16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2204,6 +2228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saucer
       objectReference: {fileID: 0}
+    - target: {fileID: 7985948857531989657, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2260,6 +2288,10 @@ PrefabInstance:
     - target: {fileID: 7238103921518997512, guid: 1d9f4d0c793a571489b3107cf0c9e683, type: 3}
       propertyPath: m_Name
       value: Artillery
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238103921518997512, guid: 1d9f4d0c793a571489b3107cf0c9e683, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

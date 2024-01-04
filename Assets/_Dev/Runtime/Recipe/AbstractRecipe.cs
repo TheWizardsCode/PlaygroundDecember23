@@ -21,10 +21,10 @@ namespace Playground
         float timeToBuild = 5;
 
         [Header("Feedback")]
-        [SerializeField, Tooltip("The sound to play when the build is started. If this is null then ")]
-        AudioClip buildStartedClip;
-        [SerializeField, Tooltip("The sound to play when the build is complete.")]
-        AudioClip buildCompleteClip;
+        [SerializeField, Tooltip("The sound to play when the build is started. If there are no sounds here then a default will be used.")]
+        AudioClip[] buildStartedClips;
+        [SerializeField, Tooltip("The sound to play when the build is complete. If there are no sounds here then a default will be used.")]
+        AudioClip[] buildCompleteClips;
         [SerializeField, Tooltip("The particle system to play when a pickup is spawned.")]
         ParticleSystem pickupParticles;
 
@@ -42,9 +42,34 @@ namespace Playground
 
         public float TimeToBuild => timeToBuild;
 
-        public AudioClip BuildStartedClip => buildStartedClip;
+        public AudioClip BuildStartedClip
+        {
+            get
+            {
+                if (buildStartedClips.Length == 0)
+                {
+                    return null;
+                } else
+                {
+                    return buildStartedClips[Random.Range(0, buildStartedClips.Length)];
+                }
+            }
+        }
 
-        public AudioClip BuildCompleteClip => buildCompleteClip;
+        public AudioClip BuildCompleteClip
+        {
+            get
+            {
+                if (buildCompleteClips.Length == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    return buildStartedClips[Random.Range(0, buildCompleteClips.Length)];
+                }
+            }
+        }
 
         public ParticleSystem PickupParticles => pickupParticles;
 

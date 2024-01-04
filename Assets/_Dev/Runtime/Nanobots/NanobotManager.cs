@@ -1,7 +1,4 @@
 using NeoFPS;
-using NeoFPS.ModularFirearms;
-using NeoFPS.SinglePlayer;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +15,9 @@ namespace Playground
 
         [Header("Default Feedback")]
         [SerializeField, Tooltip("The sound to play when the build is started. Note that this can be overridden in the recipe.")]
-        private AudioClip buildStartedClip;
+        private AudioClip[] buildStartedClips;
         [SerializeField, Tooltip("The sound to play when the build is complete. Note that this can be overridden in the recipe.")]
-        private AudioClip buildCompleteClip;
+        private AudioClip[] buildCompleteClips;
         [SerializeField, Tooltip("The default particle system to play when a pickup is spawned. Note that this can be overridden in the recipe."), FormerlySerializedAs("pickupSpawnParticlePrefab")]
         ParticleSystem defaultPickupParticlePrefab;
 
@@ -228,7 +225,7 @@ namespace Playground
                 NeoFpsAudioManager.PlayEffectAudioAtPosition(recipe.BuildStartedClip, transform.position, 1);
             } else
             {
-                NeoFpsAudioManager.PlayEffectAudioAtPosition(buildStartedClip, transform.position, 1);
+                NeoFpsAudioManager.PlayEffectAudioAtPosition(buildStartedClips[Random.Range(0, buildStartedClips.Length)], transform.position, 1);
             }
 
             yield return new WaitForSeconds(recipe.TimeToBuild);
@@ -247,7 +244,7 @@ namespace Playground
                 }
                 else
                 {
-                    NeoFpsAudioManager.PlayEffectAudioAtPosition(buildCompleteClip, go.transform.position, 1);
+                    NeoFpsAudioManager.PlayEffectAudioAtPosition(buildCompleteClips[Random.Range(0, buildCompleteClips.Length)], go.transform.position, 1);
                 }
 
                 // TODO: Use the pool manager to create the particle system
