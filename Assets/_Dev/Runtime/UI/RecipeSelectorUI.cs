@@ -116,7 +116,7 @@ namespace Playground
             float cardWidth = (targetWidth * 0.8f) / numberOfOffers; 
 
             float imageHeight = targetHeight * 0.6f;
-            float imageWidth = 640 * (imageHeight / 960f);
+            float imageWidth = imageHeight;
 
             GUILayout.BeginArea(new Rect((screenWidth - targetWidth) / 2, (screenHeight - targetHeight) / 2, targetWidth, targetHeight));
 
