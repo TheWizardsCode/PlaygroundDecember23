@@ -1,4 +1,5 @@
 using NeoFPS;
+using NeoFPS.Samples;
 using NeoFPS.SinglePlayer;
 using NeoSaveGames.SceneManagement;
 using System;

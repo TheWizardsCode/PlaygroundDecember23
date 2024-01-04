@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NaughtyAttributes;
+using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -20,17 +21,5 @@ namespace Playground
         internal T pickup;
 
         public Component Item => pickup;
-
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            if (string.IsNullOrEmpty(uniqueID))
-            {
-                uniqueID = Guid.NewGuid().ToString();
-                EditorUtility.SetDirty(this);
-                AssetDatabase.SaveAssets();
-            }
-        }
-#endif
     }
 }

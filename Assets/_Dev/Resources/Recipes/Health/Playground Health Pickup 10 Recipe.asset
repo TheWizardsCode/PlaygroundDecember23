@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Playground Health Pickup 10 Recipe
   m_EditorClassIdentifier: 
   displayName: Health 10
-  description: TBD
-  heroImage: {fileID: 0}
+  description: Bandage up some of those flesh wounds.
+  heroImage: {fileID: 2800000, guid: 9315bf7dbd8dae2468351024b404ddd6, type: 3}
   uniqueID: e1ab5fee-77d9-48b5-bec3-fee65852a9b3
   isPowerUp: 0
   cost: 10

@@ -1,4 +1,10 @@
+using Codice.Client.Common;
+using NaughtyAttributes;
+using System;
+using UnityEditor;
+using UnityEditor.PackageManager;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Playground
 {
@@ -9,10 +15,8 @@ namespace Playground
         string displayName = "TBD";
         [SerializeField, TextArea(1, 4), Tooltip("A short description of this recipe helping the player understand what it is.")]
         string description = "TBD";
-        [SerializeField, Tooltip("An image to use as the hero image for this recipe.")]
+        [SerializeField, Tooltip("An image to use as the hero image for this recipe."), ShowAssetPreview]
         Texture2D heroImage;
-        [SerializeField, Tooltip("DO NOT CHANGE THIS. TODO: Create a custom editor that hides this in case of accidental change.")]
-        internal string uniqueID;
         [SerializeField, Tooltip("Powerups are recipes that can be offered between levels and, if purchased, become permanent.")]
         bool isPowerUp = false; 
         [SerializeField, Tooltip("The resources required to build this ammo type.")]
@@ -87,5 +91,24 @@ namespace Playground
         public virtual void BuildFinished()
         {
         }
+
+
+        [SerializeField, Tooltip("DO NOT CHANGE THIS. TODO: Create a custom editor that hides this in case of accidental change."), BoxGroup("Internal"), ReadOnly]
+        internal string uniqueID;
+
+#if UNITY_EDITOR
+        [Button("ERROR: Need a valid ID."), HideIf("IsValidID")]
+        protected void GenerateID()
+        {
+            uniqueID = Guid.NewGuid().ToString();
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
+        }
+
+        private bool IsValidID
+        {
+            get { return string.IsNullOrEmpty(uniqueID) == false; }
+        }
+#endif
     }
 }

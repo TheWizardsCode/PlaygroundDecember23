@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Playground Health Pickup 5 Recipe
   m_EditorClassIdentifier: 
   displayName: Health 5
-  description: Heal a small amount of health.
-  heroImage: {fileID: 0}
+  description: Take away some of the hurt.
+  heroImage: {fileID: 2800000, guid: 75b3909760d18ce4a8a72aaa86616796, type: 3}
   uniqueID: 877ed019-2280-498c-bc61-e113987700f1
   isPowerUp: 1
   cost: 5
