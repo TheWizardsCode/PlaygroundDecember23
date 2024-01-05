@@ -48,14 +48,16 @@ MonoBehaviour:
   buildingLotSize: {x: 25, y: 25}
   buildingDensity: 0.734
   groundMaterial: {fileID: 2100000, guid: 05913f35d4d0cfb45a4e7a062d3f26b9, type: 2}
-  wallMaterial: {fileID: 0}
-  buildingPrefabs:
+  wallMaterial: {fileID: 2100000, guid: 64710d2176c2e8f438cd7dbd01d584a9, type: 2}
+  buildingWithoutSpawnerPrefabs:
   - {fileID: 6543032934749555394, guid: 820a528fff96436408dc70de520ccdbe, type: 3}
   - {fileID: 2060113240144020941, guid: ba2b4875383ad064691053d037b07f7a, type: 3}
   - {fileID: 5230112460837190557, guid: 07103324111bf7641975a5f08d5429c6, type: 3}
   - {fileID: 895710043128325180, guid: a9aaa7cc6f16b504899e8f2bdc066b57, type: 3}
   - {fileID: 4330765639891971577, guid: a890f145341659149991d7b77a40c12e, type: 3}
   - {fileID: 7019865242113649934, guid: 58ccb8d32c23cc94c80153045c24d74a, type: 3}
+  buildingWithSpawnerPrefabs:
+  - {fileID: 919132149155446097, guid: c666b12ca6e53d9469c9c9b0f9edd932, type: 3}
   recipeDropPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
   mainSpawnerPrefab: {fileID: 6576056135945926902, guid: aa20c983568f3cf449287cfaea83b7ed, type: 3}
   numberOfEnemySpawners: 2
@@ -76,6 +78,7 @@ GameObject:
   - component: {fileID: 7050872739850107185}
   - component: {fileID: 3957620431239229239}
   - component: {fileID: 905963099382226170}
+  - component: {fileID: 2767766673360794206}
   m_Layer: 0
   m_Name: Playground_Game_Mode
   m_TagString: Untagged
@@ -126,6 +129,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 44fc4b4d12062884394c89580d492d70, type: 2}
   - {fileID: 11400000, guid: 543e7f3598e6cb7439f8bb6c5effd41a, type: 2}
   rewardsPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
+  _isDebug: 0
   m_SpawnZones:
     mapSprite: {fileID: 0}
     spawnZones: []
@@ -185,6 +189,23 @@ MonoBehaviour:
   expandNeoComponents: 0
   expandOtherComponents: 0
   prefabGuid: 3f2b5cc90618dbb46b29cd834ae94c12
+--- !u!114 &2767766673360794206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223561033937574973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb73adea4588514fb2d2a797f0932c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelGenerator: {fileID: 3423411428560200973}
+  maximumTimeBetweenReports: 30
+  scannerPrefab: {fileID: 4437746279418429034, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
+  timeSlice: 25
+  targetKillRate: 10
 --- !u!1 &6495454180581363533
 GameObject:
   m_ObjectHideFlags: 0
