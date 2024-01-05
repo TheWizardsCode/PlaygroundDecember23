@@ -1,0 +1,3154 @@
+<REAPER_PROJECT 0.1 "7.07/win64" 1704428017
+  <NOTES 0 2
+  >
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 1
+  ENVATTACH 3
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 0
+  GRID 3199 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 0
+  ZOOM 100 0 0
+  VZOOMEX 6 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "Media" ""
+  <RECORD_CFG
+    ZXZhdxgAAQ==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN ""
+  RENDER_FMT 0 2 0
+  RENDER_1X 0
+  RENDER_RANGE 3 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 1
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+    ZXZhdxgAAQ==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+    MULT 1
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 0 0
+  SELECTION2 0 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0 0 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_PANMODE 3
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERPLAYSPEEDENV
+    EGUID {B6F6167A-344E-4151-9093-44C43ED2E01F}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {5865986E-844F-4ED9-8D2D-F01965E73481}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {f175487f-66c9-42e5-8850-5710a9820653}
+    NAME "GameSynth"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {f175487f-66c9-42e5-8850-5710a9820653}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 1.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID dca31384-b1c3-47ca-bb31-f7c7d0b0f59e
+      IID 1
+      NAME "Explosion_Small_Close_000"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 6f5cb913-0525-4577-9aea-b2f1c3fe11dd
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_000.wav"
+      >
+    >
+    <ITEM
+      POSITION 2.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 033ad7c8-5458-4c45-8b1c-23ec3abb7802
+      IID 2
+      NAME "Explosion_Small_Close_001"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 8f419734-843c-43ae-93c5-1be9c554bb52
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_001.wav"
+      >
+    >
+    <ITEM
+      POSITION 3.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d848fc5c-7de4-48b2-80bf-fd3d276b1978
+      IID 3
+      NAME "Explosion_Small_Close_002"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID ecd49848-ebe9-48a0-886d-c32f6c1a6a22
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_002.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 93470612-567a-41ae-8620-3007f8f32798
+      IID 4
+      NAME "Explosion_Small_Close_003"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 9d9ac121-b308-4f1f-8a48-14ebb2efb94e
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_003.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 77cda173-a94b-40fd-9096-0768a08770c1
+      IID 5
+      NAME "Explosion_Small_Close_004"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 504be157-ab33-4517-bd94-9baf0042f58b
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_004.wav"
+      >
+    >
+    <ITEM
+      POSITION 6.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID b4b6da48-72f2-42cf-a64a-926eea12292a
+      IID 6
+      NAME "Explosion_Small_Close_005"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID d0d5149d-78a3-4316-a027-8a3e00920f2f
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_005.wav"
+      >
+    >
+    <ITEM
+      POSITION 7.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d1bc66f6-c848-464f-9327-b88bde866ff7
+      IID 7
+      NAME "Explosion_Small_Close_006"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 6b044836-8367-44fa-a2e2-4e64e898c5ba
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_006.wav"
+      >
+    >
+    <ITEM
+      POSITION 8.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID e78c8845-c59f-425f-9a58-a6f346dacbd4
+      IID 8
+      NAME "Explosion_Small_Close_007"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID d4f7d212-7a7c-4b5a-81f1-759edbdf936a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_007.wav"
+      >
+    >
+    <ITEM
+      POSITION 9.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID a0d9ec1e-e8e8-42bb-a0d4-b723e8f3f4d9
+      IID 9
+      NAME "Explosion_Small_Close_008"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID ed57c0b8-87c9-401e-a389-db192ef33f9f
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_008.wav"
+      >
+    >
+    <ITEM
+      POSITION 10.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 7592f02e-2db8-430f-be25-0ca07e02037f
+      IID 10
+      NAME "Explosion_Small_Close_009"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 50d02cff-3fca-452a-b27d-3f5ecc030dc0
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_009.wav"
+      >
+    >
+  >
+  <TRACK {be6a2029-37e6-4dda-a86c-4e19d81ad844}
+    NAME "Modular_000"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {be6a2029-37e6-4dda-a86c-4e19d81ad844}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID f826bca3-08f6-4ac6-afe3-1902d0b539d7
+      IID 11
+      NAME "Modular_000"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID b895cd4b-e57e-419f-87d4-90a81ac58276
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_000.wav"
+      >
+    >
+  >
+  <TRACK {cbec2969-26b4-4d9a-82b9-faf9dcc61bf4}
+    NAME "Modular_001"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {cbec2969-26b4-4d9a-82b9-faf9dcc61bf4}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 1.526
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID c3a51a23-8b49-42d6-8f73-419ee34ec5cb
+      IID 12
+      NAME "Modular_001"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e12cddd4-ba43-4ff2-9c52-526d547b9237
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_001.wav"
+      >
+    >
+  >
+  <TRACK {ab608b3a-db4c-4219-85ad-687c9a9aa019}
+    NAME "Modular_002"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {ab608b3a-db4c-4219-85ad-687c9a9aa019}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 3.052
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID f714f591-afdb-4280-a0fc-931c0e016b6e
+      IID 13
+      NAME "Modular_002"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 31d9de70-2568-4c35-bca1-aff18dda2145
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_002.wav"
+      >
+    >
+  >
+  <TRACK {88507c27-8c32-45a8-a8fc-d1a5a1a1b897}
+    NAME "Modular_003"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {88507c27-8c32-45a8-a8fc-d1a5a1a1b897}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 4.579
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 5af8b322-52d7-4f3c-aa0e-199c0eef3d96
+      IID 14
+      NAME "Modular_003"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e7b65b6a-db37-42c4-8126-a7266087dd3e
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_003.wav"
+      >
+    >
+  >
+  <TRACK {da7dcc7e-4ced-4089-8a29-e9752c0375a2}
+    NAME "Modular_004"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {da7dcc7e-4ced-4089-8a29-e9752c0375a2}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 6.105
+      SNAPOFFS 0
+      LENGTH 1.654
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 85c8a7ff-b264-4ea3-85cb-5092b2a91258
+      IID 15
+      NAME "Modular_004"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID bfc29b5a-17ef-4761-b28f-19e81c7f16ce
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_004.wav"
+      >
+    >
+  >
+  <TRACK {4aa198a3-64fe-44ce-ac9e-ceb903c81304}
+    NAME "Modular_005"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {4aa198a3-64fe-44ce-ac9e-ceb903c81304}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 7.759
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 8be36da0-bf8c-4951-847a-bb2d60f709c7
+      IID 16
+      NAME "Modular_005"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e9adec96-ff8b-462c-ad0e-f6e9ba5762ee
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_005.wav"
+      >
+    >
+  >
+  <TRACK {d27e73bf-d04e-40c6-b1f5-29fc4126bf99}
+    NAME "Modular_006"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {d27e73bf-d04e-40c6-b1f5-29fc4126bf99}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 9.286
+      SNAPOFFS 0
+      LENGTH 1.906
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ad444815-64c3-4a4a-836b-2649b453e243
+      IID 17
+      NAME "Modular_006"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID ee1130ad-0c08-47c7-aa48-ccfd29657f43
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_006.wav"
+      >
+    >
+  >
+  <TRACK {3fe05dc8-5529-475a-aeb2-93484b71b4dc}
+    NAME "Modular_007"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {3fe05dc8-5529-475a-aeb2-93484b71b4dc}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 11.191
+      SNAPOFFS 0
+      LENGTH 1.533
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID dda86577-bc56-48a9-918d-bd29ab4c424e
+      IID 18
+      NAME "Modular_007"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 31839c74-a7e2-4d2e-9a96-e73bf05cafcb
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_007.wav"
+      >
+    >
+  >
+  <TRACK {3aa2f1de-7ce2-4ea7-b242-c47d1722aca9}
+    NAME "Modular_008"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {3aa2f1de-7ce2-4ea7-b242-c47d1722aca9}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 12.725
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 1ce333dd-a2b8-4e2d-b3f9-129bd5c9d7b1
+      IID 19
+      NAME "Modular_008"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 2e64c427-e7ab-425b-b44e-1b9b1a0b09a3
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_008.wav"
+      >
+    >
+  >
+  <TRACK {cef406a0-36ad-4e82-843d-714ff9958cec}
+    NAME "Modular_009"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {cef406a0-36ad-4e82-843d-714ff9958cec}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 14.251
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 8e9b1be8-65bf-48cb-98c4-2cf9758b1b83
+      IID 20
+      NAME "Modular_009"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 5b7e0a16-46b7-49ae-9d04-76e3f9a55cb5
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Modular_009.wav"
+      >
+    >
+  >
+  <TRACK {6875a7f5-919d-403d-a8a3-e5edf7fb8b65}
+    NAME "ExplosionSmallClose"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {6875a7f5-919d-403d-a8a3-e5edf7fb8b65}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 1.000
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 19e415d6-90e0-446c-b43e-2ce8a1bf5f7a
+      IID 21
+      NAME "Explosion_Small_Close_000"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 347f66ea-9452-485a-a8b2-a5a8f78843c7
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_000.wav"
+      >
+    >
+    <ITEM
+      POSITION 3.526
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 87878a73-d7b7-43d2-9abb-392d3b032417
+      IID 22
+      NAME "Explosion_Small_Close_001"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID d95bedf4-a0e3-4d3e-846f-25a3b58d6081
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_001.wav"
+      >
+    >
+    <ITEM
+      POSITION 6.052
+      SNAPOFFS 0
+      LENGTH 1.612
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 05d90122-2c8c-4d0a-bbbf-594aca941a5f
+      IID 23
+      NAME "Explosion_Small_Close_002"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 79a25ce0-3c85-49e1-a457-31507fac76b6
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_002.wav"
+      >
+    >
+    <ITEM
+      POSITION 8.664
+      SNAPOFFS 0
+      LENGTH 1.868
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 0db26434-e874-4735-8bae-1f9c3ed07c3b
+      IID 24
+      NAME "Explosion_Small_Close_003"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 35e9b5b7-e204-4a33-82cb-4c5b35e100da
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_003.wav"
+      >
+    >
+    <ITEM
+      POSITION 11.533
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID dbdb4d60-f50d-4326-b836-341faf2e4fd8
+      IID 25
+      NAME "Explosion_Small_Close_004"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID b0bac006-c4c6-4598-ab71-b7b3173ae601
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_004.wav"
+      >
+    >
+    <ITEM
+      POSITION 14.059
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 10d63179-6c87-46b7-9e01-177985c17baa
+      IID 26
+      NAME "Explosion_Small_Close_005"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 611865fc-7d72-44a4-b31d-9deef9f642d6
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_005.wav"
+      >
+    >
+    <ITEM
+      POSITION 16.585
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 9e689f17-b480-487c-97e5-243f5be5dca5
+      IID 27
+      NAME "Explosion_Small_Close_006"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID de6bfee3-b925-43c5-8d86-718a86669f49
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_006.wav"
+      >
+    >
+    <ITEM
+      POSITION 19.111
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 2d1ea61e-ec28-4919-8844-05eced7b6515
+      IID 28
+      NAME "Explosion_Small_Close_007"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 1ad7ca04-0f8f-4b7e-b359-b450b502ee90
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_007.wav"
+      >
+    >
+    <ITEM
+      POSITION 21.638
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ae31b6ac-ec16-4f64-b819-28b4c8e454dc
+      IID 29
+      NAME "Explosion_Small_Close_008"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 97a27497-3410-428f-9868-35773b1835e0
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_008.wav"
+      >
+    >
+    <ITEM
+      POSITION 24.164
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID c98475b8-2a5b-44c0-85a6-362d9be01818
+      IID 30
+      NAME "Explosion_Small_Close_009"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID d497cd1f-c3f9-4184-a708-09bdaf54e1ac
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_009.wav"
+      >
+    >
+    <ITEM
+      POSITION 26.690
+      SNAPOFFS 0
+      LENGTH 2.004
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 4b40b5a5-88d5-4b7e-b9c3-61ae6597a435
+      IID 31
+      NAME "Explosion_Small_Close_010"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 96074911-f0b2-4a39-a471-e00772442b4d
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_010.wav"
+      >
+    >
+    <ITEM
+      POSITION 29.694
+      SNAPOFFS 0
+      LENGTH 1.988
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ac8e0895-649d-428f-a282-0487254ed815
+      IID 32
+      NAME "Explosion_Small_Close_011"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 98caed72-1cdf-4485-b726-51ca0dd7e320
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_011.wav"
+      >
+    >
+    <ITEM
+      POSITION 32.682
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID e52358f1-310b-4ca8-8207-4961e2c65f4b
+      IID 33
+      NAME "Explosion_Small_Close_012"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 0dc8f86d-7ac5-4669-98e2-068cb6cb2a89
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_012.wav"
+      >
+    >
+    <ITEM
+      POSITION 35.209
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 93cdba9a-db0f-44d2-bfd3-206cfd12e39e
+      IID 34
+      NAME "Explosion_Small_Close_013"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID c0e0c599-42bd-4abe-b92b-7a95986b80d2
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_013.wav"
+      >
+    >
+    <ITEM
+      POSITION 37.735
+      SNAPOFFS 0
+      LENGTH 1.718
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 97b1dab2-408e-4bed-b4ee-6fc20f4f4fa5
+      IID 35
+      NAME "Explosion_Small_Close_014"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID a9dc8b75-8d62-4dda-8808-33fc7ac0a7ca
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_014.wav"
+      >
+    >
+    <ITEM
+      POSITION 40.453
+      SNAPOFFS 0
+      LENGTH 2.355
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 28a6e496-6abe-4805-a91a-52df80088f71
+      IID 36
+      NAME "Explosion_Small_Close_015"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 9913f3a1-909b-4fef-bd84-0bcf2a053f08
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_015.wav"
+      >
+    >
+    <ITEM
+      POSITION 43.809
+      SNAPOFFS 0
+      LENGTH 1.598
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 4e29f527-8ab1-4f10-b0ff-5f728bf4e006
+      IID 37
+      NAME "Explosion_Small_Close_016"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 664e4594-ecc4-4012-82a4-4771d63ebb0a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_016.wav"
+      >
+    >
+    <ITEM
+      POSITION 46.407
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 942642a1-dac4-4acc-a434-8fff1ed5b2e9
+      IID 38
+      NAME "Explosion_Small_Close_017"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 94ff77ac-6690-4482-b885-661c689261fc
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_017.wav"
+      >
+    >
+    <ITEM
+      POSITION 48.933
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 4b71ed87-6d23-4a03-996b-fd32317984b9
+      IID 39
+      NAME "Explosion_Small_Close_018"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 33e912c1-5c15-4fa9-9719-6a0db97dbdfc
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_018.wav"
+      >
+    >
+    <ITEM
+      POSITION 51.459
+      SNAPOFFS 0
+      LENGTH 2.555
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 97c7bcf2-ca01-467f-b5fb-68cba34df00b
+      IID 40
+      NAME "Explosion_Small_Close_019"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 0ac45b05-072a-4445-832a-76f6ab1fb325
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_019.wav"
+      >
+    >
+    <ITEM
+      POSITION 55.014
+      SNAPOFFS 0
+      LENGTH 1.781
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID dbf8fac8-f35f-464e-9cc3-3ccbc65efefd
+      IID 41
+      NAME "Explosion_Small_Close_020"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 41df0b79-4f74-416b-878c-92277310eced
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_020.wav"
+      >
+    >
+    <ITEM
+      POSITION 57.795
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 892603a8-5037-4c66-a3ef-0d3f1e0abf2e
+      IID 42
+      NAME "Explosion_Small_Close_021"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID b56939d3-b92e-401f-8de0-bf8d7920932a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_021.wav"
+      >
+    >
+    <ITEM
+      POSITION 60.321
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 90a5954d-90d2-45f1-9d11-19abae3cf01c
+      IID 43
+      NAME "Explosion_Small_Close_022"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 886f0bb1-0293-4329-9f01-fb73698581d7
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_022.wav"
+      >
+    >
+    <ITEM
+      POSITION 62.848
+      SNAPOFFS 0
+      LENGTH 2.395
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 7b44cf22-7171-4912-a410-786e4918e5e5
+      IID 44
+      NAME "Explosion_Small_Close_023"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 581c0c37-467f-4b52-96e9-7a462b3f8ff4
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_023.wav"
+      >
+    >
+    <ITEM
+      POSITION 66.243
+      SNAPOFFS 0
+      LENGTH 2.321
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d89c56ae-b08f-461e-925b-a672333c002a
+      IID 45
+      NAME "Explosion_Small_Close_024"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 48e597e6-17e8-49e6-8892-e61c69f2232b
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_024.wav"
+      >
+    >
+    <ITEM
+      POSITION 69.563
+      SNAPOFFS 0
+      LENGTH 1.749
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID a81afb2d-38a1-4f4e-ad1f-e0fdbab887d5
+      IID 46
+      NAME "Explosion_Small_Close_025"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 46749541-173c-42cd-8e99-923ff832ca4a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_025.wav"
+      >
+    >
+    <ITEM
+      POSITION 72.312
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d88ce607-1e63-4413-adc5-80478d727464
+      IID 47
+      NAME "Explosion_Small_Close_026"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID f53d7131-645a-4a9f-8bd6-d80c3b5c5011
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_026.wav"
+      >
+    >
+    <ITEM
+      POSITION 74.838
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID c0795c3f-0805-4723-8a12-b52e9f594c1b
+      IID 48
+      NAME "Explosion_Small_Close_027"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID cbad422d-2fd6-4cbf-a251-06717c8dc3cd
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_027.wav"
+      >
+    >
+    <ITEM
+      POSITION 77.364
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 64dd11b1-c6c4-4326-ab4c-b82f07def789
+      IID 49
+      NAME "Explosion_Small_Close_028"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 2fb0e910-659f-4fe8-b118-fc6f8e23e70a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_028.wav"
+      >
+    >
+    <ITEM
+      POSITION 79.891
+      SNAPOFFS 0
+      LENGTH 2.103
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 01f36c38-ce54-467b-939a-5876702b2ec2
+      IID 50
+      NAME "Explosion_Small_Close_029"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 6ee99726-9bd2-435c-a86e-72f9f6b1f3b9
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_029.wav"
+      >
+    >
+    <ITEM
+      POSITION 82.994
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d83561bb-9e93-40a1-8819-22ab9755a2b7
+      IID 51
+      NAME "Explosion_Small_Close_030"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID c33d1a78-c255-4d48-9e48-9abc2d941177
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_030.wav"
+      >
+    >
+    <ITEM
+      POSITION 85.520
+      SNAPOFFS 0
+      LENGTH 1.547
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID c3d91fd4-598d-4e10-ab88-f48ad33fa698
+      IID 52
+      NAME "Explosion_Small_Close_031"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID aeed66a2-1bc3-404a-8e10-1bb109f97284
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_031.wav"
+      >
+    >
+    <ITEM
+      POSITION 88.067
+      SNAPOFFS 0
+      LENGTH 2.310
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 35818f08-cf0c-42ce-a441-b58172506e8b
+      IID 53
+      NAME "Explosion_Small_Close_032"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 2d90e028-4b9e-435b-9dc2-aafb590c8dc4
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_032.wav"
+      >
+    >
+    <ITEM
+      POSITION 91.377
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d1cb0bdb-4a67-4fc0-b77d-690ba13a2043
+      IID 54
+      NAME "Explosion_Small_Close_033"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID c29d5479-c0c0-47a1-813d-0fad45fcd40a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_033.wav"
+      >
+    >
+    <ITEM
+      POSITION 93.903
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 3b10f361-8780-4714-abc5-85abf5363062
+      IID 55
+      NAME "Explosion_Small_Close_034"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 6375c744-6629-47c4-ad2f-11be016e3713
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_034.wav"
+      >
+    >
+    <ITEM
+      POSITION 96.429
+      SNAPOFFS 0
+      LENGTH 2.302
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 0aad7b28-d4d3-4a6f-999b-28d5aea40d49
+      IID 56
+      NAME "Explosion_Small_Close_035"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 80a6e835-290d-464d-9f0e-0d1521f7dd3c
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_035.wav"
+      >
+    >
+    <ITEM
+      POSITION 99.731
+      SNAPOFFS 0
+      LENGTH 1.599
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 0481e029-fcf2-4178-8e5e-1f4716f0e6b4
+      IID 57
+      NAME "Explosion_Small_Close_036"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 139217c1-0b15-4c57-8aa9-1440e003ba5c
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_036.wav"
+      >
+    >
+    <ITEM
+      POSITION 102.330
+      SNAPOFFS 0
+      LENGTH 1.862
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID a8e41a4a-8dc1-44c4-a885-fb2f4574cf81
+      IID 58
+      NAME "Explosion_Small_Close_037"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 7e5b0752-0732-4b1b-aa1e-55775466e4a3
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_037.wav"
+      >
+    >
+    <ITEM
+      POSITION 105.192
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 28436f30-17cd-481b-9d7f-57b6cf250212
+      IID 59
+      NAME "Explosion_Small_Close_038"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID bd289018-fad3-437b-9820-858f21670204
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_038.wav"
+      >
+    >
+    <ITEM
+      POSITION 107.718
+      SNAPOFFS 0
+      LENGTH 2.330
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 689fe0f6-1357-44c2-b643-cc1cff9a9ef1
+      IID 60
+      NAME "Explosion_Small_Close_039"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 624bafbf-31f4-49a9-8ea6-03e3778e476f
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_039.wav"
+      >
+    >
+    <ITEM
+      POSITION 111.048
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 4dec3003-b020-4007-84c7-2ce773d04b03
+      IID 61
+      NAME "Explosion_Small_Close_040"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID a7c5c83b-c109-4dbb-93cf-e924f0ce58b1
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_040.wav"
+      >
+    >
+    <ITEM
+      POSITION 113.574
+      SNAPOFFS 0
+      LENGTH 1.968
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID b36e166b-6800-47b1-bb8e-1f82ec5a2398
+      IID 62
+      NAME "Explosion_Small_Close_041"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 41faef8a-0eb5-434c-87c0-a754965956ca
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_041.wav"
+      >
+    >
+    <ITEM
+      POSITION 116.542
+      SNAPOFFS 0
+      LENGTH 2.120
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d71efbd0-9e4f-46e3-aca5-dfbc1b85c0cd
+      IID 63
+      NAME "Explosion_Small_Close_042"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID fac45c5d-701b-4eaa-a143-91856744af00
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_042.wav"
+      >
+    >
+    <ITEM
+      POSITION 119.662
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID c7159355-0d10-42ab-ad6d-4843187d879a
+      IID 64
+      NAME "Explosion_Small_Close_043"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 8e493ce4-a2c1-4a64-b6af-55c04f14e05d
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_043.wav"
+      >
+    >
+    <ITEM
+      POSITION 122.189
+      SNAPOFFS 0
+      LENGTH 1.978
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 58a9fb14-df16-41e1-9e61-a64ea1335ee6
+      IID 65
+      NAME "Explosion_Small_Close_044"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 33db4ac5-3492-48ea-b8c8-0f381dd1b1fd
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_044.wav"
+      >
+    >
+    <ITEM
+      POSITION 125.167
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 93ada7a6-f9b2-4c17-8eeb-6e1f0b862d3d
+      IID 66
+      NAME "Explosion_Small_Close_045"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID c10f2000-361b-47f9-a136-539447471d04
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_045.wav"
+      >
+    >
+    <ITEM
+      POSITION 127.693
+      SNAPOFFS 0
+      LENGTH 2.102
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 44edc1d3-fb12-4d49-9c32-5f76a5531127
+      IID 67
+      NAME "Explosion_Small_Close_046"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID f087093f-7f16-4d70-9545-1d33a679fff7
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_046.wav"
+      >
+    >
+    <ITEM
+      POSITION 130.795
+      SNAPOFFS 0
+      LENGTH 1.783
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d85e5e55-b3ad-4a2f-89d8-2a65541704b1
+      IID 68
+      NAME "Explosion_Small_Close_047"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 8896a6db-b2f2-4391-86fe-aa3726e9fb47
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_047.wav"
+      >
+    >
+    <ITEM
+      POSITION 133.579
+      SNAPOFFS 0
+      LENGTH 2.502
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID bf0c1a79-81b7-4bcb-b15e-f3473f6b039c
+      IID 69
+      NAME "Explosion_Small_Close_048"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 59fb763a-25c8-4b17-9df8-192522583170
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_048.wav"
+      >
+    >
+    <ITEM
+      POSITION 137.081
+      SNAPOFFS 0
+      LENGTH 2.231
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ee1fa09e-4314-4c41-8071-6f72945625c0
+      IID 70
+      NAME "Explosion_Small_Close_049"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e0359e0f-5afb-46f7-8da4-9304b4437ad7
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_049.wav"
+      >
+    >
+    <ITEM
+      POSITION 140.312
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID bc2a37cb-f463-4c47-b10b-cd1c32d3650c
+      IID 71
+      NAME "Explosion_Small_Close_050"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID fd976abe-4501-48af-bed0-4fc2830854a3
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_050.wav"
+      >
+    >
+    <ITEM
+      POSITION 142.838
+      SNAPOFFS 0
+      LENGTH 2.119
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 29408def-9e29-4d9b-960e-a21bc990652d
+      IID 72
+      NAME "Explosion_Small_Close_051"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 12f6659a-792c-4107-8b22-350933a1e804
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_051.wav"
+      >
+    >
+    <ITEM
+      POSITION 145.957
+      SNAPOFFS 0
+      LENGTH 2.314
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 3867bbc3-5e9b-4858-9349-14626be5f7a5
+      IID 73
+      NAME "Explosion_Small_Close_052"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID a2f1a960-3093-4d9d-a4d7-7ec52deea034
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_052.wav"
+      >
+    >
+    <ITEM
+      POSITION 149.272
+      SNAPOFFS 0
+      LENGTH 2.263
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 52545ba6-403f-446d-80e8-c2a453c8359c
+      IID 74
+      NAME "Explosion_Small_Close_053"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID cea2a278-3297-40b2-ba5e-c9939060315d
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_053.wav"
+      >
+    >
+    <ITEM
+      POSITION 152.534
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID e17b7f7c-db03-4e37-9fe8-b1dcf67ea132
+      IID 75
+      NAME "Explosion_Small_Close_054"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 0a4f7218-53a9-4343-89e2-29655883fb94
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_054.wav"
+      >
+    >
+    <ITEM
+      POSITION 155.061
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 70940e9d-ec0c-449e-8c93-787d33ffa563
+      IID 76
+      NAME "Explosion_Small_Close_055"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 11d8557a-dead-4420-93e1-f82c32059511
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_055.wav"
+      >
+    >
+    <ITEM
+      POSITION 157.587
+      SNAPOFFS 0
+      LENGTH 1.748
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID e01d3d6e-8ff5-4aa3-8c3b-1eb1749fd002
+      IID 77
+      NAME "Explosion_Small_Close_056"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 8b5fa869-55c4-4957-9ae6-87381e2ea594
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_056.wav"
+      >
+    >
+    <ITEM
+      POSITION 160.335
+      SNAPOFFS 0
+      LENGTH 2.552
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 63983528-75d0-407d-95a2-1da3557eb1ac
+      IID 78
+      NAME "Explosion_Small_Close_057"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 3eafd1fa-4a69-4eca-bec3-f27252619dac
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_057.wav"
+      >
+    >
+    <ITEM
+      POSITION 163.888
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 9e46edcb-0214-4470-ab9c-4cfc6887ae5f
+      IID 79
+      NAME "Explosion_Small_Close_058"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 4809f0e5-ada4-4fcc-ade1-52a16cc37773
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_058.wav"
+      >
+    >
+    <ITEM
+      POSITION 166.414
+      SNAPOFFS 0
+      LENGTH 2.505
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ce3d093a-1295-48e0-bf43-d7194a9fc5b4
+      IID 80
+      NAME "Explosion_Small_Close_059"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID bc1abc3e-8109-4b18-9ca9-89d922840eae
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_059.wav"
+      >
+    >
+    <ITEM
+      POSITION 169.919
+      SNAPOFFS 0
+      LENGTH 1.665
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 1936abbf-aa0f-4ef6-aed4-98ee0867c885
+      IID 81
+      NAME "Explosion_Small_Close_060"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID f82c631f-d73a-4e8c-9575-86bd74b2d261
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_060.wav"
+      >
+    >
+    <ITEM
+      POSITION 172.584
+      SNAPOFFS 0
+      LENGTH 1.770
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 816a4fbb-01ee-4d08-8940-d2458b272631
+      IID 82
+      NAME "Explosion_Small_Close_061"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 8a596318-9e64-46a4-963a-e8c202f689f1
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_061.wav"
+      >
+    >
+    <ITEM
+      POSITION 175.354
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID b6ede3b6-8b5d-4da7-bb19-d93a8d4ac2e2
+      IID 83
+      NAME "Explosion_Small_Close_062"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 3fe1673d-9d87-4738-8aeb-e0d888a8fa4d
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_062.wav"
+      >
+    >
+    <ITEM
+      POSITION 177.880
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 95cf2b23-280f-4956-b563-da74a156d32e
+      IID 84
+      NAME "Explosion_Small_Close_063"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 62bf9796-2f17-4385-86cc-bfa473052e7c
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_063.wav"
+      >
+    >
+    <ITEM
+      POSITION 180.406
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID fb6fec78-6711-4666-9e99-0151b55d0b93
+      IID 85
+      NAME "Explosion_Small_Close_064"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID c9835684-900b-4b03-8a88-f9325d4b9efe
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_064.wav"
+      >
+    >
+    <ITEM
+      POSITION 182.932
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID f0307e10-971b-449b-b032-ecfff4f2fce4
+      IID 86
+      NAME "Explosion_Small_Close_065"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 33da2818-a11c-4a43-95cf-2d4d4ac5388a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_065.wav"
+      >
+    >
+    <ITEM
+      POSITION 185.459
+      SNAPOFFS 0
+      LENGTH 1.836
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 53699415-4200-4f96-b300-4ac00d77f022
+      IID 87
+      NAME "Explosion_Small_Close_066"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID d382a2b9-4b3a-4f73-b9c9-454ff845c4a3
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_066.wav"
+      >
+    >
+    <ITEM
+      POSITION 188.295
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID c2866e29-7781-48ea-8ae8-ff6445d3b7ff
+      IID 88
+      NAME "Explosion_Small_Close_067"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 7b406d48-b36c-46cf-b1fe-e484819b067c
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_067.wav"
+      >
+    >
+    <ITEM
+      POSITION 190.821
+      SNAPOFFS 0
+      LENGTH 2.398
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 054347f4-3335-4d5f-8c5b-71901d91047f
+      IID 89
+      NAME "Explosion_Small_Close_068"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 42616313-fcbc-4bfb-9df0-802ed49bd3ef
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_068.wav"
+      >
+    >
+    <ITEM
+      POSITION 194.219
+      SNAPOFFS 0
+      LENGTH 1.791
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 5de5824b-f34f-44f2-8272-7e43077b5f45
+      IID 90
+      NAME "Explosion_Small_Close_069"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 90c16b66-bca4-43d3-8d0f-0511b79ceda3
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_069.wav"
+      >
+    >
+    <ITEM
+      POSITION 197.010
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 072af0fa-dc4d-4517-87df-fb50498e7d86
+      IID 91
+      NAME "Explosion_Small_Close_070"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 41e77b5c-ccea-4ef1-8a16-3c3960b45a98
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_070.wav"
+      >
+    >
+    <ITEM
+      POSITION 199.536
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 936db02a-66de-4a2a-8ae5-2a9a3ab642b0
+      IID 92
+      NAME "Explosion_Small_Close_071"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 170103c1-b448-4c6b-af79-46e4cd463caf
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_071.wav"
+      >
+    >
+    <ITEM
+      POSITION 202.062
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID d1f353f3-f180-4102-ba13-46265b724d61
+      IID 93
+      NAME "Explosion_Small_Close_072"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 974012b4-f910-4bb0-9d80-21f484c77d73
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_072.wav"
+      >
+    >
+    <ITEM
+      POSITION 204.589
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 02fdc4c1-8c59-4022-86b5-8e4de6cfc357
+      IID 94
+      NAME "Explosion_Small_Close_073"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 3221921a-e967-40b2-b98b-c0c075e009b6
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_073.wav"
+      >
+    >
+    <ITEM
+      POSITION 207.115
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 7c0868fd-40ef-4648-80e2-82a1c6857266
+      IID 95
+      NAME "Explosion_Small_Close_074"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 682c1c43-78fe-42b5-ab07-0ca8b9639740
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_074.wav"
+      >
+    >
+    <ITEM
+      POSITION 209.641
+      SNAPOFFS 0
+      LENGTH 1.596
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID a2d0923b-f8bb-4a3b-83ea-385bef8ba0ee
+      IID 96
+      NAME "Explosion_Small_Close_075"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID a98b7552-2994-44f3-9154-38057932d478
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_075.wav"
+      >
+    >
+    <ITEM
+      POSITION 212.238
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ab7141b9-b26d-4486-9b4a-ca5186806dbf
+      IID 97
+      NAME "Explosion_Small_Close_076"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 35cef9fa-c383-49a2-bc5c-6cbdde01d96e
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_076.wav"
+      >
+    >
+    <ITEM
+      POSITION 214.764
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 15659e1a-1c9a-407d-9ffb-ae104fe5d69a
+      IID 98
+      NAME "Explosion_Small_Close_077"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 64fd1265-b8c9-4de7-8cd1-8e1e12b3be20
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_077.wav"
+      >
+    >
+    <ITEM
+      POSITION 217.290
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 027f2c15-544d-4d34-98fa-82384c6bb148
+      IID 99
+      NAME "Explosion_Small_Close_078"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e9e5b95b-4549-4e81-b25d-437f92caee8a
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_078.wav"
+      >
+    >
+    <ITEM
+      POSITION 219.816
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID f5767079-ee81-4f2d-9167-3ba42aa47ad1
+      IID 100
+      NAME "Explosion_Small_Close_079"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID da4251bf-4e15-498a-abf9-fd611c17ed91
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_079.wav"
+      >
+    >
+    <ITEM
+      POSITION 222.342
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 0d0e46f4-aa3a-4ae5-bab2-d360fe923913
+      IID 101
+      NAME "Explosion_Small_Close_080"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 2e87ad00-86ec-4319-9280-caa163caf3b4
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_080.wav"
+      >
+    >
+    <ITEM
+      POSITION 224.869
+      SNAPOFFS 0
+      LENGTH 2.011
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 9f693e55-b271-46e9-9cd8-3c0b95f32c9c
+      IID 102
+      NAME "Explosion_Small_Close_081"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 7668e9ec-74bb-420c-954a-aa2b55566087
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_081.wav"
+      >
+    >
+    <ITEM
+      POSITION 227.880
+      SNAPOFFS 0
+      LENGTH 1.661
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ae595a52-e718-4666-b4de-95b4385fb038
+      IID 103
+      NAME "Explosion_Small_Close_082"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID da51640a-5576-4a0a-bf9e-a0dc0c620a86
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_082.wav"
+      >
+    >
+    <ITEM
+      POSITION 230.541
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 42a9676a-19b2-454e-9aaa-e7e1bd3c51f9
+      IID 104
+      NAME "Explosion_Small_Close_083"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 605f489d-7b63-4cd4-b791-ce5cb9c02939
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_083.wav"
+      >
+    >
+    <ITEM
+      POSITION 233.067
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 80f51eb2-a276-4498-b6ad-acf9098ef921
+      IID 105
+      NAME "Explosion_Small_Close_084"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 8f41eb0b-2eef-4a15-8b38-790aa700cdf4
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_084.wav"
+      >
+    >
+    <ITEM
+      POSITION 235.593
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID a1e1ac3a-7edf-464d-a6aa-e920d379a7a6
+      IID 106
+      NAME "Explosion_Small_Close_085"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e776e4d2-661f-4db7-90fd-786eab68f780
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_085.wav"
+      >
+    >
+    <ITEM
+      POSITION 238.119
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID fb8ee2eb-7df3-4a21-999a-054308af791c
+      IID 107
+      NAME "Explosion_Small_Close_086"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 2b3b45ef-d8f3-49cf-9538-ac743aa9daa8
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_086.wav"
+      >
+    >
+    <ITEM
+      POSITION 240.646
+      SNAPOFFS 0
+      LENGTH 2.222
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ff49fd8e-1e6e-4759-87f0-4e957e904971
+      IID 108
+      NAME "Explosion_Small_Close_087"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 3b90d815-8e97-41b9-9232-503a22596e0b
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_087.wav"
+      >
+    >
+    <ITEM
+      POSITION 243.867
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 2d2b64c9-7ede-48ab-be6c-308c59db71d8
+      IID 109
+      NAME "Explosion_Small_Close_088"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID e53e7a96-266b-4b6a-b2f7-b0bc28079b5e
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_088.wav"
+      >
+    >
+    <ITEM
+      POSITION 246.393
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID ddc9f71a-3dba-49ba-80ff-753c6c688777
+      IID 110
+      NAME "Explosion_Small_Close_089"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID a1af2c9d-89fc-4051-a574-6bcf10a4deec
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_089.wav"
+      >
+    >
+    <ITEM
+      POSITION 248.920
+      SNAPOFFS 0
+      LENGTH 1.535
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 5dcdfc8d-7a7d-41d3-8f60-1198d9d0db59
+      IID 111
+      NAME "Explosion_Small_Close_090"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 4ea3db28-b85d-43b4-81d2-a9da43670002
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_090.wav"
+      >
+    >
+    <ITEM
+      POSITION 251.454
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID e8bc638f-0123-4ce7-8c18-c2b816017ab7
+      IID 112
+      NAME "Explosion_Small_Close_091"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 4e90c574-bfff-481b-9650-5e327cb613a8
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_091.wav"
+      >
+    >
+    <ITEM
+      POSITION 253.981
+      SNAPOFFS 0
+      LENGTH 1.790
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 323857ac-4fa8-4c06-9570-614ee35b9e12
+      IID 113
+      NAME "Explosion_Small_Close_092"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 87693fa2-2900-4ffe-87ac-1bbcedc1fa52
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_092.wav"
+      >
+    >
+    <ITEM
+      POSITION 256.770
+      SNAPOFFS 0
+      LENGTH 1.873
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 10109af5-d87f-4d34-8233-2762c9271410
+      IID 114
+      NAME "Explosion_Small_Close_093"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 90abe85d-240f-4418-a119-2220b677941c
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_093.wav"
+      >
+    >
+    <ITEM
+      POSITION 259.644
+      SNAPOFFS 0
+      LENGTH 2.522
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID b02db591-49cd-4a41-9e79-d9dfd7c2bccc
+      IID 115
+      NAME "Explosion_Small_Close_094"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID dd4db256-e263-4fef-a1f4-899ed81790b7
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_094.wav"
+      >
+    >
+    <ITEM
+      POSITION 263.166
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID f087df94-2194-4648-af01-4a5ec66d8504
+      IID 116
+      NAME "Explosion_Small_Close_095"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID ee118b09-f06d-435b-8ba6-0fa9ae2a61a8
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_095.wav"
+      >
+    >
+    <ITEM
+      POSITION 265.692
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 0d2285b7-30a5-40cd-8b66-574ae55dde68
+      IID 117
+      NAME "Explosion_Small_Close_096"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 6184a609-cd52-472a-85ac-cb4c07522f7c
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_096.wav"
+      >
+    >
+    <ITEM
+      POSITION 268.218
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID f97092bc-72c7-4d29-9632-d2e84788bc9e
+      IID 118
+      NAME "Explosion_Small_Close_097"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 802bd68e-f97b-48ea-80cc-63c4ebbff9ab
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_097.wav"
+      >
+    >
+    <ITEM
+      POSITION 270.745
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID 67a91e1d-05aa-4dfe-b85c-5c370ac8fbf8
+      IID 119
+      NAME "Explosion_Small_Close_098"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID adb6b3aa-1b79-462d-9f29-9f9781e1df4f
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_098.wav"
+      >
+    >
+    <ITEM
+      POSITION 273.271
+      SNAPOFFS 0
+      LENGTH 1.526
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      YPOS 0 1
+      IGUID bbe1836f-e2f0-48df-847f-b052708d931d
+      IID 120
+      NAME "Explosion_Small_Close_099"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID 74a08853-79f3-4f2c-b741-95f2ba0cd192
+      <SOURCE WAVE
+        FILE "C:\Users\ross\OneDrive\Audio\Gamesynth\Exports\Renders\Explosion_Small_Close_099.wav"
+      >
+    >
+  >
+>
