@@ -15,7 +15,6 @@ MonoBehaviour:
   displayName: 556mm 30
   description: TBD
   heroImage: {fileID: 0}
-  uniqueID: d16ea57d-45d2-4521-861d-4a96ec69d455
   isPowerUp: 0
   cost: 30
   timeToBuild: 5
@@ -25,8 +24,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 58ddc5495f5c83940a02f6c80771af63, type: 3}
   - {fileID: 8300000, guid: 39db5f17ca63bd444acf035995e6d0e1, type: 3}
   - {fileID: 8300000, guid: e5e2e77fa8a976947baf083cdc61b149, type: 3}
-  buildCompleteClips:
-  - {fileID: 8300000, guid: bcaacdb2a1cc5224a95d8982f7ee37d1, type: 3}
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: d16ea57d-45d2-4521-861d-4a96ec69d455
   pickup: {fileID: 114439433628311108, guid: 22b000e4b734447488222861cf03d541, type: 3}
   ammo: {fileID: 11400000, guid: db82c342eedf1a642856a1bbb5fd9a6e, type: 2}

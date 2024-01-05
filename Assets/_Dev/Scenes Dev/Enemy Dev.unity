@@ -2490,11 +2490,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4764889720509381714, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: rotationSpeed.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4764889720509381714, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: rotationSpeed.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764889720509381714, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
+      propertyPath: rotationSpeed.z
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6004605724691275000, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: m_LocalRotation.w
