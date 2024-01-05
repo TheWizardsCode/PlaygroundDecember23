@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1651731687865070, guid: 710655323c5501145b640386c3cacd78, type: 3}
       propertyPath: m_Name
-      value: Pickup WeaponPickup_Shotgun_Swappable
+      value: Playground WeaponPickup_Shotgun_Swappable
       objectReference: {fileID: 0}
     - target: {fileID: 4968529916689684, guid: 710655323c5501145b640386c3cacd78, type: 3}
       propertyPath: m_RootOrder

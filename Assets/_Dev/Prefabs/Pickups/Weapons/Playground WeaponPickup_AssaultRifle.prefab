@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1962489923670448, guid: 4d5ced316c05f1946a0549ae4baf6645, type: 3}
       propertyPath: m_Name
-      value: Playground WeaponPickupAssaultRifle
+      value: Playground WeaponPickup_AssaultRifle
       objectReference: {fileID: 0}
     - target: {fileID: 4510155327491028, guid: 4d5ced316c05f1946a0549ae4baf6645, type: 3}
       propertyPath: m_RootOrder
