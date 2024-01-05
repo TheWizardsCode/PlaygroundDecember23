@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5219187662690625511}
   - component: {fileID: 6274646092407174085}
   - component: {fileID: 8698099878786347980}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Bottlecap
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -462,6 +462,10 @@ PrefabInstance:
     - target: {fileID: 1881717928048593120, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
       propertyPath: m_Name
       value: Contact Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881717928048593120, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6817774594015439600, guid: 6b774844ad739584dbfe978e0bceff96, type: 3}
       propertyPath: m_LocalPosition.x

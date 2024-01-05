@@ -47,9 +47,9 @@ GameObject:
   - component: {fileID: 3508714589688286614}
   - component: {fileID: 3993961177526658726}
   - component: {fileID: 4529629528363867195}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Shielded Core
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

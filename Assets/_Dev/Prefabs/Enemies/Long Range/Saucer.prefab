@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436079867255219435}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,9 @@ GameObject:
   - component: {fileID: 4529999075292211241}
   - component: {fileID: 3410746078879773002}
   - component: {fileID: 7054961101329663811}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Saucer
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1298c6460d67b9347ba0b8f268004d18, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1298c6460d67b9347ba0b8f268004d18, type: 3}
       propertyPath: m_LocalRotation.x
@@ -438,11 +438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1298c6460d67b9347ba0b8f268004d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1298c6460d67b9347ba0b8f268004d18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1298c6460d67b9347ba0b8f268004d18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3993dc9a04cd8c84fad3babce838ded2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 50}
+  rotationSpeed: {x: 0, y: 0, z: 40}
 --- !u!1001 &8083408344299699952
 PrefabInstance:
   m_ObjectHideFlags: 0

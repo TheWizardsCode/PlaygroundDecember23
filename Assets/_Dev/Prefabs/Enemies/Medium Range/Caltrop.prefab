@@ -46,9 +46,9 @@ GameObject:
   - component: {fileID: -6177641379027551643}
   - component: {fileID: 8266808405102126096}
   - component: {fileID: 4676414208784409485}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Caltrop
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

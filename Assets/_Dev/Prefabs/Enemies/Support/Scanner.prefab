@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4337732152716580310}
   - component: {fileID: 2131261758738502137}
   - component: {fileID: 4437746279418429034}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Scanner
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

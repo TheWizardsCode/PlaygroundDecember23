@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 8117743476493717414}
   - component: {fileID: 4984582729786400570}
   - component: {fileID: 8024360569292229668}
-  m_Layer: 12
+  m_Layer: 31
   m_Name: Artillery
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
