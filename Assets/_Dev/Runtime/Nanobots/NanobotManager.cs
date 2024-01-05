@@ -170,7 +170,7 @@ namespace Playground
             {
                 // TODO: make a decision on whether to make a generic item in a more intelligent way
                 // TODO: can we make tests that are dependent on the pickup, e.g. when the pickup is triggered it will only be picked up if needed 
-                if (RogueLiteManager.persistentData.currentResources < itemRecipes[i].Cost * 5)
+                if (RogueLiteManager.persistentData.currentResources < itemRecipes[i].Cost)
                 {
                     continue;
                 }

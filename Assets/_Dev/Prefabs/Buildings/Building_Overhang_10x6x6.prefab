@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6318804837798939257}
   - component: {fileID: 8844099959072405239}
   - component: {fileID: 5968102851861411981}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Building_Overhang_10x6x6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
