@@ -13,9 +13,9 @@ namespace Playground
     public class MagnetController : MonoBehaviour
     {
         [SerializeField, Tooltip("The range of the magnet.")]
-        private float range = 5;
+        internal float range = 5;
         [SerializeField, Tooltip("The speed at which the magnet attracts pickups.")]
-        private float speed = 2;
+        internal float speed = 2;
         [SerializeField, Tooltip("How often the magnet scans for pickups.")]
         private float frequencyOfScans = 0.5f;
 

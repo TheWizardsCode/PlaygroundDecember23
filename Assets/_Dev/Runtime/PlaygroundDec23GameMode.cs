@@ -145,6 +145,17 @@ namespace Playground
         {
             onVictory?.Invoke();
 
+            // Temporary magnet buff to pull in victory rewards
+            MagnetController magnet = FpsSoloCharacter.localPlayerCharacter.GetComponent<MagnetController>();
+            float originalRange = 0;
+            float originalSpeed = 0;
+            if (magnet != null) {
+                originalRange = magnet.range;
+                originalSpeed = magnet.speed;
+                magnet.range = 100;
+                magnet.speed = 25;
+            }
+
             yield return null;
 
             // Delay timer
@@ -153,6 +164,13 @@ namespace Playground
             {
                 m_VictoryTimer -= Time.deltaTime;
                 yield return null;
+            }
+
+            // Reset magnet
+            if (magnet != null)
+            {
+                magnet.range = originalRange;
+                magnet.speed = originalSpeed;
             }
 
             if (inGame)
