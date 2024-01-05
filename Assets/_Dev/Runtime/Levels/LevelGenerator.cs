@@ -23,8 +23,10 @@ namespace Playground
         Material groundMaterial;
         [SerializeField, Tooltip("The material to apply to the walls.")]
         Material wallMaterial;
-        [SerializeField, Tooltip("The prefabs to use for buildings.")]
-        GameObject[] buildingPrefabs;
+        [SerializeField, Tooltip("The prefabs to use for buildings without proximity spawners."), FormerlySerializedAs("buildingPrefabs")]
+        GameObject[] buildingWithoutSpawnerPrefabs;
+        [SerializeField, Tooltip("The prefabs to use for buildings with proximity spawners.")]
+        GameObject[] buildingWithSpawnerPrefabs;
 
         [Header("Additional Items")]
         [SerializeField, Tooltip("Recipe drops enable the player to colelct recipes for use within the run. if this is not null than a number of drops, proportional to the map size and density, will be placed in empty areas.")]
@@ -114,13 +116,24 @@ namespace Playground
                         continue;
                     }
 
-                    GameObject buildingPrefab = buildingPrefabs[Random.Range(0, buildingPrefabs.Length)];
+                    bool hasBuildingSpawner = buildingProximitySpawner != null && Random.value <= buildingSpawnerDensity;
+
+                    GameObject buildingPrefab = null;
+                    if (hasBuildingSpawner)
+                    {
+                        buildingPrefab = buildingWithSpawnerPrefabs[Random.Range(0, buildingWithSpawnerPrefabs.Length - 1)];
+                    }
+                    else
+                    {
+                        buildingPrefab = buildingWithoutSpawnerPrefabs[Random.Range(0, buildingWithoutSpawnerPrefabs.Length)];
+                    }
                     position = new Vector3(x + (buildingLotSize.x / 2), 0, z + (buildingLotSize.x / 2));
                     Transform building = Instantiate(buildingPrefab, position, Quaternion.identity, level.transform).transform;
 
-                    if (buildingProximitySpawner != null && Random.value <= buildingSpawnerDensity)
+                    if (hasBuildingSpawner)
                     {
                         Spawner spawner = Instantiate(buildingProximitySpawner, building);
+                        spawner.spawnRadius = 3;
                         spawner.transform.localPosition = new Vector3(0, 1.5f, 0);
                         spawner.GetComponent<IHealthManager>().onIsAliveChanged += spawner.OnAliveIsChanged;
                     }

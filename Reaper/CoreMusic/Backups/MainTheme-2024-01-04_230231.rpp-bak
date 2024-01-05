@@ -1,0 +1,611 @@
+<REAPER_PROJECT 0.1 "7.07/win64" 1704438151
+  <NOTES 0 2
+  >
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 129
+  ENVATTACH 3
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 0
+  GRID 3199 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 190
+  ZOOM 6.3928833274522 132 0
+  VZOOMEX 6 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 1
+  LOOPGRAN 0 4
+  RECORD_PATH "Media" ""
+  <RECORD_CFG
+    ZXZhdxgAAQ==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN MainTheme
+  RENDER_FMT 0 2 0
+  RENDER_1X 0
+  RENDER_RANGE 3 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 1
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+    ZXZhdxgAAQ==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+    MULT 1
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 142 228
+  SELECTION2 142 228
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0 0 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_PANMODE 3
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERPLAYSPEEDENV
+    EGUID {B6F6167A-344E-4151-9093-44C43ED2E01F}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {5865986E-844F-4ED9-8D2D-F01965E73481}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  MARKER 1 0 "Emily's Original" 1 0 1 R {1DE47CE6-CA85-4B75-9C26-A69490BB0FAA} 0
+  MARKER 1 104 "" 1
+  <PROJBAY
+  >
+  <TRACK {15ABC844-3F74-4B08-9447-00A8B4B8C35C}
+    NAME Drums
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.33518308651955 0 -1 -1 1
+    MUTESOLO 0 2 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {15ABC844-3F74-4B08-9447-00A8B4B8C35C}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 104.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7999B831-0A2C-4F35-972D-5BABEF5B3E2F}
+      IID 1
+      NAME -001.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CE794AE9-BFA0-4CB5-BCBE-85E5D3019E8A}
+      <SOURCE WAVE
+        FILE "Media\-001.wav"
+      >
+    >
+  >
+  <TRACK {9656AE6A-5294-4CE9-A277-B9BF43B4FF29}
+    NAME Bass
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.38912661506245 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {9656AE6A-5294-4CE9-A277-B9BF43B4FF29}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 26
+      SNAPOFFS 0
+      LENGTH 78.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {B4648F34-C89D-4B09-8EE1-EECA5BCE424F}
+      IID 4
+      NAME -004.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {83DD5FFB-5739-4B6E-96F7-C9DCBA75CB04}
+      <SOURCE WAVE
+        FILE "Media\-004.wav"
+      >
+    >
+  >
+  <TRACK {A1F9E978-11DA-460C-83C6-32A1792A710E}
+    NAME Pads
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.77570283218775 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A1F9E978-11DA-460C-83C6-32A1792A710E}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 104.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {4899900E-DFAB-42B2-9A9D-34A7C6D9E88E}
+      IID 3
+      NAME -003.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {51A370A7-410F-4F23-A947-1F7D3C6EA2DA}
+      <SOURCE WAVE
+        FILE "Media\-003.wav"
+      >
+    >
+  >
+  <TRACK {B26E0093-AD0E-45B6-B165-9050564783AB}
+    NAME "Synth "
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.31858830368035 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {B26E0093-AD0E-45B6-B165-9050564783AB}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 104.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {54FE5A56-7C1E-4657-9D43-3E536B02AEAB}
+      IID 2
+      NAME -002.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {F0188387-B9C7-4AC5-8C9A-98790A2D0FF7}
+      <SOURCE WAVE
+        FILE "Media\-002.wav"
+      >
+    >
+  >
+  <TRACK {DEEFECF6-1E2E-4D8E-9939-314D6AD76AA5}
+    NAME "Lead Guitar"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.52901304635576 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 1 1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {DEEFECF6-1E2E-4D8E-9939-314D6AD76AA5}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {7F006F5B-50EE-494E-8297-D812969BD37D}
+    NAME "Lead Guitar 1"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {7F006F5B-50EE-494E-8297-D812969BD37D}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 26
+      SNAPOFFS 0
+      LENGTH 26
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0.01 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {D9FD539E-A11F-4D72-A9CA-3461164CCDDA}
+      IID 5
+      NAME -005.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6F079895-B0E9-42CE-B614-19FC84002914}
+      <SOURCE WAVE
+        FILE "Media\-005.wav"
+      >
+    >
+  >
+  <TRACK {C300488B-C809-4FFB-A03B-8809A43C1907}
+    NAME "Lead Guitar 2"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 2 -1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {C300488B-C809-4FFB-A03B-8809A43C1907}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 26
+      SNAPOFFS 0
+      LENGTH 26
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0.01 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7AAD121B-C03C-4AFF-AF69-1DA4A1380E44}
+      IID 5
+      NAME -005.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {DE11C317-96E4-4E5E-93A1-DC80D28ABFEB}
+      <SOURCE WAVE
+        FILE "Media\-005.wav"
+      >
+    >
+  >
+  <TRACK {A0E42AE3-5FCF-4AAE-AAB6-351C6FC08B4F}
+    NAME "Guitar Strums"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A0E42AE3-5FCF-4AAE-AAB6-351C6FC08B4F}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 26
+      SNAPOFFS 0
+      LENGTH 78.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {4B6F21E2-A7F5-4677-BC70-22B89BCE9276}
+      IID 6
+      NAME -006.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D0A54709-F036-4F91-910E-626281C2CCAD}
+      <SOURCE WAVE
+        FILE "Media\-006.wav"
+      >
+    >
+  >
+  <TRACK {74C87C01-C21C-46E2-8171-A062259A8F80}
+    NAME "Rhythm Guitar"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.49571584489927 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 1 1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {74C87C01-C21C-46E2-8171-A062259A8F80}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {6F5500D0-F0EB-4F7A-99DF-7A05D8532B4A}
+    NAME "Rhythm Left"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.38912661506245 -0.432 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {6F5500D0-F0EB-4F7A-99DF-7A05D8532B4A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 26
+      SNAPOFFS 0
+      LENGTH 78.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5AA24334-20BA-493C-AFE7-D9877DC24CB4}
+      IID 7
+      NAME -007.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 3
+      GUID {D470184F-F3CB-40C7-94F9-3B6D6715AF9D}
+      <SOURCE WAVE
+        FILE "Media\-007.wav"
+      >
+    >
+  >
+  <TRACK {85A1ABE5-95DE-485B-8A38-E2736655F1D1}
+    NAME "Rhythm Right"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.74262274103116 0.432 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 2 -1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {85A1ABE5-95DE-485B-8A38-E2736655F1D1}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 26
+      SNAPOFFS 0
+      LENGTH 78.00933333333333
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F2894A21-C6F3-4F4A-B9E9-635B36506E63}
+      IID 8
+      NAME -008.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 4
+      GUID {5B126A41-E743-4A7D-B39F-CD4B28664B64}
+      <SOURCE WAVE
+        FILE "Media\-008.wav"
+      >
+    >
+  >
+  <EXTENSIONS
+    <MCU_B_KLINKE
+      |#{PROJECT_CONFIG/}#|
+      
+    >
+    <MCU_KLINKE
+      |#{PROJECT_CONFIG}#|
+        |#{TRACKSTATES}#|
+          |#{STATE track="{15ABC844-3F74-4B08-9447-00A8B4B8C35C}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{6F5500D0-F0EB-4F7A-99DF-7A05D8532B4A}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{74C87C01-C21C-46E2-8171-A062259A8F80}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{7F006F5B-50EE-494E-8297-D812969BD37D}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{85A1ABE5-95DE-485B-8A38-E2736655F1D1}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{9656AE6A-5294-4CE9-A277-B9BF43B4FF29}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{A0E42AE3-5FCF-4AAE-AAB6-351C6FC08B4F}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{A1F9E978-11DA-460C-83C6-32A1792A710E}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{B26E0093-AD0E-45B6-B165-9050564783AB}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{C300488B-C809-4FFB-A03B-8809A43C1907}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+          |#{STATE track="{DEEFECF6-1E2E-4D8E-9939-314D6AD76AA5}" name="" tcp="1"
+                 mcp="1" mcu="1" anchor="0" q_channel="0" q_name="" q_root="0"/}#|
+        |#{/TRACKSTATES}#|
+        |#{PLUGMAPMANAGER/}#|
+        |#{PLUGACCESS}#|
+          |#{SELECTED_PLUG track="{00000000-0000-0000-0000-000000000000}" slot="-1"/}#|
+        |#{/PLUGACCESS}#|
+        |#{PLUGPRESETMANAGER/}#|
+        |#{PLUGMODE/}#|
+        |#{LAST_CALLED_PRESETS/}#|
+      |#{/PROJECT_CONFIG}#|
+      
+    >
+  >
+>
