@@ -7,20 +7,19 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Laser Red
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Laser Red - Damaging
+  m_Shader: {fileID: 4800000, guid: 65496952687231d4382d31041d14d10f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ALPHABLEND_ON
   - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -50,8 +49,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: f5951f8d7c7ccd44f9057c04c2b7f463, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 12c89afe141ffb44db0961b50bfb0d10, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -62,25 +73,57 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: ff3f57713c1b8734da61cb2b03f2e1e5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 1, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: bb9e18de7dac0d64eb057f2f74706cf0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DissolveAmount: 0.323
     - _DstBlend: 10
+    - _EmissionStrength: 0.663
+    - _Float1: 0
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mode: 3
+    - _Mode: 2
+    - _NoiseAmount: 0.072
+    - _NoisePower: 3.35
+    - _NoiseScale: 5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _RimGlow: 0.475
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _Speed: 0.151
+    - _SrcBlend: 5
+    - _TransAmbient: 0.2
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.1
+    - _TransScattering: 1
+    - _TransShadow: 0.9
+    - _Translucency: 29.5
     - _UVSec: 0
     - _ZWrite: 0
+    - __dirty: 0
     m_Colors:
+    - _AnimationSpeed: {r: -0.3, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 0, b: 0, a: 0.41960785}
+    - _Colour: {r: 5.1387925, g: 0.26663548, b: 0.26663548, a: 0}
     - _EmissionColor: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissionColour: {r: 2.260026, g: 0.50104344, b: 0.50104344, a: 0.68235296}
+    - _NoiseSpeed: {r: -0.3, g: 0, b: 0, a: 0}
+    - _Speed: {r: -0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

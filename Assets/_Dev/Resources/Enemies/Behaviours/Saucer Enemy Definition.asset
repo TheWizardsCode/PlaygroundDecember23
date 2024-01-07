@@ -19,7 +19,7 @@ MonoBehaviour:
   rotationSpeed: 3
   minimumHeight: 20
   maximumHeight: 75
-  optimalDistanceFromPlayer: 50
+  optimalDistanceFromPlayer: 40
   maxWanderRange: 75
   obstacleAvoidanceDistance: 10
   sensorMask:

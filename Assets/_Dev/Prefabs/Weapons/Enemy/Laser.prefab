@@ -41,7 +41,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4475757418089012447}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -76,11 +76,11 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.8325112, y: 20.066103, z: -0.485678}
-  - {x: -0.8325112, y: 20.787102, z: -0.485678}
+  - {x: 0, y: 15, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.012912106
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -98,8 +98,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0.033018887, b: 0.033018887, a: 1}
+      key1: {r: 0, g: 0.40291214, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -123,13 +123,13 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
@@ -149,7 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f92cdcf301dc2349b2bbc42e1f96337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireRate: 1
-  damageAmount: 5
+  _Range: 45
+  _fireRate: 3
+  _targetingSpeed: 5
+  damageAmount: 10
+  accuracy: 0.1
   _lineRenderer: {fileID: 9164050455306302669}
-  _fireDuration: 0.5
+  _damagingLaser: {fileID: 2100000, guid: f2666178b87c7624d9b55baf8a6e7432, type: 2}
+  _targetingLaser: {fileID: 2100000, guid: da019b7535a430743843759da308b157, type: 2}
+  _fireDuration: 1

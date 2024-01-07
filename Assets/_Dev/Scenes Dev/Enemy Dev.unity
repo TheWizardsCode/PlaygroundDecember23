@@ -2253,6 +2253,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1681854101242362916, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
+      propertyPath: damageAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681854101242362916, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
+      propertyPath: _damagingLaser
+      value: 
+      objectReference: {fileID: 2100000, guid: f2666178b87c7624d9b55baf8a6e7432, type: 2}
+    - target: {fileID: 1681854101242362916, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
+      propertyPath: _targetingLaser
+      value: 
+      objectReference: {fileID: 2100000, guid: da019b7535a430743843759da308b157, type: 2}
     - target: {fileID: 3898056511753922700, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2299,7 +2311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038197323659428586, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2441,7 +2453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7985948857531989657, guid: dc8e65fcc446be54ea416d0af616ad16, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2462,7 +2474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1450764596457488462, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 15.06
       objectReference: {fileID: 0}
     - target: {fileID: 1450764596457488462, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2499,10 +2511,6 @@ PrefabInstance:
     - target: {fileID: 7985948857531989657, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: m_Name
       value: Saucer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7985948857531989657, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
