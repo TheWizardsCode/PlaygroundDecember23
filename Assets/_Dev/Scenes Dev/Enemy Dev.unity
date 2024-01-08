@@ -2265,6 +2265,10 @@ PrefabInstance:
       propertyPath: _targetingLaser
       value: 
       objectReference: {fileID: 2100000, guid: da019b7535a430743843759da308b157, type: 2}
+    - target: {fileID: 1681854101242362916, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
+      propertyPath: _targetingSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3898056511753922700, guid: 3746b354cbd2ebf48bc933b85f6205b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2507,6 +2511,10 @@ PrefabInstance:
     - target: {fileID: 1450764596457488462, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074747615513523070, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
+      propertyPath: _targetingSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7985948857531989657, guid: 9df54c08e26d9e64583aefeb1cd720b7, type: 3}
       propertyPath: m_Name

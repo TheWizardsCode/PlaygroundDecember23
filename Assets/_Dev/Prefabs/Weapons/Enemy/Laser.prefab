@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Range: 45
   _fireRate: 3
-  _targetingSpeed: 5
+  _targetingSpeed: 7
   damageAmount: 10
   accuracy: 0.1
   _lineRenderer: {fileID: 9164050455306302669}
