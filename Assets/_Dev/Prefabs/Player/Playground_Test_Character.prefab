@@ -2723,6 +2723,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
+  _resourcesRewardMultiplier: 200
+  rewardsPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
   buildStartedClips:
   - {fileID: 8300000, guid: f20eeaac5d265b84f95eb4b72a8b30b2, type: 3}
   - {fileID: 8300000, guid: 62e3f0ab8af798d4f9df2a549ea49b22, type: 3}

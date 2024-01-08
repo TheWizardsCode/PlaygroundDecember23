@@ -1,4 +1,5 @@
 using NeoFPS;
+using NeoFPS.SinglePlayer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,10 @@ namespace Playground
         [Header("Building")]
         [SerializeField, Tooltip("Cooldown between recipes.")]
         private float cooldown = 5;
+        [SerializeField, Tooltip("How many resources are needed for a reward. This will be multiplied by the current level squared. Meaning the higher the level the more resources are required for a reward crate.")]
+        private int _resourcesRewardMultiplier = 200;
+        [SerializeField, Tooltip("The prefab to use when generating level up rewards.")]
+        private RecipeSelectorUI rewardsPrefab;
 
         [Header("Default Feedback")]
         [SerializeField, Tooltip("The sound to play when the build is started. Note that this can be overridden in the recipe.")]
@@ -28,6 +33,7 @@ namespace Playground
         private List<ToolPickupRecipe> toolRecipes = new List<ToolPickupRecipe>();
         private List<GenericItemPickupRecipe> itemRecipes = new List<GenericItemPickupRecipe>();
 
+        internal int nextRewardsLevel = 200;
 
         public delegate void OnResourcesChanged(float from, float to);
         public event OnResourcesChanged onResourcesChanged;
@@ -37,6 +43,8 @@ namespace Playground
 
         private void Start()
         {
+            nextRewardsLevel = GetRequiredResourcesForNextLevel();
+
             foreach (var healthRecipe in healthRecipes)
             {
                 healthRecipe.Reset();
@@ -64,6 +72,16 @@ namespace Playground
             if (isBuilding || Time.timeSinceLevelLoad < timeOfNextBuiild)
             {
                 return;
+            }
+
+            // Offer a new recipe if possible
+            if (RogueLiteManager.persistentData.currentResources > nextRewardsLevel)
+            {
+                Transform player = FpsSoloCharacter.localPlayerCharacter.transform;
+                Vector3 position = player.position + player.forward * 5 + player.right * 1.5f;
+                RecipeSelectorUI rewards = Instantiate(rewardsPrefab, position, Quaternion.identity);
+
+                nextRewardsLevel = GetRequiredResourcesForNextLevel();
             }
 
             // Prioritize building ammo if the player is low on ammo
@@ -102,8 +120,15 @@ namespace Playground
             }
         }
 
-        // TODO: we can probably generalize these now that we have refactored the recipes to use interfaces/Abstract classes
 
+
+        private int GetRequiredResourcesForNextLevel()
+        {
+            int level = RogueLiteManager.runData.currentLevel + 1;
+            return RogueLiteManager.persistentData.currentResources + (level * level * _resourcesRewardMultiplier);
+        }
+
+        // TODO: we can probably generalize these Try* methods now that we have refactored the recipes to use interfaces/Abstract classes
         private bool TryHealthRecipes()
         {
             HealthPickupRecipe chosenRecipe = null;

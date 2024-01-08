@@ -22,21 +22,16 @@ namespace Playground
         private FpsSoloPlayerController m_PlayerPrefab = null;
         [SerializeField, NeoPrefabField(required = true), Tooltip("The character prefab to use.")]
         private FpsSoloCharacter m_CharacterPrefab = null;
-        [SerializeField, Tooltip("How many resources are needed for a reward. This will be multiplied by the current level squared. Meaning the higher the level the more resources are required for a reward crate.")]
-        private int _resourcesRewardMultiplier = 200;
         [SerializeField, Tooltip("The recipes that will be available to the player at the start of each run, regardless of resources.")]
         private AbstractRecipe[] _startingRecipes;
 
         [Header("Level Management")]
         [SerializeField, Tooltip("The level definitions which define the enemies, geometry and more for each level.")]
         LevelDefinition[] levels;
-        [SerializeField, Tooltip("The prefab to use when generating level up rewards.")]
-        private RecipeSelectorUI rewardsPrefab;
 
         [SerializeField, Tooltip("Turn on debug mode for this Game Mode"), Foldout("Debug")]
         private bool _isDebug = false;
 
-        int nextRewardsLevel = 200;
         private int spawnersRemaining = int.MaxValue;
 
         public static PlaygroundDecember23GameMode Instance { get; private set; }
@@ -91,15 +86,6 @@ namespace Playground
             if (FpsSoloCharacter.localPlayerCharacter == null) 
             {
                 return;
-            }
-
-            if (RogueLiteManager.persistentData.currentResources > nextRewardsLevel)
-            {
-                Transform player = FpsSoloCharacter.localPlayerCharacter.transform;
-                Vector3 position = player.position + player.forward * 5 + player.right * 1.5f;
-                RecipeSelectorUI rewards = Instantiate(rewardsPrefab, position, Quaternion.identity);
-
-                nextRewardsLevel = GetRequiredResourcesForNextLevel();
             }
         }
         #endregion
@@ -275,14 +261,6 @@ namespace Playground
                     }
                 }
             }
-
-            nextRewardsLevel = GetRequiredResourcesForNextLevel();
-        }
-
-        private int GetRequiredResourcesForNextLevel()
-        {
-            int level = RogueLiteManager.runData.currentLevel + 1;
-            return RogueLiteManager.persistentData.currentResources + (level * level * _resourcesRewardMultiplier);
         }
 
         #endregion

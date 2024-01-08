@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 8443320165488447625}
   - component: {fileID: 4090585656190305989}
   m_Layer: 22
-  m_Name: Recipe Pickup
+  m_Name: Recipe Reward Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
