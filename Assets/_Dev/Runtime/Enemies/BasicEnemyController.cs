@@ -350,8 +350,13 @@ namespace Playground
             if (Time.timeSinceLevelLoad > timeOfNextWanderPositionChange)
             {
                 timeOfNextWanderPositionChange = Time.timeSinceLevelLoad + Random.Range(10f, config.maxWanderRange);
-                wanderDestination = spawnPosition + Random.insideUnitSphere * config.maxWanderRange;
-                wanderDestination.y = Mathf.Clamp(wanderDestination.y, 1, config.maxWanderRange);
+
+                do
+                {
+                    wanderDestination = spawnPosition + Random.insideUnitSphere * config.maxWanderRange;
+                    wanderDestination.y = Mathf.Clamp(wanderDestination.y, 1, config.maxWanderRange);
+                } while (Physics.CheckSphere(wanderDestination, 1f));
+
                 goalDestination = wanderDestination;
 
 #if UNITY_EDITOR

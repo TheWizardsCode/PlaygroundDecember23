@@ -21,7 +21,7 @@ MonoBehaviour:
   maximumHeight: 75
   optimalDistanceFromPlayer: 5
   maxWanderRange: 250
-  obstacleAvoidanceDistance: 8
+  obstacleAvoidanceDistance: 10
   sensorMask:
     serializedVersion: 2
     m_Bits: 12781057
