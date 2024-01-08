@@ -15,11 +15,17 @@ MonoBehaviour:
   displayName: Grapple
   description: Swing through the world with ease, reach those high places.
   heroImage: {fileID: 2800000, guid: cb0bcf819fa7ea14ca46d1e0dbba1dd4, type: 3}
-  uniqueID: 6f7f0bf3-657f-46d6-9f68-6474a0e5916c
   isPowerUp: 1
   cost: 1000
   timeToBuild: 0
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: 9325db03cb72e224dbe825d11967c8eb, type: 3}
+  - {fileID: 8300000, guid: f4411b23913ab9241b3dcb2451e93b49, type: 3}
+  - {fileID: 8300000, guid: 1e82c4d0e9cbe374a8561eba0ab3a403, type: 3}
+  - {fileID: 8300000, guid: 23f9198eb2df9de4d88fdb475c86c5a4, type: 3}
+  - {fileID: 8300000, guid: d223427fa33258347bc695ff0740506c, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: 6f7f0bf3-657f-46d6-9f68-6474a0e5916c
   statType: 1

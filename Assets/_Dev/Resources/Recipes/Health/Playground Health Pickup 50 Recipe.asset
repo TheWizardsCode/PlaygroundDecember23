@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9173466c2b1873b46a6dc2bb3df303bb, type: 3}
   m_Name: Playground Health Pickup 50 Recipe
   m_EditorClassIdentifier: 
-  displayName: Health 50
+  displayName: Adrenaline Shot
   description: This could bring you back from the brink.
   heroImage: {fileID: 2800000, guid: c0427e47ce5e2674f91f7d8328fdb62b, type: 3}
   isPowerUp: 1
   cost: 40
   timeToBuild: 14
+  nameClips:
+  - {fileID: 8300000, guid: e28726b61f481fc42914a78570095a9f, type: 3}
+  - {fileID: 8300000, guid: 58fae0804aae342458b8a009f8c51e8b, type: 3}
+  - {fileID: 8300000, guid: 1fce416648fdd014ab55fbe08b042979, type: 3}
+  - {fileID: 8300000, guid: 774eb7fd5ac85674b9e60aacb784d4a2, type: 3}
+  - {fileID: 8300000, guid: e4d47ebef96602646bc00f5871126443, type: 3}
   buildStartedClips:
   - {fileID: 8300000, guid: 4cfa5201532b8804386629272d6c2251, type: 3}
   - {fileID: 8300000, guid: 82c6b2d4f96469a4a8a1f08f33a09a10, type: 3}

@@ -16,12 +16,18 @@ MonoBehaviour:
   description: A quick, lightweight weapon, ideal for close-range combat and as a
     backup when primary ammo depletes.
   heroImage: {fileID: 2800000, guid: 7cb4e7bcac7f53f40b122852e102d50b, type: 3}
-  uniqueID: 41110db0-dc1b-4fc0-9b53-fcb27672eca5
   isPowerUp: 1
   cost: 100
   timeToBuild: 10
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: 84ed53819ec065245aa7e9e5ba9905ad, type: 3}
+  - {fileID: 8300000, guid: 56c98587cc810bb4fa09432e9cfb9294, type: 3}
+  - {fileID: 8300000, guid: 6c0e2ca63ae33a549b443d35a9915f94, type: 3}
+  - {fileID: 8300000, guid: 8c5352d0c33247348aa888a7f8ed2687, type: 3}
+  - {fileID: 8300000, guid: d61773e98a68b87418f1674de9105950, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 96ce3b5dfacbf0b4db7929ae12fe32c2, type: 3}
+  uniqueID: 41110db0-dc1b-4fc0-9b53-fcb27672eca5
   pickup: {fileID: 7387125574233693455, guid: dbb6c52d2283b1947882ee01bf761508, type: 3}
   ammoRecipe: {fileID: 11400000, guid: eaac1bde8106d6c4eb2847d896423822, type: 2}

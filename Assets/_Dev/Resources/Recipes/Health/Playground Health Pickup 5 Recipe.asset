@@ -15,16 +15,17 @@ MonoBehaviour:
   displayName: Health 5
   description: Take away some of the hurt.
   heroImage: {fileID: 2800000, guid: 75b3909760d18ce4a8a72aaa86616796, type: 3}
-  uniqueID: 877ed019-2280-498c-bc61-e113987700f1
   isPowerUp: 1
   cost: 5
   timeToBuild: 2
-  buildStartedClips:
-  - {fileID: 8300000, guid: d210d5b65b7756e49b7b3a612f1fbae0, type: 3}
-  - {fileID: 8300000, guid: 263014f7a0dd6924a8b73f5e88f326e9, type: 3}
-  - {fileID: 8300000, guid: 9c715b49ac67b0c4280590cee6067c70, type: 3}
-  - {fileID: 8300000, guid: b9d5c9c9b0a695c41a9c9cd1ee2843c8, type: 3}
-  - {fileID: 8300000, guid: 579b43c8c16fded428de5d6a9b4541f7, type: 3}
+  nameClips:
+  - {fileID: 8300000, guid: d67945ee9483704479f83eee5bf0eeb7, type: 3}
+  - {fileID: 8300000, guid: ab28e9346e0b22146b3e11acc35b2f75, type: 3}
+  - {fileID: 8300000, guid: 7c95dc1578de4744ca0ef0d3f5b0947b, type: 3}
+  - {fileID: 8300000, guid: c41cb1ee1b3177546b432286ad92c2b1, type: 3}
+  - {fileID: 8300000, guid: 887522f414ac3ca4a99ab2d8f7c4d65d, type: 3}
+  buildStartedClips: []
   buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: 877ed019-2280-498c-bc61-e113987700f1
   pickup: {fileID: 114608595035019784, guid: 07dff97a969c00743824edf4557db1a6, type: 3}

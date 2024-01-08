@@ -90,7 +90,7 @@ namespace Playground
                 if (enemies.Count > 0 && currentKillRate < targetKillRate)
                 {
                     int orderedEnemies = 0;
-                    while (totalChallengeRating < targetKillRate * 3 || orderedEnemies == enemies.Count)
+                    while (totalChallengeRating < targetKillRate * 3 && orderedEnemies < enemies.Count)
                     {
                         orderedEnemies++;
                         BasicEnemyController randomEnemy = enemies[Random.Range(0, enemies.Count)];
@@ -98,7 +98,7 @@ namespace Playground
                         randomEnemy.RequestAttack(suspectedTargetLocation);
                     }
 
-                    Debug.Log($"AIDirector: Sent {orderedEnemies} enemies to the player as the current kill rate is {currentKillRate} (target {targetKillRate}).");
+                    Debug.Log($"AIDirector: Sent {orderedEnemies} enemies to the player as the current kill rate is {currentKillRate} (target kill rate is {targetKillRate}).");
                 }
             }
         }

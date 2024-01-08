@@ -15,12 +15,18 @@ MonoBehaviour:
   displayName: Assault Rifle
   description: 'A versatile weapon for short and medium range combat. '
   heroImage: {fileID: 2800000, guid: b02d677aa4737654a8d3a029f5a6d5fe, type: 3}
-  uniqueID: 575edd46-4720-4dad-b8cc-6c70b445a090
   isPowerUp: 1
   cost: 150
   timeToBuild: 10
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: 98d6425ab5c2a55478a74f3720859049, type: 3}
+  - {fileID: 8300000, guid: 59021332775d1ed48842390fd5752488, type: 3}
+  - {fileID: 8300000, guid: 472913d95e42e014496c96daa124c3c7, type: 3}
+  - {fileID: 8300000, guid: fc03125f71dbf6249969223d79e150ff, type: 3}
+  - {fileID: 8300000, guid: 8ce37ea3836e1bd4e86f4cb699e5c727, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 49e4f87a7da6124429021e19bf876a9e, type: 3}
+  uniqueID: 575edd46-4720-4dad-b8cc-6c70b445a090
   pickup: {fileID: 3009663108730004697, guid: 793a6a0be4f3d204f88162471ffca28f, type: 3}
   ammoRecipe: {fileID: 11400000, guid: 643b1bd15f2739a4c8ccafac741ac2fc, type: 2}

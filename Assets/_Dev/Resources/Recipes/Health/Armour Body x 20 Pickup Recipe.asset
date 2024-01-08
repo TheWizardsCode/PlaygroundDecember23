@@ -15,11 +15,17 @@ MonoBehaviour:
   displayName: Armour Body 20
   description: Increase Body armour by 20 units.
   heroImage: {fileID: 2800000, guid: 2b55cb2be30f7ce439143bf48e504a93, type: 3}
-  uniqueID: 1cb5b2d1-6c83-4be7-ba99-ccae8cc5e8a9
   isPowerUp: 1
   cost: 50
   timeToBuild: 3
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: 7464e5fb6d03d7c47bad887d4ca99a56, type: 3}
+  - {fileID: 8300000, guid: 78e57d01411d6704c859b0c0f54308d0, type: 3}
+  - {fileID: 8300000, guid: e20c7548d001f874a9e7be983d524cbe, type: 3}
+  - {fileID: 8300000, guid: d5b38c999a80286448e1c05630d766b9, type: 3}
+  - {fileID: 8300000, guid: fc6b3928d9ad5a84f9454d18d15895c4, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: 1cb5b2d1-6c83-4be7-ba99-ccae8cc5e8a9
   pickup: {fileID: 505966138466652811, guid: 21bed546992cc164bbf729d28fe48e0e, type: 3}

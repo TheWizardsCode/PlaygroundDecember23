@@ -12,6 +12,7 @@ namespace Playground
         public bool IsPowerUp { get; }
         public int Cost { get; }
         public float TimeToBuild { get; }
+        public AudioClip NameClip { get; }
         public AudioClip BuildStartedClip { get; }
         public AudioClip BuildCompleteClip { get; }
         public ParticleSystem PickupParticles { get; }

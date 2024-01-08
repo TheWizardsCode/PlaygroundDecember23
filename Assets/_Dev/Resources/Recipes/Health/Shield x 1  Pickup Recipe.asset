@@ -15,11 +15,17 @@ MonoBehaviour:
   displayName: Shield x 1
   description: Restore 1 unity of shield.
   heroImage: {fileID: 2800000, guid: 17be6d3ecb77f71469a47139024dc942, type: 3}
-  uniqueID: 8d8e911d-6df3-4f3e-ae7b-10b9ed3c2303
   isPowerUp: 1
   cost: 200
   timeToBuild: 3
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: 66656c26c9f20b140879731bf8110f25, type: 3}
+  - {fileID: 8300000, guid: 2044e83e45c9e3b4bb8df583d9081a4e, type: 3}
+  - {fileID: 8300000, guid: 4180748bdbc5c4441837abdd9e35ca67, type: 3}
+  - {fileID: 8300000, guid: f45b8cf474de6654db0faf19424fdd55, type: 3}
+  - {fileID: 8300000, guid: ac70ca52f5440ee4ab77a4517a07260f, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 2ce10288e86f40143962a90a593d50e8, type: 3}
+  uniqueID: 8d8e911d-6df3-4f3e-ae7b-10b9ed3c2303
   pickup: {fileID: 2606030180617626494, guid: 921b6efbf2eb5754a8aa7762a542cdfb, type: 3}

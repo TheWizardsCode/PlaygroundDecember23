@@ -15,12 +15,18 @@ MonoBehaviour:
   displayName: Grenade Launcher
   description: Great for clearing out areas, but not very accurate.
   heroImage: {fileID: 2800000, guid: 6725943151fd3d547ac59a6fb46f4681, type: 3}
-  uniqueID: 8b58f8ac-d90e-4973-bee7-f2c70d2d16e3
   isPowerUp: 1
   cost: 150
   timeToBuild: 10
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: ed2739f9ce15f7c4d8c638baaa921bd1, type: 3}
+  - {fileID: 8300000, guid: 94475b46a7af827418e7804b53ceabee, type: 3}
+  - {fileID: 8300000, guid: be8f63b9068e9b3459dcaa379b213c55, type: 3}
+  - {fileID: 8300000, guid: 772abb295ba610f4f82d5564188d8ea1, type: 3}
+  - {fileID: 8300000, guid: 026acdee3817475469ae9dc551d20d01, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 0427728751d38304f91a55cf7ed15373, type: 3}
+  uniqueID: 8b58f8ac-d90e-4973-bee7-f2c70d2d16e3
   pickup: {fileID: 4318132736356810998, guid: 06350c6ac0c9c164da890b998ded814c, type: 3}
   ammoRecipe: {fileID: 11400000, guid: 8b52b568428411a48939cecc08f13b34, type: 2}

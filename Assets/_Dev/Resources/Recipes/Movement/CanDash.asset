@@ -15,11 +15,17 @@ MonoBehaviour:
   displayName: Dash
   description: Provide a momentary burst of speed to get out of sticky situations.
   heroImage: {fileID: 2800000, guid: a3d77b1cd91884147903b64f18bb13d3, type: 3}
-  uniqueID: 00fffb51-4f80-41f0-bd8e-77694496687c
   isPowerUp: 1
   cost: 500
   timeToBuild: 0
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: b054f2239d2cd054ab2206cdaaf690f1, type: 3}
+  - {fileID: 8300000, guid: 66f0b48021c2a504790ca44b821ff3c5, type: 3}
+  - {fileID: 8300000, guid: 63463a1415c004648bb31175aa33b606, type: 3}
+  - {fileID: 8300000, guid: b70431a9e40cf43499c37bd0ea02a925, type: 3}
+  - {fileID: 8300000, guid: ddba51a900eb50f4c979c75af4123311, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: 00fffb51-4f80-41f0-bd8e-77694496687c
   statType: 0

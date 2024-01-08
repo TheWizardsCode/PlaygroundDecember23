@@ -28,10 +28,6 @@ namespace Playground
         [SerializeField, Tooltip("The prefabs to use for buildings with proximity spawners.")]
         GameObject[] buildingWithSpawnerPrefabs;
 
-        [Header("Additional Items")]
-        [SerializeField, Tooltip("Recipe drops enable the player to colelct recipes for use within the run. if this is not null than a number of drops, proportional to the map size and density, will be placed in empty areas.")]
-        RecipeSelectorUI recipeDropPrefab;
-
         [Header("Enemies")]
         //TODO: Move spawner prefab into the Wave definition
         [SerializeField, Tooltip("The spawner to use for this level. This will be placed in a random lot that does not have a building in it."), FormerlySerializedAs("spawnerPrefab")]
@@ -76,7 +72,6 @@ namespace Playground
             try
             {
                 PlaceSpawners(possibleEnemySpawnPositions, gameMode);
-                PlaceRecipeDrops(possibleEnemySpawnPositions, gameMode);
             }
             catch (Exception e)
             {
@@ -196,36 +191,6 @@ namespace Playground
                 spawner.Initialize(gameMode.currentLevelDefinition);
 
                 onSpawnerCreated.Invoke(spawner);
-            }
-        }
-
-        private void PlaceRecipeDrops(List<Vector2> possibleRecipeDropPositions, PlaygroundDecember23GameMode gameMode)
-        {
-            if (recipeDropPrefab == null)
-            {
-                return;
-            }
-
-            Vector3 position;
-
-            int numberOfRecipeDrops = Mathf.RoundToInt(possibleRecipeDropPositions.Count * 0.05f);
-            if (numberOfRecipeDrops < numberOfEnemySpawners)
-            {
-                numberOfRecipeDrops = numberOfEnemySpawners;
-            }
-
-            while (possibleRecipeDropPositions.Count < numberOfRecipeDrops)
-            {
-                numberOfRecipeDrops--;
-            }
-            
-            for (int i = 0; i < numberOfRecipeDrops; i++)
-            {
-                Vector2 spawnerPosition = GetValidSpawnerPosition(possibleRecipeDropPositions);
-                position = new Vector3(spawnerPosition.x, mainSpawnerPrefab.spawnRadius, spawnerPosition.y);
-                possibleRecipeDropPositions.Remove(spawnerPosition);
-
-                Instantiate(recipeDropPrefab, position, Quaternion.identity, level.transform);
             }
         }
 

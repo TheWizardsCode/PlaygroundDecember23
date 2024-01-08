@@ -2405,7 +2405,7 @@ MonoBehaviour:
   m_UseCrouchJump: 1
   m_ManualInitialisation: 0
   m_BodyAnimator: {fileID: 0}
-  m_UpperBodyRoot: {fileID: 4168948728585668923}
+  m_UpperBodyRoot: {fileID: 4168948728585668923, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
   m_UpperBodyTarget: {fileID: 0}
   m_HeightAnimFloat: 
   m_OnMotionGraphStateChange:
@@ -2433,10 +2433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a17adf5b6e2ebf4183045e48b711e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_YawTransform: {fileID: 4168948728585668923}
+  m_YawTransform: {fileID: 4168948728585668923, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
   m_AimYawTransform: {fileID: 0}
   m_SteeringRate: 0.5
-  m_PitchTransform: {fileID: 4162638472092934021}
+  m_PitchTransform: {fileID: 4162638472092934021, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
   m_MaxPitch: 89
   m_ConstraintsDamping: 0.5
   m_ConstraintsTolerance: 0.25
@@ -2487,8 +2487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7956967a1b5f004686054f22fc97ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HeadTransformHandler: {fileID: 4054035901437707719}
-  m_BodyTransformHandler: {fileID: 4053917508628190249}
+  m_HeadTransformHandler: {fileID: 4054035901437707719, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
+  m_BodyTransformHandler: {fileID: 4053917508628190249, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
   m_DamageAudioThreshold: 0
   m_ApplyFallDamage: 1
   m_LandingMinForce: 10
@@ -2778,9 +2778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6fd67490cc1304cace3aa49f979008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WieldableRoot: {fileID: 4168948721246765893}
+  m_WieldableRoot: {fileID: 4168948721246765893, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
   m_WieldableRootScale: 0.5
-  m_DropTransform: {fileID: 4162471131328030125}
+  m_DropTransform: {fileID: 4162471131328030125, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
   m_DropVelocity: {x: 0, y: 2, z: 5}
   m_HolsterAction: 0
   m_EmptyAsBackup: 0
@@ -2904,22 +2904,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750a797d8f5dd2f4dad9dd839ee9f7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 3
-  _resourcesRewardMultiplier: 200
-  rewardsPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
+  buildingCooldown: 8
+  resourcesRewardMultiplier: 100
+  timeBetweenRecipeOffers: 60
+  recipeRequestPrefix:
+  - {fileID: 8300000, guid: 070e760ddfb02be44a7bb06d05054646, type: 3}
+  - {fileID: 8300000, guid: 8f11d42199da93843aa021882d0d2489, type: 3}
+  - {fileID: 8300000, guid: c0fb0fa3f0b39a54c9c4288daff9b3e3, type: 3}
+  - {fileID: 8300000, guid: 80eae7d65b1736b48ac3cac94d839b80, type: 3}
+  - {fileID: 8300000, guid: ef1cee44bc3af35428af81eda18ac443, type: 3}
+  - {fileID: 8300000, guid: 881c7956ae6c002428c9e7efc22a6d4b, type: 3}
+  - {fileID: 8300000, guid: 1673437f3da602642a4b3674976af5cd, type: 3}
+  - {fileID: 8300000, guid: 4c9ca382f5f480d48b849b7a5686c3a7, type: 3}
+  - {fileID: 8300000, guid: d00d3d1c5b1d2fb4990af2c9416fe8c0, type: 3}
+  - {fileID: 8300000, guid: 66ca51dbfcbb28a4a99cef8de671402f, type: 3}
+  recipeRequested:
+  - {fileID: 8300000, guid: ae0f63ffd299346459d653565ab07b2e, type: 3}
+  - {fileID: 8300000, guid: 3fd443bbb576a564ea76d2e25d7baeb1, type: 3}
+  - {fileID: 8300000, guid: a5af2ea4606bdce4382b81fd5213448b, type: 3}
+  - {fileID: 8300000, guid: 868bb27bc2617dd4f8f7ff0f563f7e69, type: 3}
+  - {fileID: 8300000, guid: e86964108452a4b4b83de174865851fc, type: 3}
+  - {fileID: 8300000, guid: 39a7112c7e54ba0488b36bd489258c9d, type: 3}
+  - {fileID: 8300000, guid: 9c831bd8e81e59d4b90c89632e18cbb5, type: 3}
+  - {fileID: 8300000, guid: e41c24860eb1f86419192a658fb3e93b, type: 3}
+  - {fileID: 8300000, guid: 46e6727848692e7469fcc27601a0328c, type: 3}
+  - {fileID: 8300000, guid: 5fdee490563fc96449b20a1fceb3c91d, type: 3}
+  recipeRecievedPrefix:
+  - {fileID: 8300000, guid: 243f55dd5a42c3c4ab486a1ad6af0fda, type: 3}
+  - {fileID: 8300000, guid: d516ede58756c8b4ea56d19c8d1ace44, type: 3}
+  - {fileID: 8300000, guid: 350a29a039dca77439650e4f6d9a0cde, type: 3}
+  - {fileID: 8300000, guid: f8349b811a5713b4a84bb9a65a16ef9a, type: 3}
+  - {fileID: 8300000, guid: d088193ccc61eea42b2e2c667889e6ac, type: 3}
+  - {fileID: 8300000, guid: 9ea34b7231ac3df4d9eef1b5818c1e6a, type: 3}
+  - {fileID: 8300000, guid: 8587fc904a97df24c9265d77aa5596f8, type: 3}
+  - {fileID: 8300000, guid: 29c8d3f089e28ec49bb702cf39b8dcad, type: 3}
+  - {fileID: 8300000, guid: 9f38c7bbcaffb2b469c52da1719e4f25, type: 3}
+  - {fileID: 8300000, guid: 40294e371a702a74fbe5a7227cb6915b, type: 3}
   buildStartedClips:
-  - {fileID: 8300000, guid: f20eeaac5d265b84f95eb4b72a8b30b2, type: 3}
-  - {fileID: 8300000, guid: 62e3f0ab8af798d4f9df2a549ea49b22, type: 3}
-  - {fileID: 8300000, guid: 119e71a63fca0d1478124ee8be745952, type: 3}
-  - {fileID: 8300000, guid: 1e73a5f6676b98f4790db151629596f2, type: 3}
-  - {fileID: 8300000, guid: ea28e78b8974c1144a2dd4ba32253bcd, type: 3}
+  - {fileID: 8300000, guid: 7bab0c928e0327b4094cf830f479eee7, type: 3}
+  - {fileID: 8300000, guid: 35a53be6e09e31f4cb1a29ab887b747e, type: 3}
+  - {fileID: 8300000, guid: 51deebc86d32ad248864ecf43b13fec2, type: 3}
+  - {fileID: 8300000, guid: 61b4c5766de9aaf4195a917a3010f36e, type: 3}
+  - {fileID: 8300000, guid: 0b319d6fc6639844197363b61a449a01, type: 3}
+  - {fileID: 8300000, guid: 49a5757f481042846a88fd60141cc888, type: 3}
+  - {fileID: 8300000, guid: 5cffb8ee72801f04aba4e7232d113d3d, type: 3}
+  - {fileID: 8300000, guid: d0d1661b68d948c47928489237577908, type: 3}
+  - {fileID: 8300000, guid: 5c96a80908672ca409380edc5c98961e, type: 3}
+  - {fileID: 8300000, guid: 863249945036c7c408c55db330232d6a, type: 3}
+  - {fileID: 8300000, guid: 006bfc2bb30fbb24b93647b1aa365cb8, type: 3}
+  - {fileID: 8300000, guid: dc91b4fcd55bc3746be693621ceee2ce, type: 3}
+  - {fileID: 8300000, guid: 58ff5adc00b647e45b45f644cd434b23, type: 3}
+  - {fileID: 8300000, guid: 8e76d1784507ab1438d7a0c62a3a3a7d, type: 3}
+  - {fileID: 8300000, guid: f48daa38fb6a5104282ff505879ab9e2, type: 3}
   buildCompleteClips:
-  - {fileID: 8300000, guid: 9092330c07468984c90b8c0632f72a71, type: 3}
-  - {fileID: 8300000, guid: 9623f1d3431d042498f1d96b35a16b24, type: 3}
-  - {fileID: 8300000, guid: 51bf78040ed8b4e40bbc13bab80ab2a1, type: 3}
-  - {fileID: 8300000, guid: 1755a80de160ce347a90b172a6d817c2, type: 3}
-  - {fileID: 8300000, guid: a3c90128ef7096c428e032974597d0d6, type: 3}
+  - {fileID: 8300000, guid: 89af4ac01a6a6fc468a587e7eb9089c9, type: 3}
+  - {fileID: 8300000, guid: c4daf5a8c9ecdef4f993f75912f70189, type: 3}
+  - {fileID: 8300000, guid: 8389da362edd14e45b5077d8c25f80c2, type: 3}
+  - {fileID: 8300000, guid: 4282587434499fd47baa17b32c100730, type: 3}
+  - {fileID: 8300000, guid: 4a85f926a01f38d479291e4cfe737cc0, type: 3}
+  - {fileID: 8300000, guid: a5066d8a06f709d45a581681577cc99a, type: 3}
+  - {fileID: 8300000, guid: d2386a64028c37c46824347c5d894362, type: 3}
+  - {fileID: 8300000, guid: 8d92d61251018d74ea35f344a219a3cd, type: 3}
+  - {fileID: 8300000, guid: 1490ef0e2ac7a0e4d94e706f18a16cfe, type: 3}
+  - {fileID: 8300000, guid: f10d50e1715d58d428f4eb37b1330a93, type: 3}
+  - {fileID: 8300000, guid: 437729858f169f94bb90a35558095c71, type: 3}
+  - {fileID: 8300000, guid: 4ef1e990b9030d842ba0d698d8f22f9e, type: 3}
+  - {fileID: 8300000, guid: bd18b889c86d1204889b4271d34bafce, type: 3}
   defaultPickupParticlePrefab: {fileID: 1974278376555586578, guid: 5431668a66cd19c42ac02f0bdd90e9d2, type: 3}
+  defaultRecipeName: {fileID: 0}
 --- !u!114 &2584534266323046183
 MonoBehaviour:
   m_ObjectHideFlags: 0

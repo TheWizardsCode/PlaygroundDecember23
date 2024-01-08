@@ -15,17 +15,18 @@ MonoBehaviour:
   displayName: Ammo 9mm x 30
   description: TBD
   heroImage: {fileID: 0}
-  uniqueID: 3840f519-4322-4370-bba1-50450b88b214
   isPowerUp: 0
   cost: 10
   timeToBuild: 3
-  buildStartedClips:
-  - {fileID: 8300000, guid: a9f6a22427ac8ec488620f706a1e8134, type: 3}
-  - {fileID: 8300000, guid: 984a84dc0216035498cf0a76d5faf72c, type: 3}
-  - {fileID: 8300000, guid: bf2e549292b736a43815ed0fa9b07a09, type: 3}
-  - {fileID: 8300000, guid: 28649af1e878afb49b7de2a29d7f924b, type: 3}
-  - {fileID: 8300000, guid: ac5cae1e4086cac4e9454715364adedd, type: 3}
+  nameClips:
+  - {fileID: 8300000, guid: db39fe0b86caeec4b987b7c0b0df57a5, type: 3}
+  - {fileID: 8300000, guid: 584909db7df7ec14b99611cf2db29642, type: 3}
+  - {fileID: 8300000, guid: 7713945cb64266c4586b0d8a3149d7ec, type: 3}
+  - {fileID: 8300000, guid: a7597162abda57f42a1a8511aa1a3e31, type: 3}
+  - {fileID: 8300000, guid: d1003b25599c5724b902ff9d74d28c89, type: 3}
+  buildStartedClips: []
   buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: 3840f519-4322-4370-bba1-50450b88b214
   pickup: {fileID: 114335859765365026, guid: 7bff23a6257bb1145aa20ca50ebcfd4e, type: 3}
   ammo: {fileID: 11400000, guid: a79bf42d15972724a9473b8c0ab8881d, type: 2}

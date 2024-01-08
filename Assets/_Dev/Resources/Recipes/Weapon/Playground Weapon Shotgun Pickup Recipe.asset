@@ -15,12 +15,18 @@ MonoBehaviour:
   displayName: Shotgun
   description: For close quarter combat.
   heroImage: {fileID: 2800000, guid: 44b0cb379131bd34898c7fceb288c1a9, type: 3}
-  uniqueID: bbb982f4-97d2-483a-9148-c6c0bc0ff5fa
   isPowerUp: 1
   cost: 150
   timeToBuild: 10
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: c0ff48bc71104fe43947c74c95ae1e41, type: 3}
+  - {fileID: 8300000, guid: ec06a483cfaf5e74e9b8c1a8165b6cb3, type: 3}
+  - {fileID: 8300000, guid: b11b57b49321eae4880a1670989803a1, type: 3}
+  - {fileID: 8300000, guid: f4345c5bde6dae9469794147df570167, type: 3}
+  - {fileID: 8300000, guid: e99fad591705f044cac2e280f4b2510e, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 51d5c13109dedfa448db6e094ab4ea52, type: 3}
+  uniqueID: bbb982f4-97d2-483a-9148-c6c0bc0ff5fa
   pickup: {fileID: 5274049787565617587, guid: c5620ade635845e438b3008965902601, type: 3}
   ammoRecipe: {fileID: 11400000, guid: 925d033e3c87a1a49a8882178734bbe2, type: 2}

@@ -15,13 +15,18 @@ MonoBehaviour:
   displayName: Baton
   description: If all else fails you can hit things with a stick.
   heroImage: {fileID: 2800000, guid: a5080b11aa166924bb54bcc4fa2750d0, type: 3}
-  uniqueID: 015bb413-833e-4c1d-af49-819f39f02696
   isPowerUp: 1
-  pickup: {fileID: 1738296456779188967, guid: 09dd4508f2aebee4daee0341f9b2c7a8, type: 3}
   cost: 2
   timeToBuild: 1
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: 0da65fa8b04ce964bad2a9a8d715a77e, type: 3}
+  - {fileID: 8300000, guid: 44b8ae9d8e1e7b24289cdc935c320c37, type: 3}
+  - {fileID: 8300000, guid: cbd38af36a8120d4b96b4c7e82a7bb1e, type: 3}
+  - {fileID: 8300000, guid: 259a2164b6fd73e46a0c86ea9af70138, type: 3}
+  - {fileID: 8300000, guid: ed067840cda5d6743895cda6d7bdd85c, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 4e56073aa92940841806e8958e8f74a4, type: 3}
+  uniqueID: 015bb413-833e-4c1d-af49-819f39f02696
+  pickup: {fileID: 1738296456779188967, guid: 09dd4508f2aebee4daee0341f9b2c7a8, type: 3}
   ammoRecipe: {fileID: 0}
-  inventorySlot: 8

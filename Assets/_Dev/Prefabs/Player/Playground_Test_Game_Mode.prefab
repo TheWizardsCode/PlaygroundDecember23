@@ -44,19 +44,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c187386a2187f4fac5475fff8f1275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 100, y: 100}
+  size: {x: 250, y: 250}
   buildingLotSize: {x: 25, y: 25}
   buildingDensity: 0.6
   groundMaterial: {fileID: 2100000, guid: 05913f35d4d0cfb45a4e7a062d3f26b9, type: 2}
   wallMaterial: {fileID: 2100000, guid: 64710d2176c2e8f438cd7dbd01d584a9, type: 2}
-  buildingPrefabs:
+  buildingWithoutSpawnerPrefabs:
   - {fileID: 6543032934749555394, guid: 820a528fff96436408dc70de520ccdbe, type: 3}
   - {fileID: 2060113240144020941, guid: ba2b4875383ad064691053d037b07f7a, type: 3}
   - {fileID: 5230112460837190557, guid: 07103324111bf7641975a5f08d5429c6, type: 3}
   - {fileID: 895710043128325180, guid: a9aaa7cc6f16b504899e8f2bdc066b57, type: 3}
   - {fileID: 4330765639891971577, guid: a890f145341659149991d7b77a40c12e, type: 3}
   - {fileID: 7019865242113649934, guid: 58ccb8d32c23cc94c80153045c24d74a, type: 3}
-  recipeDropPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
+  - {fileID: 3878517904651559269, guid: f3a2a4d0535b34541ab64d341eeb65b2, type: 3}
+  buildingWithSpawnerPrefabs:
+  - {fileID: 7571342023460485295, guid: f349bcbf314ebbe45ba44bba226acdf8, type: 3}
   mainSpawnerPrefab: {fileID: 6576056135945926902, guid: aa20c983568f3cf449287cfaea83b7ed, type: 3}
   numberOfEnemySpawners: 2
   buildingSpawnerDensity: 0.1
@@ -119,12 +121,11 @@ MonoBehaviour:
   m_VictoryDuration: 5
   m_PlayerPrefab: {fileID: 114330862915175946, guid: 3b4baa77285369e46a04c916100b828b, type: 3}
   m_CharacterPrefab: {fileID: 4053288922990363585, guid: 0b24de9ee7ef5c34a8fbb496881f4707, type: 3}
-  _resourcesRewardMultiplier: 200
   _startingRecipes:
   - {fileID: 11400000, guid: acfc3b4061ccfed46b45124f93446649, type: 2}
   levels:
   - {fileID: 11400000, guid: c6ce2c3bfb9d41b47b32f4690dc4a982, type: 2}
-  rewardsPrefab: {fileID: 4090585656190305989, guid: 382c373785256594888b943f67a8d32f, type: 3}
+  _isDebug: 0
   m_SpawnZones:
     mapSprite: {fileID: 0}
     spawnZones: []
@@ -200,6 +201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGenerator: {fileID: 3423411428560200973}
+  maximumTimeBetweenReports: 30
+  scannerPrefab: {fileID: 4437746279418429034, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
+  timeSlice: 25
+  targetKillRate: 1
 --- !u!1 &6495454180581363533
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,10 +15,15 @@ MonoBehaviour:
   displayName: Health 10
   description: Bandage up some of those flesh wounds.
   heroImage: {fileID: 2800000, guid: 9315bf7dbd8dae2468351024b404ddd6, type: 3}
-  uniqueID: e1ab5fee-77d9-48b5-bec3-fee65852a9b3
   isPowerUp: 0
   cost: 10
   timeToBuild: 5
+  nameClips:
+  - {fileID: 8300000, guid: 89967dc181ad044438d2e71d9b8b1ed0, type: 3}
+  - {fileID: 8300000, guid: ac60d6c35a686214981bc70b76cb3154, type: 3}
+  - {fileID: 8300000, guid: 702fd7e65e4256748a990daf373054c3, type: 3}
+  - {fileID: 8300000, guid: 1b9a0f4fee56c5c469ce92ef54604636, type: 3}
+  - {fileID: 8300000, guid: aa3532eba6d1d964bab3b87c40f75f5d, type: 3}
   buildStartedClips:
   - {fileID: 8300000, guid: 372f2124f27024844996c0e57dbb7ed8, type: 3}
   - {fileID: 8300000, guid: 9047ca4bae75c5a46a72037c49edad6f, type: 3}
@@ -27,4 +32,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1171f7fc64454484394425d1adddc62a, type: 3}
   buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: e1ab5fee-77d9-48b5-bec3-fee65852a9b3
   pickup: {fileID: 114608595035019784, guid: 1c36af958a0fbe646b6dff5ed9c8d273, type: 3}

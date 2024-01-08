@@ -15,10 +15,15 @@ MonoBehaviour:
   displayName: Health 25
   description: Sometimes you need more than a bandage. Here's a medkit.
   heroImage: {fileID: 2800000, guid: 5be5a95716beb9d4b96be839a6f3328b, type: 3}
-  uniqueID: 64a6fe8c-474b-42c9-967c-17b46bf497f8
   isPowerUp: 1
   cost: 22
   timeToBuild: 10
+  nameClips:
+  - {fileID: 8300000, guid: 166a8f4eef7f9e042a586b3aa8ec7265, type: 3}
+  - {fileID: 8300000, guid: 9011d555bd01c5e4da1d9d3547d58a49, type: 3}
+  - {fileID: 8300000, guid: b84bde8e1eedaec46a20821e6cdcebb5, type: 3}
+  - {fileID: 8300000, guid: 1762cb0a5ce558146b44cdb916d43259, type: 3}
+  - {fileID: 8300000, guid: 0c7de2d8cd11a094d916730567c718b5, type: 3}
   buildStartedClips:
   - {fileID: 8300000, guid: 4cfa5201532b8804386629272d6c2251, type: 3}
   - {fileID: 8300000, guid: 82c6b2d4f96469a4a8a1f08f33a09a10, type: 3}
@@ -27,4 +32,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c327bd01caf5cd44ea97d7affea5eee5, type: 3}
   buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: 64a6fe8c-474b-42c9-967c-17b46bf497f8
   pickup: {fileID: 114608595035019784, guid: ec080938cf493944fb6b703bb303a0ad, type: 3}

@@ -15,22 +15,18 @@ MonoBehaviour:
   displayName: Ammo 762 x 14
   description: Commonly used in Sniper rifles.
   heroImage: {fileID: 0}
-  uniqueID: b926d467-176f-4411-9a65-a761e58838a1
   isPowerUp: 0
   cost: 20
   timeToBuild: 5
-  buildStartedClips:
-  - {fileID: 8300000, guid: 66170521e86d2444eaa6602c8541f8ed, type: 3}
-  - {fileID: 8300000, guid: 32d7ec29661b94d42b8f585c16f53ba4, type: 3}
-  - {fileID: 8300000, guid: 045872a5fd3ee384eb749b58f7939dc3, type: 3}
-  - {fileID: 8300000, guid: e9818d1f67199e143bc325796e3822e4, type: 3}
-  - {fileID: 8300000, guid: b334de7403156744298a9f0368fac267, type: 3}
-  buildCompleteClips:
-  - {fileID: 8300000, guid: 66170521e86d2444eaa6602c8541f8ed, type: 3}
-  - {fileID: 8300000, guid: 32d7ec29661b94d42b8f585c16f53ba4, type: 3}
-  - {fileID: 8300000, guid: 045872a5fd3ee384eb749b58f7939dc3, type: 3}
-  - {fileID: 8300000, guid: e9818d1f67199e143bc325796e3822e4, type: 3}
-  - {fileID: 8300000, guid: b334de7403156744298a9f0368fac267, type: 3}
+  nameClips:
+  - {fileID: 8300000, guid: 77392d9042fbcc24caa727e827f1e254, type: 3}
+  - {fileID: 8300000, guid: 67bcf5087c4c64e4f84a08c16e2b0cc7, type: 3}
+  - {fileID: 8300000, guid: f0ad233ee1b202c4391877c66a262f3d, type: 3}
+  - {fileID: 8300000, guid: c75dd700a4fc3a3479b0d38dc560fbd0, type: 3}
+  - {fileID: 8300000, guid: a1d2a43f11db05540bd226b25634c7cd, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 0}
+  uniqueID: b926d467-176f-4411-9a65-a761e58838a1
   pickup: {fileID: 114527090721276536, guid: eca33a9343365014fa8cde1125ce6078, type: 3}
   ammo: {fileID: 11400000, guid: 6f045baf28df2544b8334ca95aff7f1e, type: 2}

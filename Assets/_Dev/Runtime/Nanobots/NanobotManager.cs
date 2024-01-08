@@ -1,5 +1,6 @@
 using NeoFPS;
 using NeoFPS.SinglePlayer;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,20 +12,28 @@ namespace Playground
     public class NanobotManager : MonoBehaviour
     {
         [Header("Building")]
-        [SerializeField, Tooltip("Cooldown between recipes.")]
-        private float cooldown = 5;
-        [SerializeField, Tooltip("How many resources are needed for a reward. This will be multiplied by the current level squared. Meaning the higher the level the more resources are required for a reward crate.")]
-        private int _resourcesRewardMultiplier = 200;
-        [SerializeField, Tooltip("The prefab to use when generating level up rewards.")]
-        private RecipeSelectorUI rewardsPrefab;
+        [SerializeField, Tooltip("Cooldown between recipe builds.")]
+        private float buildingCooldown = 8;
+        [SerializeField, Tooltip("How many resources are needed for a level up recipe offer. This will be multiplied by the current level squared. Meaning the higher the level the more resources are required for a reward crate.")]
+        private int resourcesRewardMultiplier = 100;
+        [SerializeField, Tooltip("The time between recipe offers from the home planet. Once a player has levelled up they will recieve an updated offer until they accept one. This is the freqency at which the offer will be changed.")]
+        private float timeBetweenRecipeOffers = 60;
+        [SerializeField, Tooltip("The sound to play to indicate a new recipe is available from home planet. This will be played before the name of the recipe to tell the player that they can call it in if they want.")]
+        private AudioClip[] recipeRequestPrefix;
+        [SerializeField, Tooltip("The sound to play to indicate a recipe has been requested.")]
+        private AudioClip[] recipeRequested;
+        [SerializeField, Tooltip("The sound to play to indicate a new recipe has been recieved. This will be played before the name of the recipe to tell the player that the recipe has been recieved.")]
+        private AudioClip[] recipeRecievedPrefix;
 
-        [Header("Default Feedback")]
+        [Header("Default Feedbacks")]
         [SerializeField, Tooltip("The sound to play when the build is started. Note that this can be overridden in the recipe.")]
         private AudioClip[] buildStartedClips;
         [SerializeField, Tooltip("The sound to play when the build is complete. Note that this can be overridden in the recipe.")]
         private AudioClip[] buildCompleteClips;
         [SerializeField, Tooltip("The default particle system to play when a pickup is spawned. Note that this can be overridden in the recipe."), FormerlySerializedAs("pickupSpawnParticlePrefab")]
         ParticleSystem defaultPickupParticlePrefab;
+        [SerializeField, Tooltip("The default audio clip to play when a recipe name is needed, but the recipe does not have a name clip. This should never be used in practice.")]
+        AudioClip defaultRecipeName;
 
         private List<HealthPickupRecipe> healthRecipes = new List<HealthPickupRecipe>();
         private List<ShieldPickupRecipe> shieldRecipes = new List<ShieldPickupRecipe>();
@@ -37,6 +46,9 @@ namespace Playground
 
         public delegate void OnResourcesChanged(float from, float to);
         public event OnResourcesChanged onResourcesChanged;
+
+        private bool isRequesting = false;
+        private float timeOfLastRewardOffer = 0;
 
         private bool isBuilding = false;
         private float timeOfNextBuiild = 0;
@@ -71,17 +83,25 @@ namespace Playground
         {
             if (isBuilding || Time.timeSinceLevelLoad < timeOfNextBuiild)
             {
+                Debug.Log($"Cannot build or request recipe (building: {isBuilding} time till next build {Time.timeSinceLevelLoad - timeOfNextBuiild}");
                 return;
             }
 
             // Offer a new recipe if possible
             if (RogueLiteManager.persistentData.currentResources > nextRewardsLevel)
             {
-                Transform player = FpsSoloCharacter.localPlayerCharacter.transform;
-                Vector3 position = player.position + player.forward * 5 + player.right * 1.5f;
-                RecipeSelectorUI rewards = Instantiate(rewardsPrefab, position, Quaternion.identity);
+                if (isRequesting == false && timeOfLastRewardOffer + timeBetweenRecipeOffers < Time.timeSinceLevelLoad)
+                {
+                    if (rewardCoroutine != null)
+                    {
+                        StopCoroutine(rewardCoroutine);
+                    }
+                    rewardCoroutine = StartCoroutine(OfferInGameRewardRecipe());
+                }
+            }
 
-                nextRewardsLevel = GetRequiredResourcesForNextLevel();
+            if (isRequesting) {                 
+                return;
             }
 
             // Prioritize building ammo if the player is low on ammo
@@ -120,12 +140,103 @@ namespace Playground
             }
         }
 
+        IEnumerator OfferInGameRewardRecipe()
+        {
+            timeOfLastRewardOffer = Time.timeSinceLevelLoad;
 
+            IRecipe offer = RecipeManager.GetOffers(1)[0];
+            yield return null;
+
+            // Announce a recipe is available
+            AudioClip clip = recipeRequestPrefix[Random.Range(0, recipeRequestPrefix.Length)];
+            AudioClip recipeName = offer.NameClip;
+            if (recipeName == null)
+            {
+                recipeName = defaultRecipeName;
+                Debug.LogError($"Recipe {offer.DisplayName} (offer) does not have an audio clip for its name. Used default of `Unkown`.");
+            }
+            yield return Announce(clip, recipeName);
+
+            while (true) // this coroutine will run until the player accepts or a new coroutine is started with a new offer
+            {
+                // TODO: add this key to the NeoFPS input manager
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    nextRewardsLevel = GetRequiredResourcesForNextLevel();
+
+                    isRequesting = true;
+                    timeOfNextBuiild = Time.timeSinceLevelLoad + offer.TimeToBuild + 5f;
+
+                    // Announce request made
+                    clip = recipeRequested[Random.Range(0, recipeRequested.Length)];
+                    if (Time.timeSinceLevelLoad - timeOfLastRewardOffer > 5)
+                    {
+                        yield return Announce(clip);
+                    }
+                    else
+                    {
+                        yield return Announce(clip, recipeName);
+                    }
+
+                    yield return new WaitForSeconds(offer.TimeToBuild);
+
+                    // Announce request recieved
+                    clip = recipeRecievedPrefix[Random.Range(0, recipeRecievedPrefix.Length)];
+                    Announce(clip);
+                    yield return new WaitForSeconds(clip.length + 0.1f);
+                    if (offer.TimeToBuild > 5)
+                    {
+                        yield return Announce(clip);
+                    }
+                    else
+                    {
+                        yield return Announce(clip, recipeName);
+                    }
+
+                    Add(offer, false);
+
+                    isRequesting = false;
+
+                    break;
+                }
+
+                yield return null;
+            }
+        }
+
+        /// <summary>
+        /// Make an announcement to the player. This will play the clip at the position of the nanobot manager.
+        /// </summary>
+        /// <param name="mainClip">The main clip to play</param>
+        private IEnumerator Announce(AudioClip mainClip)
+        {
+            yield return Announce(mainClip, null);
+        }
+
+        /// <summary>
+        /// Make an announcement to the player. This will play the clip at the position of the nanobot manager.
+        /// </summary>
+        /// <param name="mainClip">The main clip to play</param>
+        /// <param name="recipeName">OPTIONAL: if not null then this recipe name clip will be announced after the main clip</param>
+        private IEnumerator Announce(AudioClip mainClip, AudioClip recipeName)
+        {
+            NeoFpsAudioManager.PlayEffectAudioAtPosition(mainClip, transform.position, 1);
+            yield return new WaitForSeconds(mainClip.length);
+
+            if (recipeName == null)
+            {
+                yield break;
+            }
+
+            NeoFpsAudioManager.PlayEffectAudioAtPosition(recipeName, transform.position, 1);
+
+            yield return new WaitForSeconds(recipeName.length);
+        }
 
         private int GetRequiredResourcesForNextLevel()
         {
             int level = RogueLiteManager.runData.currentLevel + 1;
-            return RogueLiteManager.persistentData.currentResources + (level * level * _resourcesRewardMultiplier);
+            return RogueLiteManager.persistentData.currentResources + (level * level * resourcesRewardMultiplier);
         }
 
         // TODO: we can probably generalize these Try* methods now that we have refactored the recipes to use interfaces/Abstract classes
@@ -183,6 +294,8 @@ namespace Playground
         }
 
         float earliestTimeOfNextItemSpawn = 0;
+        private Coroutine rewardCoroutine;
+
         private bool TryItemRecipes()
         {
             if (earliestTimeOfNextItemSpawn > Time.timeSinceLevelLoad)
@@ -247,10 +360,17 @@ namespace Playground
 
             if (recipe.BuildStartedClip != null)
             {
-                NeoFpsAudioManager.PlayEffectAudioAtPosition(recipe.BuildStartedClip, transform.position, 1);
+                yield return Announce(recipe.BuildStartedClip, null);
             } else
             {
-                NeoFpsAudioManager.PlayEffectAudioAtPosition(buildStartedClips[Random.Range(0, buildStartedClips.Length)], transform.position, 1);
+                AudioClip recipeName = recipe.NameClip;
+                if (recipeName == null)
+                {
+                    recipeName = defaultRecipeName;
+                    Debug.LogError($"Recipe {recipe.DisplayName} ({recipe}) does not have an audio clip for its name. Used default of `Unkown`.");
+                }
+
+                yield return Announce(buildStartedClips[Random.Range(0, buildStartedClips.Length)], recipeName);
             }
 
             yield return new WaitForSeconds(recipe.TimeToBuild);
@@ -261,26 +381,34 @@ namespace Playground
             {
                 // TODO Use the pool manager to create the item
                 GameObject go = Instantiate(itemRecipe.Item.gameObject);
-                go.transform.position = transform.position + (transform.forward * 5) + (transform.up * 0.5f);
-
-                if (recipe.BuildCompleteClip != null)
-                {
-                    NeoFpsAudioManager.PlayEffectAudioAtPosition(recipe.BuildCompleteClip, go.transform.position, 1);
-                }
-                else
-                {
-                    NeoFpsAudioManager.PlayEffectAudioAtPosition(buildCompleteClips[Random.Range(0, buildCompleteClips.Length)], go.transform.position, 1);
-                }
+                go.transform.position = transform.position + (transform.forward * 5) + (transform.up * 1f);
 
                 // TODO: Use the pool manager to create the particle system
                 if (recipe.PickupParticles != null)
                 {
                     ParticleSystem ps = Instantiate(recipe.PickupParticles, go.transform);
                     ps.Play();
-                } else if (defaultPickupParticlePrefab != null)
+                }
+                else if (defaultPickupParticlePrefab != null)
                 {
                     ParticleSystem ps = Instantiate(defaultPickupParticlePrefab, go.transform);
                     ps.Play();
+                }
+
+                if (recipe.BuildCompleteClip != null)
+                {
+                    yield return Announce(recipe.BuildCompleteClip, null);
+                }
+                else
+                {
+                    //AudioClip recipeName = recipe.NameClip;
+                    //if (recipeName == null)
+                    //{
+                    //    recipeName = defaultRecipeName;
+                    //    Debug.LogError($"Recipe {recipe.DisplayName} ({recipe}) does not have an audio clip for its name. Used default of `Unkown`.");
+                    //}
+
+                    yield return Announce(buildCompleteClips[Random.Range(0, buildCompleteClips.Length)]);
                 }
             }
             else
@@ -291,7 +419,7 @@ namespace Playground
             recipe.BuildFinished();
 
             isBuilding = false;
-            timeOfNextBuiild = Time.timeSinceLevelLoad + cooldown;
+            timeOfNextBuiild = Time.timeSinceLevelLoad + buildingCooldown;
         }
 
         /// <summary>

@@ -15,11 +15,17 @@ MonoBehaviour:
   displayName: Blink
   description: Teleport from one place to another in the blink of an eye.
   heroImage: {fileID: 2800000, guid: 4f5fa76c4a0f2744d9b87c8a7c9d89f6, type: 3}
-  uniqueID: 75cfe9f9-a173-4ca9-a6ed-f055d9fbcddc
   isPowerUp: 1
   cost: 200
   timeToBuild: 15
-  buildStartedClip: {fileID: 0}
-  buildCompleteClip: {fileID: 0}
+  nameClips:
+  - {fileID: 8300000, guid: fd6861b1209f9ef44878921e7fd5dc29, type: 3}
+  - {fileID: 8300000, guid: 0019e9c82207c7d4c942790ba7a38151, type: 3}
+  - {fileID: 8300000, guid: eedca42f59f3d894cbcdd48e2fe3e1a7, type: 3}
+  - {fileID: 8300000, guid: fae237a3d5e291c489fd3b56f68f74e5, type: 3}
+  - {fileID: 8300000, guid: 8b227e4a6d7ed3c41ab944b78544f074, type: 3}
+  buildStartedClips: []
+  buildCompleteClips: []
   pickupParticles: {fileID: 1974278376555586578, guid: 98539a937de1d6a4582bd89cf10275c7, type: 3}
+  uniqueID: 75cfe9f9-a173-4ca9-a6ed-f055d9fbcddc
   pickup: {fileID: -3347169623672194488, guid: ed475afa1ebe2fd4ebb8339510f51790, type: 3}

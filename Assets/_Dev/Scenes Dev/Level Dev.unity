@@ -157,18 +157,22 @@ MonoBehaviour:
   buildingDensity: 0.6
   groundMaterial: {fileID: 2100000, guid: 05913f35d4d0cfb45a4e7a062d3f26b9, type: 2}
   wallMaterial: {fileID: 0}
-  buildingPrefabs:
+  buildingWithoutSpawnerPrefabs:
   - {fileID: 6543032934749555394, guid: 820a528fff96436408dc70de520ccdbe, type: 3}
   - {fileID: 2060113240144020941, guid: ba2b4875383ad064691053d037b07f7a, type: 3}
   - {fileID: 5230112460837190557, guid: 07103324111bf7641975a5f08d5429c6, type: 3}
   - {fileID: 895710043128325180, guid: a9aaa7cc6f16b504899e8f2bdc066b57, type: 3}
   - {fileID: 4330765639891971577, guid: a890f145341659149991d7b77a40c12e, type: 3}
   - {fileID: 7019865242113649934, guid: 58ccb8d32c23cc94c80153045c24d74a, type: 3}
+  buildingWithSpawnerPrefabs: []
   recipeDropPrefab: {fileID: 0}
   mainSpawnerPrefab: {fileID: 6576056135945926902, guid: aa20c983568f3cf449287cfaea83b7ed, type: 3}
   numberOfEnemySpawners: 2
   buildingSpawnerDensity: 0.25
   buildingProximitySpawner: {fileID: 0}
+  onSpawnerCreated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &117578075
 Transform:
   m_ObjectHideFlags: 0
@@ -1206,14 +1210,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3423411428560200973, guid: 3f2b5cc90618dbb46b29cd834ae94c12, type: 3}
-      propertyPath: wallMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 64710d2176c2e8f438cd7dbd01d584a9, type: 2}
-    - target: {fileID: 3423411428560200973, guid: 3f2b5cc90618dbb46b29cd834ae94c12, type: 3}
-      propertyPath: buildingProximitySpawner
-      value: 
-      objectReference: {fileID: 6576056135945926902, guid: 8580e7bc57d7d9a4e9cc17120733b0c9, type: 3}
     - target: {fileID: 5223561033937574973, guid: 3f2b5cc90618dbb46b29cd834ae94c12, type: 3}
       propertyPath: m_Name
       value: Playground Game Mode
