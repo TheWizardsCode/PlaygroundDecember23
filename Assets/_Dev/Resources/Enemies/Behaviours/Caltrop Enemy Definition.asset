@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Caltrop Enemy Definition
   m_EditorClassIdentifier: 
   requireLineOfSight: 1
-  viewDistance: 35
+  viewDistance: 76
   isMobile: 1
   speed: 1
   rotationSpeed: 2
   minimumHeight: 0.5
-  maximumHeight: 75
+  maximumHeight: 40
   optimalDistanceFromPlayer: 20
   maxWanderRange: 150
   obstacleAvoidanceDistance: 7
