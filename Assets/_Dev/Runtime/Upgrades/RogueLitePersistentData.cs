@@ -54,16 +54,14 @@ namespace Playground
 
         public RogueLitePersistentData()
         {
-
-#if UNITY_EDITOR
-            currentResources = 100000;
-            Debug.Log("RogueLiteRunData: currentResources set to 100000 as we are running in the editor.");
-#else
-
             if (runNumber == 0) // this will be the players first run
             {
                 currentResources = 150;
             }
+
+#if UNITY_EDITOR
+            //currentResources = 100000;
+            //Debug.Log("RogueLiteRunData: currentResources set to 100000 as we are running in the editor in debug mode.");
 #endif
         }
 
