@@ -1,7 +1,9 @@
 using NaughtyAttributes;
 using NeoFPS.SinglePlayer;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 namespace Playground
@@ -20,8 +22,12 @@ namespace Playground
         ScannerController scannerPrefab;
         [SerializeField, Tooltip("The length of a time slice. The AI director will evaluate the current state of play every timeSlice seconds. Based on this evluation the AI will issue orders to the Enemies.")]
         float timeSlice = 25f;
-        [SerializeField, Tooltip("The target kill rate. When the AI director detects that the current kill rate is below this value it will send more enemies to the player in order to pressure them.")]
-        float targetKillRate = 10f;
+        [SerializeField, Tooltip("The target kill score, which is the total challenge rating of all the enemies killed in the last `timeSlice`, divided by the `timeslice`. " +
+            "When the AI director detects that the current kill rate is below this value it will send more enemies to the player in order to pressure player.")]
+        float targetKillScore = 0.3f;
+
+        [SerializeField, Tooltip("Turn on debug features for the AI Director"), Foldout("Debug")]
+        bool isDebug = false;
 
         List<Spawner> spawners = new List<Spawner>();
         List<BasicEnemyController> enemies = new List<BasicEnemyController>();
@@ -30,7 +36,7 @@ namespace Playground
 
         float timeOfLastPlayerLocationReport = 0;
         float timeOfNextTimeSlice = 0;
-        float currentKillRate = 0; // the current value of the total challenge rating of enemies killed in the last timeSlice
+        float currentKillscore = 0; // the current value of the total challenge rating of enemies killed in the last timeSlice
         private BasicEnemyController enemyController;
 
         /// <summary>
@@ -85,20 +91,32 @@ namespace Playground
                     }
                     totalChallengeRating += killReports[i].challengeRating;
                 }
-                currentKillRate = totalChallengeRating / timeSlice;
+                currentKillscore = totalChallengeRating / timeSlice;
 
-                if (enemies.Count > 0 && currentKillRate < targetKillRate)
+#if UNITY_EDITOR
+                if (isDebug)
                 {
+                    Debug.Log($"currentKillScore is {currentKillscore}, targetKillScore is {targetKillScore}");
+                }
+#endif
+                if (enemies.Count > 0 && currentKillscore < targetKillScore)
+                {
+                    totalChallengeRating = 0;
                     int orderedEnemies = 0;
-                    while (totalChallengeRating < targetKillRate * 3 && orderedEnemies < enemies.Count)
+                    while ((totalChallengeRating / timeSlice) < targetKillScore * 1.5f && orderedEnemies < enemies.Count)
                     {
                         orderedEnemies++;
                         BasicEnemyController randomEnemy = enemies[Random.Range(0, enemies.Count)];
                         totalChallengeRating += randomEnemy.challengeRating;
                         randomEnemy.RequestAttack(suspectedTargetLocation);
                     }
+#if UNITY_EDITOR
+                    if (isDebug)
+                    {
+                        Debug.Log($"AIDirector: Sent {orderedEnemies} of {enemies.Count} enemies with a total challenge rating of {totalChallengeRating} to the player as the currentKillScore is {currentKillscore} (targetKillScore is {targetKillScore}).");
+                    }
+#endif
 
-                    Debug.Log($"AIDirector: Sent {orderedEnemies} enemies to the player as the current kill rate is {currentKillRate} (target kill rate is {targetKillRate}).");
                 }
             }
         }

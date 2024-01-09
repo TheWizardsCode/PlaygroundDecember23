@@ -156,7 +156,7 @@ MonoBehaviour:
   description: Moves very slowly towards the player until within a given distance.
     Once within attack range will move quickly towards the player damaging on contact.
     Whhen they are attacking they no longer need line of sight.
-  challengeRating: 1
+  challengeRating: 2
   config: {fileID: 11400000, guid: 4ab26df8c0ed22147837c917c65a1fe4, type: 2}
   sensor: {fileID: 1967564365263936831}
   onDeath:

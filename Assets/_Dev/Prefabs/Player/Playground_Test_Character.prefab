@@ -2722,7 +2722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750a797d8f5dd2f4dad9dd839ee9f7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingCooldown: 8
+  buildingCooldown: 4
   resourcesRewardMultiplier: 100
   timeBetweenRecipeOffers: 60
   recipeRequestPrefix:

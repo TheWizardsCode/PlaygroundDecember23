@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using NeoFPS;
 using NeoFPS.SinglePlayer;
 using System;
@@ -13,7 +14,7 @@ namespace Playground
     {
         [Header("Building")]
         [SerializeField, Tooltip("Cooldown between recipe builds.")]
-        private float buildingCooldown = 8;
+        private float buildingCooldown = 4;
         [SerializeField, Tooltip("How many resources are needed for a level up recipe offer. This will be multiplied by the current level squared. Meaning the higher the level the more resources are required for a reward crate.")]
         private int resourcesRewardMultiplier = 100;
         [SerializeField, Tooltip("The time between recipe offers from the home planet. Once a player has levelled up they will recieve an updated offer until they accept one. This is the freqency at which the offer will be changed.")]
@@ -34,6 +35,9 @@ namespace Playground
         ParticleSystem defaultPickupParticlePrefab;
         [SerializeField, Tooltip("The default audio clip to play when a recipe name is needed, but the recipe does not have a name clip. This should never be used in practice.")]
         AudioClip defaultRecipeName;
+
+        [SerializeField, Tooltip("Turn on debug features for the Nanobot Manager"), Foldout("Debug")]
+        bool isDebug = false;
 
         private List<HealthPickupRecipe> healthRecipes = new List<HealthPickupRecipe>();
         private List<ShieldPickupRecipe> shieldRecipes = new List<ShieldPickupRecipe>();
@@ -83,7 +87,6 @@ namespace Playground
         {
             if (isBuilding || Time.timeSinceLevelLoad < timeOfNextBuiild)
             {
-                Debug.Log($"Cannot build or request recipe (building: {isBuilding} time till next build {Time.timeSinceLevelLoad - timeOfNextBuiild}");
                 return;
             }
 
@@ -354,7 +357,12 @@ namespace Playground
 
         internal IEnumerator BuildRecipe(IRecipe recipe)
         {
-            Debug.Log($"Building {recipe.DisplayName}");
+#if UNITY_EDITOR
+            if (isDebug)
+            {
+                Debug.Log($"Building {recipe.DisplayName}");
+            }
+#endif
             isBuilding = true;
             resources -= recipe.Cost;
 

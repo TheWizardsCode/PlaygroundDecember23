@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Artillery
   description: Slow moving, stays at a range and bombards the player.
-  challengeRating: 1
+  challengeRating: 2
   config: {fileID: 11400000, guid: f46ed6863cef21349831bec09843d1f5, type: 2}
   sensor: {fileID: 1723859731166736551}
   onDeath:

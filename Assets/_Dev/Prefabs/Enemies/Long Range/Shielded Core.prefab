@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Gem
   description: Moves slowly towards the enemy in a direct line and attacks on contact.
-  challengeRating: 1
+  challengeRating: 2
   config: {fileID: 11400000, guid: fee7f40593d232f4c9e7efc46beb44e0, type: 2}
   sensor: {fileID: 8620451866325067554}
   onDeath:

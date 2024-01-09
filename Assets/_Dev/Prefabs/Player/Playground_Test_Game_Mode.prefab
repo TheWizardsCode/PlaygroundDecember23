@@ -204,7 +204,8 @@ MonoBehaviour:
   maximumTimeBetweenReports: 30
   scannerPrefab: {fileID: 4437746279418429034, guid: bf1c25210103bed4bb9378c859bef582, type: 3}
   timeSlice: 25
-  targetKillRate: 1
+  targetKillScore: 0.3
+  isDebug: 1
 --- !u!1 &6495454180581363533
 GameObject:
   m_ObjectHideFlags: 0
